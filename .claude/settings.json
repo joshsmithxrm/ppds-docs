@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start)",
+      "Bash(npm run build)",
+      "Bash(npm run serve)",
+      "Bash(npm run typecheck)",
+      "Bash(npm install)",
+      "Bash(npm ci)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git log)",
+      "Bash(git add .)",
+      "Bash(git commit -m :*)",
+      "Bash(git checkout :*)",
+      "Bash(git branch :*)",
+      "Bash(git push)",
+      "Bash(git pull)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(npm publish)",
+      "Bash(git push --force)",
+      "Bash(git push -f)"
+    ]
+  }
+}
