@@ -6,13 +6,20 @@ description: Command-line interface reference for PPDS
 
 # CLI Reference
 
-The Power Platform Developer Suite CLI (`ppds`) provides command-line access to common Power Platform development tasks.
+The Power Platform Developer Suite CLI (`ppds`) provides an interactive terminal interface for Power Platform development tasks.
 
 ## Usage
 
+Running `ppds` without arguments launches the interactive TUI (Text User Interface):
+
 ```bash
-ppds <command> [subcommand] [options]
+ppds
 ```
+
+The TUI provides guided workflows for:
+- Authentication and profile management
+- Data export and import
+- Environment discovery
 
 ## Commands
 
