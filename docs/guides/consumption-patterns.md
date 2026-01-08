@@ -67,9 +67,10 @@ var result = await migrator.ExportAsync(options);
 
 ```bash
 dotnet tool install -g PPDS.Cli
-ppds export --connection "$CONN" --entities account,contact --output ./data
-ppds import --connection "$CONN" --input ./data --dry-run
+ppds  # Launches interactive TUI
 ```
+
+The TUI guides you through authentication, entity selection, and export/import workflows interactively.
 
 **Lifecycle:** Install a tool version. CLI maintains backwards-compatible flags. Library can change internally.
 
