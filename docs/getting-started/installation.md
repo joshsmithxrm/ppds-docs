@@ -12,14 +12,14 @@ Get up and running with Power Platform Developer Suite in under 5 minutes.
 
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - A Microsoft Power Platform environment
-- PowerShell 7+ (for CLI on Windows)
+- PowerShell 7+ (optional, for PPDS.Tools module)
 
 ## CLI Installation
 
 Install the CLI as a global .NET tool:
 
 ```bash
-dotnet tool install --global PowerPlatformDeveloperSuite.CLI
+dotnet tool install --global PPDS.Cli
 ```
 
 Verify the installation:
@@ -31,36 +31,73 @@ ppds --version
 ### Update the CLI
 
 ```bash
-dotnet tool update --global PowerPlatformDeveloperSuite.CLI
+dotnet tool update --global PPDS.Cli
 ```
 
 ### Uninstall
 
 ```bash
-dotnet tool uninstall --global PowerPlatformDeveloperSuite.CLI
+dotnet tool uninstall --global PPDS.Cli
 ```
 
-## SDK Installation
+## SDK Packages
 
-Add the SDK packages to your .NET project:
+Add SDK packages to your .NET project based on your needs:
+
+### Plugin Development
 
 ```bash
-dotnet add package PowerPlatformDeveloperSuite.SDK
-dotnet add package PowerPlatformDeveloperSuite.SDK.Extensions
+dotnet add package PPDS.Plugins
 ```
 
-Or via the NuGet Package Manager in Visual Studio:
+Provides `PluginStep` and `PluginImage` attributes for declarative plugin registration.
 
-1. Right-click your project in Solution Explorer
-2. Select **Manage NuGet Packages**
-3. Search for `PowerPlatformDeveloperSuite.SDK`
-4. Click **Install**
+### Data Migration
 
-### Package Reference
+```bash
+dotnet add package PPDS.Migration
+```
+
+High-performance data export/import with parallel processing and CMT compatibility.
+
+### Dataverse Connectivity
+
+```bash
+dotnet add package PPDS.Dataverse
+```
+
+Connection pooling, bulk operations, and resilience for Dataverse.
+
+### Authentication
+
+```bash
+dotnet add package PPDS.Auth
+```
+
+Profile storage, credential providers, and Global Discovery Service integration.
+
+### Package References
 
 ```xml
-<PackageReference Include="PowerPlatformDeveloperSuite.SDK" Version="1.*" />
-<PackageReference Include="PowerPlatformDeveloperSuite.SDK.Extensions" Version="1.*" />
+<PackageReference Include="PPDS.Plugins" Version="2.*" />
+<PackageReference Include="PPDS.Migration" Version="1.*-*" />
+<PackageReference Include="PPDS.Dataverse" Version="1.*-*" />
+<PackageReference Include="PPDS.Auth" Version="1.*-*" />
+```
+
+## PowerShell Module
+
+For PowerShell scripting, install PPDS.Tools from the PowerShell Gallery:
+
+```powershell
+Install-Module PPDS.Tools -AllowPrerelease
+```
+
+Import and verify:
+
+```powershell
+Import-Module PPDS.Tools
+Get-Command -Module PPDS.Tools
 ```
 
 ## Next Steps

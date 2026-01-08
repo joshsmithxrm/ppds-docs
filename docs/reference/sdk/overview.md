@@ -1,187 +1,148 @@
 ---
 sidebar_position: 1
 title: SDK Overview
-description: .NET SDK reference for Power Platform Developer Suite
+description: .NET SDK packages for Power Platform Developer Suite
 ---
 
 # SDK Reference
 
-The Power Platform Developer Suite SDK provides a modern .NET interface for Power Platform development.
+The Power Platform Developer Suite SDK provides .NET libraries for Power Platform development, data migration, and plugin registration.
 
 ## Packages
 
-| Package | Description |
-|---------|-------------|
-| `PowerPlatformDeveloperSuite.SDK` | Core SDK with client and services |
-| `PowerPlatformDeveloperSuite.SDK.Extensions` | DI extensions and configuration |
+| Package | Version | Description |
+|---------|---------|-------------|
+| `PPDS.Plugins` | 2.0.0 | Plugin attributes for declarative registration |
+| `PPDS.Migration` | 1.0.0-beta | High-performance data export/import |
+| `PPDS.Dataverse` | 1.0.0-beta | Connection pooling and bulk operations |
+| `PPDS.Auth` | 1.0.0-beta | Authentication profiles and credentials |
 
-## Quick Start
+## PPDS.Plugins
 
-```csharp
-using PowerPlatformDeveloperSuite.SDK;
+Declarative plugin registration using attributes.
 
-// Create a client
-var client = new PowerPlatformClient(options =>
-{
-    options.EnvironmentUrl = "https://yourorg.crm.dynamics.com";
-});
+### Installation
 
-// Authenticate
-await client.AuthenticateAsync();
-
-// Use the client
-var solutions = await client.Solutions.GetAllAsync();
+```bash
+dotnet add package PPDS.Plugins
 ```
 
-## PowerPlatformClient
-
-The main entry point for SDK operations.
-
-### Constructor
+### Usage
 
 ```csharp
-public PowerPlatformClient(Action<PowerPlatformClientOptions> configure)
-```
+using PPDS.Plugins;
 
-### Properties
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `Solutions` | `ISolutionService` | Solution operations |
-| `Entities` | `IEntityService` | Entity operations |
-| `Plugins` | `IPluginService` | Plugin operations |
-| `WebResources` | `IWebResourceService` | Web resource operations |
-| `IsAuthenticated` | `bool` | Authentication status |
-
-### Methods
-
-| Method | Returns | Description |
-|--------|---------|-------------|
-| `AuthenticateAsync()` | `Task` | Authenticate with the environment |
-| `ExecuteAsync<T>(request)` | `Task<T>` | Execute a custom request |
-
-## PowerPlatformClientOptions
-
-Configuration options for the client.
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `EnvironmentUrl` | `string` | Target environment URL (required) |
-| `ClientId` | `string` | Azure AD application ID |
-| `ClientSecret` | `string` | Application client secret |
-| `TenantId` | `string` | Azure AD tenant ID |
-| `Credential` | `TokenCredential` | Azure.Identity credential |
-| `Timeout` | `TimeSpan` | Request timeout (default: 2 min) |
-| `MaxRetries` | `int` | Max retry attempts (default: 3) |
-
-## Dependency Injection
-
-Register the client with the DI container:
-
-```csharp
-using PowerPlatformDeveloperSuite.SDK.Extensions;
-
-services.AddPowerPlatformClient(options =>
+[PluginStep(
+    Message = "Create",
+    EntityLogicalName = "account",
+    Stage = Stage.PreOperation,
+    Mode = Mode.Synchronous)]
+public class CreateAccountPlugin : IPlugin
 {
-    options.EnvironmentUrl = "https://yourorg.crm.dynamics.com";
-    options.ClientId = configuration["PowerPlatform:ClientId"];
-    options.ClientSecret = configuration["PowerPlatform:ClientSecret"];
-    options.TenantId = configuration["PowerPlatform:TenantId"];
-});
-```
-
-Inject and use:
-
-```csharp
-public class MyService
-{
-    private readonly IPowerPlatformClient _client;
-
-    public MyService(IPowerPlatformClient client)
+    public void Execute(IServiceProvider serviceProvider)
     {
-        _client = client;
+        // Plugin logic
     }
+}
 
-    public async Task DoWorkAsync()
+[PluginStep(
+    Message = "Update",
+    EntityLogicalName = "contact",
+    Stage = Stage.PostOperation,
+    FilteringAttributes = new[] { "firstname", "lastname" })]
+[PluginImage(
+    ImageType = ImageType.PreImage,
+    Name = "PreImage",
+    Attributes = new[] { "firstname", "lastname" })]
+public class UpdateContactPlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        var solutions = await _client.Solutions.GetAllAsync();
+        // Access pre-image from context
     }
 }
 ```
 
-## Solution Service
+### Attributes
 
-### GetAllAsync
+| Attribute | Purpose |
+|-----------|---------|
+| `PluginStep` | Define message, entity, stage, mode |
+| `PluginImage` | Define pre/post images |
 
-```csharp
-Task<IReadOnlyList<Solution>> GetAllAsync(
-    bool includeManaged = false,
-    CancellationToken cancellationToken = default)
+## PPDS.Migration
+
+High-performance data migration engine.
+
+### Installation
+
+```bash
+dotnet add package PPDS.Migration
 ```
 
-### GetByNameAsync
+### Features
+
+- Parallel export with connection pooling
+- Dependency-aware tiered import
+- CMT format compatibility
+- Resume from failures
+
+### Usage
 
 ```csharp
-Task<Solution?> GetByNameAsync(
-    string uniqueName,
-    CancellationToken cancellationToken = default)
-```
+using PPDS.Migration;
 
-### ExportAsync
-
-```csharp
-Task<byte[]> ExportAsync(
-    string uniqueName,
-    bool managed = false,
-    CancellationToken cancellationToken = default)
-```
-
-### ImportAsync
-
-```csharp
-Task<ImportResult> ImportAsync(
-    byte[] solutionZip,
-    ImportOptions? options = null,
-    CancellationToken cancellationToken = default)
-```
-
-## Entity Service
-
-### GetMetadataAsync
-
-```csharp
-Task<EntityMetadata> GetMetadataAsync(
-    string logicalName,
-    CancellationToken cancellationToken = default)
-```
-
-### QueryAsync
-
-```csharp
-Task<IReadOnlyList<Entity>> QueryAsync(
-    string fetchXml,
-    CancellationToken cancellationToken = default)
-```
-
-## Error Handling
-
-```csharp
-try
+// Export data
+var exporter = new DataverseExporter(connectionString);
+await exporter.ExportAsync(new ExportOptions
 {
-    await client.Solutions.ExportAsync("MySolution");
-}
-catch (PowerPlatformAuthenticationException ex)
+    Entities = new[] { "account", "contact" },
+    OutputPath = "./export",
+    MaxParallelism = 4
+});
+
+// Import data
+var importer = new DataverseImporter(connectionString);
+await importer.ImportAsync(new ImportOptions
 {
-    // Handle authentication errors
-    Console.WriteLine($"Auth failed: {ex.Message}");
-}
-catch (PowerPlatformException ex)
-{
-    // Handle general errors
-    Console.WriteLine($"Error: {ex.Message}");
-    Console.WriteLine($"Error Code: {ex.ErrorCode}");
-}
+    InputPath = "./export",
+    BypassPlugins = true,
+    MaxParallelism = 4
+});
 ```
+
+## PPDS.Dataverse
+
+Low-level Dataverse connectivity with pooling and resilience.
+
+### Installation
+
+```bash
+dotnet add package PPDS.Dataverse
+```
+
+### Features
+
+- Connection pooling
+- Automatic retry with exponential backoff
+- Bulk operation support
+- Query pagination
+
+## PPDS.Auth
+
+Authentication infrastructure shared by CLI and libraries.
+
+### Installation
+
+```bash
+dotnet add package PPDS.Auth
+```
+
+### Features
+
+- Profile storage (encrypted credentials)
+- Multiple credential providers (interactive, client secret, certificate)
+- Global Discovery Service integration
 
 ## Next Steps
 

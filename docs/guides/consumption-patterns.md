@@ -66,9 +66,9 @@ var result = await migrator.ExportAsync(options);
 **Example:**
 
 ```bash
-dotnet tool install -g PPDS.Migration.Cli
-ppds-migrate export --connection "$CONN" --entities account,contact --output ./data
-ppds-migrate import --connection "$CONN" --input ./data --dry-run
+dotnet tool install -g PPDS.Cli
+ppds export --connection "$CONN" --entities account,contact --output ./data
+ppds import --connection "$CONN" --input ./data --dry-run
 ```
 
 **Lifecycle:** Install a tool version. CLI maintains backwards-compatible flags. Library can change internally.
@@ -147,8 +147,8 @@ Each layer declares minimum versions of its dependencies:
 | Layer | Depends On | Declared Where |
 |-------|------------|----------------|
 | ALM workflows | PPDS.Cli | Workflow `dotnet tool install` command |
-| PPDS.Tools | PPDS.Cli | `Get-PpdsCli` helper |
-| CLI | Library packages | PackageReference in csproj |
+| PPDS.Tools | PPDS.Cli | Module manifest |
+| PPDS.Cli | PPDS.Migration, PPDS.Auth | PackageReference in csproj |
 
 Breaking changes flow upward:
 1. Library breaks → CLI updates → Tools updates (and ALM updates)
