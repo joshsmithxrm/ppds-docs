@@ -20,7 +20,8 @@ Use the full name on first reference in a document, then PPDS thereafter.
 | Extension | PPDS Extension | VS Code extension |
 | Libraries | PPDS.* | NuGet packages (Plugins, Migration, Dataverse, Auth) |
 | PowerShell | PPDS.Tools | PowerShell module |
-| ALM | PPDS ALM | GitHub Actions workflows |
+| ALM | PPDS ALM | GitHub Actions and Azure DevOps templates |
+| MCP | PPDS MCP | AI integration (scope being defined) |
 
 ## NuGet Packages
 
