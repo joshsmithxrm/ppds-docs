@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Power Platform Developer Suite',
-  tagline: 'Professional developer tools for Microsoft Power Platform',
+  tagline: 'Pro-grade tooling for Power Platform developers',
   favicon: 'img/favicon.ico',
 
   url: 'https://joshsmithxrm.github.io',
