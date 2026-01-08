@@ -59,13 +59,13 @@ consumption-patterns.md
 
 ### Good/Bad Example Pattern
 
-Use checkmarks for code examples:
+Use clear labels for code examples:
 
 ```csharp
-// Correct - Nullable annotation indicates optional value
+// ✓ Correct - Nullable annotation indicates optional value
 public string? OptionalProperty { get; set; }
 
-// Wrong - Missing nullable annotation for optional property
+// ✗ Wrong - Missing nullable annotation for optional property
 public string OptionalProperty { get; set; }
 ```
 

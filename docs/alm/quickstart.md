@@ -56,11 +56,11 @@ jobs:
       solution-folder: solutions/MySolution/src
       build-plugins: true
       package-type: Managed
-    secrets:
+    secrets:  # Reusable workflow input - accepts both vars and secrets
       environment-url: ${{ vars.POWERPLATFORM_ENVIRONMENT_URL }}
       tenant-id: ${{ vars.POWERPLATFORM_TENANT_ID }}
       client-id: ${{ vars.POWERPLATFORM_CLIENT_ID }}
-      client-secret: ${{ secrets.POWERPLATFORM_CLIENT_SECRET }}
+      client-secret: ${{ secrets.POWERPLATFORM_CLIENT_SECRET }}  # Only this needs to be a secret
 ```
 
 ## Available Workflows

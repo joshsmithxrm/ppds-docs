@@ -18,8 +18,8 @@ Review automated bot comments on a pull request and help address them.
    ```bash
    gh api repos/{owner}/{repo}/pulls/{pr}/comments
    ```
-   - Filter to bot accounts (login ends with `[bot]`)
-   - Include: gemini-code-assist, github-actions, dependabot, etc.
+   - Filter to bot/AI accounts: `gemini-code-assist[bot]`, `Copilot`, `github-actions[bot]`, `dependabot[bot]`
+   - IMPORTANT: Some bots (like Copilot) don't have `[bot]` suffix - check for known bot names explicitly
 
 3. **Display comments**
    - Group by file/line
@@ -35,8 +35,19 @@ Review automated bot comments on a pull request and help address them.
      - **Skip** - Move to next comment
      - **Dismiss** - Mark as won't fix (explain why)
 
-5. **After addressing comments:**
-   - Summarize what was changed
+5. **After user confirms action, resolve the comment on GitHub:**
+   ```bash
+   # Get the GraphQL node_id for the comment
+   gh api repos/{owner}/{repo}/pulls/{pr}/comments/{comment_id} --jq '.node_id'
+
+   # Resolve the comment thread
+   gh api graphql -f query='mutation { resolveReviewThread(input: {threadId: "NODE_ID"}) { thread { isResolved } } }'
+   ```
+   - This signals to the user that the comment was reviewed
+   - Unresolved comments indicate missed items
+
+6. **After all comments processed:**
+   - Summarize what was changed vs skipped
    - Ask if user wants to commit and push
 
 ## Notes
