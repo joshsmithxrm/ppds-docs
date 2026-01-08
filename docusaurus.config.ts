@@ -30,7 +30,15 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/joshsmithxrm/ppds-docs/tree/main/',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          editUrl: 'https://github.com/joshsmithxrm/ppds-docs/tree/main/',
+          blogTitle: 'PPDS Blog',
+          blogDescription: 'Updates, guides, and insights from the Power Platform Developer Suite team',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent Posts',
+          blogSidebarCount: 5,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,6 +77,11 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
         },
         {
           href: 'https://github.com/joshsmithxrm/power-platform-developer-suite',

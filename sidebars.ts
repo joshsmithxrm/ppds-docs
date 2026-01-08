@@ -15,6 +15,18 @@ const sidebars: SidebarsConfig = {
         'guides/authentication',
         'guides/data-migration',
         'guides/plugin-deployment',
+        'guides/consumption-patterns',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'ALM',
+      items: [
+        'alm/index',
+        'alm/quickstart',
+        'alm/features',
+        'alm/authentication',
+        'alm/troubleshooting',
       ],
     },
     {
@@ -41,7 +53,10 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Contributing',
-      items: ['contributing/index'],
+      items: [
+        'contributing/index',
+        'contributing/style-guide',
+      ],
     },
   ],
 };
