@@ -10,10 +10,10 @@ Scan source repositories and update documentation in ppds-docs.
 
 | Repo | Path | Content |
 |------|------|---------|
-| ppds | C:\VS\ppds | CLI reference, SDK API |
-| ppds-alm | C:\VS\ppds-alm | ALM workflows, actions |
-| ppds-demo | C:\VS\ppds-demo | Guides, patterns |
-| ppds-tools | C:\VS\ppds-tools | PowerShell cmdlets |
+| ppds | ../ppds | CLI reference, SDK API |
+| ppds-alm | ../ppds-alm | ALM workflows, actions |
+| ppds-demo | ../ppds-demo | Guides, patterns |
+| ppds-tools | ../ppds-tools | PowerShell cmdlets |
 
 ## Process
 

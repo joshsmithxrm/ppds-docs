@@ -62,11 +62,11 @@ consumption-patterns.md
 Use checkmarks for code examples:
 
 ```csharp
-// Correct - Descriptive reason
+// Correct - Nullable annotation indicates optional value
 public string? OptionalProperty { get; set; }
 
-// Wrong - What's wrong with it
-public string OptionalProperty { get; set; }  // Missing nullable annotation
+// Wrong - Missing nullable annotation for optional property
+public string OptionalProperty { get; set; }
 ```
 
 ## Document Structure

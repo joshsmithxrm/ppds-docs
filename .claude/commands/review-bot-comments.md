@@ -26,10 +26,14 @@ Review automated bot comments on a pull request and help address them.
    - Show the bot name and comment body
    - Number each comment for reference
 
-4. **For each comment, offer options:**
-   - **Address it** - Make the suggested change
-   - **Skip** - Move to next comment
-   - **Dismiss** - Mark as won't fix (explain why)
+4. **For each comment:**
+   - Read the relevant file/code to understand context
+   - Provide your **recommendation** (Address, Skip, or Dismiss)
+   - Provide your **rationale** explaining why
+   - Offer options:
+     - **Address it** - Make the suggested change
+     - **Skip** - Move to next comment
+     - **Dismiss** - Mark as won't fix (explain why)
 
 5. **After addressing comments:**
    - Summarize what was changed

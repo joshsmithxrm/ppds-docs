@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-sidebar_position: 7
+sidebar_position: 5
 description: Resolve common issues with PPDS ALM workflows and actions
 ---
 
