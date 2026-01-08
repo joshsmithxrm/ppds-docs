@@ -18,7 +18,7 @@ Use the full name on first reference in a document, then PPDS thereafter.
 |-----------|------|-------------|
 | CLI | PPDS CLI | Interactive TUI and command-line tool |
 | Extension | PPDS Extension | VS Code extension |
-| Libraries | PPDS.* | NuGet packages (Plugins, Migration, Dataverse, Auth) |
+| Libraries | PPDS.* | NuGet packages (e.g., Plugins, Migration, Dataverse, Auth) |
 | PowerShell | PPDS.Tools | PowerShell module |
 | ALM | PPDS ALM | GitHub Actions and Azure DevOps templates |
 | MCP | PPDS.Mcp | MCP server for AI assistant integration (Claude Code) |
@@ -55,8 +55,8 @@ Use the full name on first reference in a document, then PPDS thereafter.
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Primary | #0078d4 | Microsoft Blue - links, primary actions |
-| Secondary | #25c2a0 | PPDS Green - accents, highlights |
+| Microsoft Blue | #0078d4 | Primary color in light theme (links, actions) |
+| PPDS Green | #25c2a0 | Primary color in dark theme; used for accents |
 | Background (dark) | #1e1e1e | Dark theme background |
 | Background (light) | #ffffff | Light theme background |
 
