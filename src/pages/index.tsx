@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
@@ -8,9 +9,15 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const bannerUrl = useBaseUrl('/img/ppds-banner.png');
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <img
+          src={bannerUrl}
+          alt="Power Platform Developer Suite"
+          className={styles.heroImage}
+        />
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
