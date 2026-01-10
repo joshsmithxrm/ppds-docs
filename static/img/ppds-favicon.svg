@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <!-- PPDS Favicon - 3D Cube with circuit aesthetic -->
-  <rect width="32" height="32" rx="4" fill="#1e1e1e"/>
+  <!-- PPDS Favicon - 3D Cube with circuit aesthetic (transparent background) -->
   <!-- 3D Cube matching banner -->
   <path d="M16 4L6 10v12l10 6 10-6V10L16 4z" fill="none" stroke="#25c2a0" stroke-width="1.5"/>
   <path d="M16 16L6 10M16 16l10-6M16 16v12" stroke="#25c2a0" stroke-width="1.5"/>
