@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.heroImage {
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -26,5 +33,10 @@
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+
+  .heroImage {
+    width: 100%;
+    max-width: 400px;
   }
 }

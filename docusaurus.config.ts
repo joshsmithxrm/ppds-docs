@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Power Platform Developer Suite',
   tagline: 'Pro-grade tooling for Power Platform developers',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/ppds-favicon.svg',
 
   url: 'https://joshsmithxrm.github.io',
   baseUrl: '/ppds-docs/',
@@ -69,7 +69,7 @@ const config: Config = {
       title: 'Power Platform Developer Suite',
       logo: {
         alt: 'PPDS Logo',
-        src: 'img/logo.svg',
+        src: 'img/ppds-logo.svg',
       },
       items: [
         {

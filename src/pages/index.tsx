@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
@@ -8,9 +9,21 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const bannerWebpUrl = useBaseUrl('/img/ppds-banner.webp');
+  const bannerPngUrl = useBaseUrl('/img/ppds-banner.png');
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <picture>
+          <source srcSet={bannerWebpUrl} type="image/webp" />
+          <img
+            src={bannerPngUrl}
+            alt=""
+            className={styles.heroImage}
+            width={700}
+            height={382}
+          />
+        </picture>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
