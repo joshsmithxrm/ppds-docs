@@ -36,11 +36,12 @@ Use the full name on first reference in a document, then PPDS thereafter.
 
 | Repo | GitHub Name | Display Name |
 |------|-------------|--------------|
-| Main | power-platform-developer-suite | PPDS |
+| Main | power-platform-developer-suite | PPDS (SDK + CLI + TUI + Extension + MCP) |
 | Docs | ppds-docs | PPDS Docs |
 | ALM | ppds-alm | PPDS ALM |
 | Tools | ppds-tools | PPDS.Tools |
 | Demo | ppds-demo | PPDS Demo |
+| Orchestration | ppds-orchestration | PPDS Orchestration |
 
 ## Links
 
