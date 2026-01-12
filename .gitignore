@@ -145,3 +145,6 @@ build/
 
 # Local Claude settings
 .claude/settings.local.json
+
+# Temp folder
+tmp/
