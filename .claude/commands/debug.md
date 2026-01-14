@@ -1,3 +1,7 @@
+---
+description: Debug docs development issues
+---
+
 # Debug
 
 Give Claude an interactive feedback loop for docs development using Playwright MCP.
@@ -12,8 +16,10 @@ Give Claude an interactive feedback loop for docs development using Playwright M
 ### 1. Check dev server status
 
 ```bash
-# Check if port 3000 is in use
+# Check if port 3000 is in use (Windows)
 netstat -ano | findstr :3000
+
+# macOS/Linux alternative: lsof -i :3000
 ```
 
 If not running, start it:
@@ -38,7 +44,7 @@ Use Playwright MCP to open the site:
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | Blank page | Build error | Check `npm run build` output |
-| Broken links | Missing page | Run `/check-links` |
+| Broken links | Missing page | Run `npm run build` |
 | Style issues | CSS/Tailwind problem | Check browser console |
 | Missing images | Wrong path | Verify image paths in `/static/` |
 

@@ -24,7 +24,7 @@ Documentation site for Power Platform Developer Suite.
 | `npm run build` | Production build |
 | `npm run typecheck` | TypeScript validation |
 
-## Doc Types (Diataxis)
+## Doc Types (Diátaxis)
 
 | Type | Purpose |
 |------|---------|
