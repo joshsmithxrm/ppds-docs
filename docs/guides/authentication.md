@@ -209,7 +209,7 @@ prevents surprising behavior in CI.
     PPDS_CLIENT_SECRET: ${{ secrets.PPDS_CLIENT_SECRET }}
     PPDS_TENANT_ID: ${{ secrets.PPDS_TENANT_ID }}
     PPDS_ENVIRONMENT_URL: ${{ secrets.PPDS_ENVIRONMENT_URL }}
-  run: ppds solution import ./out/MySolution.zip
+  run: ppds solutions import ./out/MySolution.zip
 ```
 
 ## Library authentication (C#)
