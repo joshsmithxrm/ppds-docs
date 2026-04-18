@@ -148,3 +148,7 @@ build/
 
 # Temp folder
 tmp/
+.muse/
+
+# Brainstorm artifacts (ephemeral visual companion + research notes)
+docs/brainstorm/

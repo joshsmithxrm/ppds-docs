@@ -13,20 +13,7 @@ const sidebars: SidebarsConfig = {
       label: 'Guides',
       items: [
         'guides/authentication',
-        'guides/data-migration',
-        'guides/plugin-deployment',
         'guides/consumption-patterns',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'ALM',
-      items: [
-        'alm/index',
-        'alm/quickstart',
-        'alm/features',
-        'alm/authentication',
-        'alm/troubleshooting',
       ],
     },
     {
@@ -40,15 +27,15 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'SDK',
-          items: ['reference/sdk/overview'],
+          label: 'Libraries',
+          items: ['reference/libraries/overview'],
+        },
+        {
+          type: 'category',
+          label: 'MCP',
+          items: ['reference/mcp/overview'],
         },
       ],
-    },
-    {
-      type: 'category',
-      label: 'Concepts',
-      items: ['concepts/architecture'],
     },
     {
       type: 'category',

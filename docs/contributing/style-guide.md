@@ -12,7 +12,7 @@ Ensures consistency and maintainability across all documentation in the Power Pl
 
 ### For Source Repos
 
-Source repositories (ppds, ppds-alm, ppds-tools) use SCREAMING_SNAKE_CASE:
+Source repositories use SCREAMING_SNAKE_CASE:
 
 ```
 GETTING_STARTED.md
@@ -89,15 +89,15 @@ Structure rules as tables:
 
 | Rule | Why |
 |------|-----|
-| Use `powershell.exe` | Requires PowerShell 7+ |
 | Hardcode GUIDs | Breaks across environments |
+| Commit sample secrets | Rotates become painful |
 
 ## Always Do This
 
 | Rule | Why |
 |------|-----|
-| Use `pwsh` | Cross-platform PowerShell 7+ |
 | Use config/queries | Environment-portable |
+| Test code samples before publishing | Copy-paste users expect working code |
 ```
 
 ## Cross-References
@@ -131,7 +131,6 @@ Use these language hints for syntax highlighting:
 | Language | Use For |
 |----------|---------|
 | `bash` | Shell commands |
-| `powershell` | PowerShell commands |
 | `csharp` | C# code |
 | `json` | JSON configuration |
 | `xml` | XML/MSBuild files |
@@ -149,8 +148,8 @@ Use these language hints for syntax highlighting:
 using PPDS.Migration;
 
 // Then show the actual code
-var migrator = new DataverseMigrator(connection);
-await migrator.ExportAsync(options);
+var exporter = provider.GetRequiredService<IExporter>();
+await exporter.ExportAsync(schemaPath, outputPath);
 ```
 
 ## Documentation Lifecycle
