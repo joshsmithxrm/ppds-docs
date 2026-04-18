@@ -57,10 +57,10 @@ function HomepageFeatures() {
           </div>
           <div className={clsx('col col--4', styles.feature)}>
             <div className="text--center padding-horiz--md">
-              <Heading as="h3">.NET SDK</Heading>
+              <Heading as="h3">.NET Libraries</Heading>
               <p>
-                Modern async SDK with dependency injection support and strongly-typed entity
-                access.
+                Composable libraries for authentication, connection pooling, data migration,
+                and declarative plugin registration.
               </p>
             </div>
           </div>

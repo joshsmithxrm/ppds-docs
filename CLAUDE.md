@@ -37,7 +37,7 @@ Documentation site for Power Platform Developer Suite.
 
 - `docs/getting-started/` - First 5 minutes
 - `docs/guides/` - How to... (task-oriented)
-- `docs/reference/` - CLI/SDK reference
+- `docs/reference/` - CLI/Libraries/MCP reference
 - `docs/concepts/` - Architecture explanations
 
 ## Key Files

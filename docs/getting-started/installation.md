@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Installation
-description: Install the PPDS CLI and SDK packages
+description: Install the PPDS CLI and libraries
 ---
 
 # Installation
@@ -12,7 +12,6 @@ Get up and running with Power Platform Developer Suite in under 5 minutes.
 
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - A Microsoft Power Platform environment
-- PowerShell 7+ (optional, for PPDS.Tools module)
 
 ## CLI Installation
 
@@ -40,9 +39,9 @@ dotnet tool update --global PPDS.Cli
 dotnet tool uninstall --global PPDS.Cli
 ```
 
-## SDK Packages
+## Libraries
 
-Add SDK packages to your .NET project based on your needs:
+Add PPDS libraries to your .NET project based on your needs:
 
 ### Plugin Development
 
@@ -85,23 +84,8 @@ Profile storage, credential providers, and Global Discovery Service integration.
 <PackageReference Include="PPDS.Auth" Version="1.*-*" />
 ```
 
-## PowerShell Module
-
-For PowerShell scripting, install PPDS.Tools from the PowerShell Gallery:
-
-```powershell
-Install-Module PPDS.Tools -AllowPrerelease
-```
-
-Import and verify:
-
-```powershell
-Import-Module PPDS.Tools
-Get-Command -Module PPDS.Tools
-```
-
 ## Next Steps
 
 - [Configure authentication](/docs/guides/authentication) to connect to your environment
 - [Explore the CLI commands](/docs/reference/cli/overview)
-- [Learn the SDK basics](/docs/reference/sdk/overview)
+- [Learn the libraries](/docs/reference/libraries/overview)

@@ -146,5 +146,12 @@ build/
 # Local Claude settings
 .claude/settings.local.json
 
+# Session plans (ephemeral, per-session artifacts)
+.claude/plans/
+
 # Temp folder
 tmp/
+.muse/
+
+# Brainstorm artifacts (ephemeral visual companion + research notes)
+docs/brainstorm/
