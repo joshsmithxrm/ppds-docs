@@ -155,3 +155,7 @@ tmp/
 
 # Brainstorm artifacts (ephemeral visual companion + research notes)
 docs/brainstorm/
+
+# docs-verify daemon artifacts (runtime only)
+tools/.docs-verify-session.json
+tools/.docs-verify-daemon.log

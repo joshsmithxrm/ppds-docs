@@ -1,0 +1,108 @@
+# Docs audit manifest. Single source of truth for which docs surfaces
+# get captured in a design audit. Adding a new page = appending an entry.
+#
+# See specs/audit-capture.md for the runner contract; AUDIT-SCHEMA.md on
+# ppds-design-system for the output format.
+#
+# Routes are relative to DOCS_URL (default http://localhost:3000 in dev).
+# Each screenshot step emits two PNGs: <stem>.light.png and <stem>.dark.png.
+
+surface: docs
+entries:
+  # ── Landing ────────────────────────────────────────────────────────────
+  - id: homepage
+    title: Homepage — hero + features
+    type: page
+    route: /
+    steps:
+      - screenshot: 01-top
+
+  - id: homepage-hero
+    title: Homepage — hero banner (component)
+    type: component
+    selector: "header.hero"
+    steps:
+      - screenshot: 01-hero
+
+  # ── Getting Started ────────────────────────────────────────────────────
+  - id: getting-started-installation
+    title: Getting Started — Installation
+    type: page
+    route: /docs/getting-started/installation
+    steps:
+      - screenshot: 01-top
+
+  # ── Guides ─────────────────────────────────────────────────────────────
+  - id: guides-authentication
+    title: Guides — Authentication
+    type: page
+    route: /docs/guides/authentication
+    steps:
+      - screenshot: 01-top
+
+  - id: guides-consumption-patterns
+    title: Guides — Consumption patterns
+    type: page
+    route: /docs/guides/consumption-patterns
+    steps:
+      - screenshot: 01-top
+
+  # ── Reference ──────────────────────────────────────────────────────────
+  - id: reference-cli-overview
+    title: Reference — CLI overview
+    type: page
+    route: /docs/reference/cli/overview
+    steps:
+      - screenshot: 01-top
+
+  - id: reference-libraries-overview
+    title: Reference — Libraries overview
+    type: page
+    route: /docs/reference/libraries/overview
+    steps:
+      - screenshot: 01-top
+
+  - id: reference-mcp-overview
+    title: Reference — MCP overview
+    type: page
+    route: /docs/reference/mcp/overview
+    steps:
+      - screenshot: 01-top
+
+  # ── Contributing ───────────────────────────────────────────────────────
+  - id: contributing-index
+    title: Contributing — index
+    type: page
+    route: /docs/contributing
+    steps:
+      - screenshot: 01-top
+
+  - id: contributing-style-guide
+    title: Contributing — Style guide
+    type: page
+    route: /docs/contributing/style-guide
+    steps:
+      - screenshot: 01-top
+
+  # ── Blog ───────────────────────────────────────────────────────────────
+  - id: blog-index
+    title: Blog — index
+    type: page
+    route: /blog
+    steps:
+      - screenshot: 01-top
+
+  # ── Shared components ──────────────────────────────────────────────────
+  - id: navbar
+    title: Top navbar (component)
+    type: component
+    selector: "nav.navbar"
+    steps:
+      - screenshot: 01-navbar
+
+  - id: footer
+    title: Site footer (component)
+    type: component
+    selector: "footer.footer"
+    steps:
+      - screenshot: 01-footer
