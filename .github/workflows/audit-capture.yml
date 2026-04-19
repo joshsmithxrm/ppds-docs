@@ -1,0 +1,166 @@
+name: Audit Capture
+
+# Manual-only for v1. No `schedule:` trigger until enabled intentionally.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dev = local dev server, production = live docs URL'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - production
+      docs_url:
+        description: 'Override DOCS_URL (otherwise defaults for mode)'
+        required: false
+        type: string
+      branch_name:
+        description: 'Override capture branch name in ppds-v1-audit (default: capture/<timestamp>)'
+        required: false
+        type: string
+
+concurrency:
+  group: audit-capture-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      AUDIT_OUT: ${{ runner.temp }}/audit-out
+      AUDIT_SOURCE_REPO: ${{ github.repository }}
+      AUDIT_SOURCE_REF: ${{ github.ref }}
+      AUDIT_SOURCE_COMMIT: ${{ github.sha }}
+      DOCS_MODE: ${{ github.event.inputs.mode }}
+      DOCS_URL: ${{ github.event.inputs.docs_url }}
+
+    steps:
+      - name: Checkout ppds-docs
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture
+        continue-on-error: true
+        run: |
+          mkdir -p "$AUDIT_OUT"
+          node tools/audit-capture.mjs run docs
+
+      - name: Checkout audit repo
+        uses: actions/checkout@v6
+        with:
+          repository: joshsmithxrm/ppds-v1-audit
+          path: audit-repo
+          token: ${{ secrets.AUDIT_REPO_TOKEN }}
+          fetch-depth: 1
+
+      - name: Compute capture branch name
+        id: branch
+        run: |
+          INPUT="${{ github.event.inputs.branch_name }}"
+          if [ -n "$INPUT" ]; then
+            BRANCH="$INPUT"
+          else
+            BRANCH="capture/$(date -u +%Y%m%d-%H%M%S)-docs"
+          fi
+          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Copy captures and commit
+        id: push
+        env:
+          BRANCH: ${{ steps.branch.outputs.name }}
+        run: |
+          set -e
+          cp -r "$AUDIT_OUT"/* audit-repo/ 2>/dev/null || true
+          cd audit-repo
+          git config user.email "audit-capture-bot@users.noreply.github.com"
+          git config user.name "audit-capture-bot"
+          # If another job already created this branch (coordinated run with PPDS),
+          # check it out and add to it. Otherwise create it fresh.
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH":"$BRANCH"
+            git checkout "$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "commit_url=" >> "$GITHUB_OUTPUT"
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "capture(docs): ${{ github.sha }} (mode=${{ github.event.inputs.mode }})"
+            git push origin "$BRANCH"
+            SHA=$(git rev-parse HEAD)
+            echo "commit_url=https://github.com/joshsmithxrm/ppds-v1-audit/commit/$SHA" >> "$GITHUB_OUTPUT"
+            echo "skipped=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarize manifest
+        id: summary
+        if: always()
+        run: |
+          if [ -f "$AUDIT_OUT/manifest.json" ]; then
+            TOTAL=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.total)")
+            OK=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.ok)")
+            ERR=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.error)")
+            SKIPPED=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.skipped)")
+            echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
+            echo "ok=$OK" >> "$GITHUB_OUTPUT"
+            echo "error=$ERR" >> "$GITHUB_OUTPUT"
+            echo "skipped=$SKIPPED" >> "$GITHUB_OUTPUT"
+          else
+            echo "total=0" >> "$GITHUB_OUTPUT"
+            echo "ok=0" >> "$GITHUB_OUTPUT"
+            echo "error=1" >> "$GITHUB_OUTPUT"
+            echo "skipped=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Notify webhook
+        if: always()
+        env:
+          AUDIT_WEBHOOK_URL: ${{ secrets.AUDIT_WEBHOOK_URL }}
+        run: |
+          if [ -z "$AUDIT_WEBHOOK_URL" ]; then
+            echo "AUDIT_WEBHOOK_URL not configured — skipping notification"
+            exit 0
+          fi
+          STATUS="ready"
+          if [ "${{ steps.summary.outputs.error }}" != "0" ]; then STATUS="with errors"; fi
+          if [ "${{ job.status }}" != "success" ]; then STATUS="failed"; fi
+          COMMIT="${{ steps.push.outputs.commit_url }}"
+          if [ -z "$COMMIT" ]; then COMMIT="(no commit — see workflow run)"; fi
+          CONTENT="Docs audit capture $STATUS: $COMMIT — ${{ steps.summary.outputs.ok }} ok / ${{ steps.summary.outputs.error }} error / ${{ steps.summary.outputs.skipped }} skipped (mode=${{ github.event.inputs.mode }}, commit ${{ github.sha }}). Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          node -e "
+            const url = process.env.AUDIT_WEBHOOK_URL;
+            const content = process.argv[1];
+            const payload = JSON.stringify({ content, text: content });
+            fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload })
+              .then(r => { if (!r.ok) { console.error('webhook status:', r.status); process.exit(1); } });
+          " "$CONTENT"
+
+      - name: Fail job if capture had errors
+        if: steps.summary.outputs.error != '0'
+        run: |
+          echo "::error::Capture reported ${{ steps.summary.outputs.error }} errored entry/entries. See manifest.json."
+          exit 1
