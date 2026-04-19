@@ -41,8 +41,11 @@ A typical post:
 
 - Marketing fluff ("revolutionary", "industry-leading"). Cut on sight.
 - Posts that are only the solution. The insight is what readers come for.
-- Screenshots without alt text. The lint blocks them anyway, but write
-  alt text well — describe the data shown, not "screenshot of dashboard".
+- Screenshots and informative images without alt text. Write alt text
+  that describes what the user should perceive — the data shown, not
+  "screenshot of dashboard". Decorative images (banners, dividers) should
+  use an empty alt attribute (`alt=""`) per WCAG so screen readers skip
+  them.
 
 ## Why This Lives in a Skill, Not CLAUDE.md
 

@@ -2,7 +2,7 @@
 
 Documentation site for Power Platform Developer Suite (Docusaurus).
 
-Governance for THIS file: **`../ppds/docs/CLAUDE-MD-GOVERNANCE.md`**.
+Governance for THIS file: **<https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/docs/CLAUDE-MD-GOVERNANCE.md>**.
 
 ## NEVER
 

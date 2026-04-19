@@ -35,16 +35,10 @@ a reference table is two pages.
 - **Third person** for reference and concept docs.
 - **Present tense, active voice.**
 - **Short paragraphs** — 3–4 sentences max. Long paragraphs scan poorly.
-- **Code examples are copy-pasteable** — no placeholders without explicit
-  callouts; assume the reader will paste verbatim and fix mismatches in
-  prod.
-- **Test every code example** at least once before merge. Stale examples
-  are the #1 source of bug reports.
-- **Link to source code** for implementation details rather than
-  duplicating logic in prose.
-- **Use consistent terminology** — see `.claude/rules/branding.md` for the
-  canonical name list (PPDS vs Power Platform Developer Suite, surface
-  names, etc.).
+- **Code blocks must be correct and ready for use.** Assume the reader
+  will copy them verbatim — no `todo`, no `fix in prod`, no untested
+  placeholders. If a value must be substituted, surface it with an
+  explicit callout immediately above the block.
 
 ## Doc Lifecycle
 
