@@ -1,20 +1,19 @@
 # PPDS Docs
 
-Documentation site for Power Platform Developer Suite.
+Documentation site for Power Platform Developer Suite (Docusaurus).
+
+Governance for THIS file: **`../ppds/docs/CLAUDE-MD-GOVERNANCE.md`**.
 
 ## NEVER
 
-- Write marketing fluff - be technical and direct
-- Document features before they're implemented
-- Duplicate content that exists in code (link instead)
-- Use screenshots without alt text
+- Document a feature that is not yet implemented in PPDS.
+- Duplicate content that already exists in code or specs — link instead.
 
 ## ALWAYS
 
-- Write for the user's goal, not the feature
-- Include working code examples (test them!)
-- Link to source code for implementation details
-- Use consistent terminology (see `.claude/rules/branding.md`)
+- Test every code example before merge — broken examples are the #1 source of bug reports.
+- Link to source code for implementation details rather than re-explaining logic.
+- Use canonical terminology — see `.claude/rules/branding.md` for the name list.
 
 ## Commands
 
@@ -24,38 +23,7 @@ Documentation site for Power Platform Developer Suite.
 | `npm run build` | Production build |
 | `npm run typecheck` | TypeScript validation |
 
-## Doc Types (Diátaxis)
+## Authoring
 
-| Type | Purpose |
-|------|---------|
-| Tutorial | Learning-oriented, step-by-step |
-| Guide | Task-oriented, goal-focused |
-| Reference | Information-oriented, complete |
-| Concept | Understanding-oriented, explains why |
-
-## Structure
-
-- `docs/getting-started/` - First 5 minutes
-- `docs/guides/` - How to... (task-oriented)
-- `docs/reference/` - CLI/Libraries/MCP reference
-- `docs/concepts/` - Architecture explanations
-
-## Key Files
-
-- `docusaurus.config.ts` - Site configuration
-- `sidebars.ts` - Navigation structure
-- `.claude/rules/branding.md` - Colors, voice, terminology
-
-## Style
-
-- Second person ("you can...")
-- Present tense, active voice
-- Code examples should be copy-pasteable
-- Short paragraphs (3-4 sentences max)
-
-## Blog Voice
-
-- First person singular ("I discovered...")
-- Conversational but technical
-- Show the struggle, not just the solution
-- Include real numbers
+For Diátaxis classification, voice, and style: see the `write-docs` skill.
+For blog posts: see the `write-blog` skill.
