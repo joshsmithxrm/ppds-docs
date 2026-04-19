@@ -63,9 +63,13 @@ export function parseArgs(argv) {
   if (command === 'component') {
     const selector = argv[1];
     const stem = argv[2];
-    if (!selector) throw new Error('Usage: component <selector> <outfile-stem>');
-    if (!stem) throw new Error('Usage: component <selector> <outfile-stem>');
-    return { command, selector, stem };
+    const route = argv[3]; // optional: where the component lives
+    if (!selector) throw new Error('Usage: component <selector> <outfile-stem> [route]');
+    if (!stem) throw new Error('Usage: component <selector> <outfile-stem> [route]');
+    if (route !== undefined && !route.startsWith('/')) {
+      throw new Error(`component route must start with /: ${route}`);
+    }
+    return { command, selector, stem, route };
   }
 
   if (command === '__daemon') {
@@ -191,13 +195,15 @@ async function cmdLaunch(opts) {
     child.unref();
     devPid = child.pid || 0;
 
+    const devUrl = new URL(process.env.DOCS_URL || 'http://localhost:3000/ppds-docs');
+    const devPort = parseInt(devUrl.port, 10) || (devUrl.protocol === 'https:' ? 443 : 80);
     try {
-      await waitForPort('localhost', 3000, 90000);
+      await waitForPort(devUrl.hostname, devPort, 90000);
     } catch (err) {
       if (devPid) { try { process.kill(devPid); } catch {} }
-      throw new Error(`dev server did not become ready within 90s: ${err.message}`);
+      throw new Error(`dev server did not become ready within 90s on ${devUrl.hostname}:${devPort}: ${err.message}`);
     }
-    process.stderr.write('[docs-verify] dev server ready at http://localhost:3000\n');
+    process.stderr.write(`[docs-verify] dev server ready at ${devUrl.origin}\n`);
   }
 
   // Spawn daemon child process that owns Chromium + an HTTP RPC port.
@@ -269,6 +275,7 @@ async function cmdComponent(opts) {
     op: 'component',
     selector: opts.selector,
     stem: opts.stem,
+    route: opts.route,
   });
   process.stderr.write(`[docs-verify] captured ${res.light} + ${res.dark}\n`);
 }
@@ -384,10 +391,10 @@ async function handleOp(msg, { page, gotoWithTheme, docsUrl }) {
     }
 
     case 'component': {
-      // Use current page — but we need a URL. Component captures assume the
-      // caller already navigated with capture, OR we fall back to the site
-      // root. Simpler: re-navigate to baseUrl per theme, then shoot the element.
-      const url = docsUrl.replace(/\/$/, '') + '/';
+      // Navigate to the entry's route (if provided), else site root, then
+      // shoot the matching element in each theme.
+      const route = msg.route || '/';
+      const url = docsUrl.replace(/\/$/, '') + route;
       const lightPath = `${msg.stem}.light.png`;
       const darkPath = `${msg.stem}.dark.png`;
       ensureDirFor(lightPath);

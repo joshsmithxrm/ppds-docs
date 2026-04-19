@@ -91,6 +91,10 @@ export function validateManifest(raw) {
       if (typeof e.selector !== 'string' || !e.selector) {
         throw new Error(`entries[${i}] ('${e.id}'): component entry must declare non-empty 'selector'`);
       }
+      // Optional: component may declare a route to navigate to before shooting.
+      if (e.route !== undefined && (typeof e.route !== 'string' || !e.route.startsWith('/'))) {
+        throw new Error(`entries[${i}] ('${e.id}'): component 'route' must be a string starting with '/'`);
+      }
     }
 
     if (e.requires !== undefined && !['dev-server', 'none'].includes(e.requires)) {
@@ -159,7 +163,7 @@ function gitSync(...args) {
 function detectRepoFromRemote() {
   const url = gitSync('config', '--get', 'remote.origin.url');
   if (!url) return 'unknown/unknown';
-  const m = url.match(/[:/]([^/]+)\/([^/]+?)(?:\.git)?$/);
+  const m = url.replace(/\/$/, '').match(/[:/]([^/]+)\/([^/]+?)(?:\.git)?$/);
   return m ? `${m[1]}/${m[2]}` : url;
 }
 
@@ -273,7 +277,9 @@ async function runDocsEntry(entry, entryDir, cfg) {
     const stemPath = join(entryDir, step.screenshot);
     const args = entry.type === 'page'
       ? ['capture', entry.route, stemPath]
-      : ['component', entry.selector, stemPath];
+      : entry.route
+        ? ['component', entry.selector, stemPath, entry.route]
+        : ['component', entry.selector, stemPath];
 
     const res = runVerify(args, { timeout: 90000 });
     if (res.status !== 0) {
@@ -398,7 +404,7 @@ async function doRun(surface) {
   const docsUrl = process.env.DOCS_URL || DEFAULT_DOCS_URL;
   const mode = process.env.DOCS_MODE
     ? process.env.DOCS_MODE
-    : (docsUrl.startsWith('http://localhost') ? 'dev' : 'production');
+    : (/^http:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::|\/|$)/.test(docsUrl) ? 'dev' : 'production');
   if (!['dev', 'production'].includes(mode)) {
     throw new Error(`DOCS_MODE must be 'dev' or 'production', got '${mode}'`);
   }
