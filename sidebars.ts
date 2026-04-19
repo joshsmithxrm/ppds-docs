@@ -43,6 +43,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'contributing/index',
         'contributing/style-guide',
+        'CROSS-REPO',
       ],
     },
   ],
