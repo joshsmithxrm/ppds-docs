@@ -133,5 +133,5 @@ Treat the MCP server the same way you treat an interactive CLI session: scope it
 
 - [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) — host-side configuration and debugging
 - [modelcontextprotocol.io](https://modelcontextprotocol.io) — protocol specification
-- [PPDS CLI reference](/docs/reference/cli/overview) — same backend, command-line surface
+- [PPDS CLI reference](/docs/reference/cli) — same backend, command-line surface
 - [Authentication guide](/docs/guides/authentication) — create profiles for `--profile`

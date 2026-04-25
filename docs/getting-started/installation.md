@@ -87,5 +87,5 @@ Profile storage, credential providers, and Global Discovery Service integration.
 ## Next Steps
 
 - [Configure authentication](/docs/guides/authentication) to connect to your environment
-- [Explore the CLI commands](/docs/reference/cli/overview)
-- [Learn the libraries](/docs/reference/libraries/overview)
+- [Explore the CLI commands](/docs/reference/cli)
+- [Learn the libraries](/docs/reference/libraries)
