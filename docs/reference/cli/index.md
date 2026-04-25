@@ -201,4 +201,4 @@ All four of the first variables must be set. Setting one to three of four is a h
 ## Next Steps
 
 - [Authentication](/docs/guides/authentication) — create profiles, service principal setup, federated auth
-- [Libraries Overview](/docs/reference/libraries/overview) — the libraries the CLI is built on
+- [Libraries Overview](/docs/reference/libraries) — the libraries the CLI is built on

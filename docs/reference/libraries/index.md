@@ -255,4 +255,4 @@ Breaking changes are listed in each package's `CHANGELOG.md` in the main repo: [
 ## Next steps
 
 - [Authentication guide](/docs/guides/authentication) — profile creation and credential flows
-- [CLI reference](/docs/reference/cli/overview) — commands built on these libraries
+- [CLI reference](/docs/reference/cli) — commands built on these libraries

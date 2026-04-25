@@ -98,7 +98,7 @@ const config: Config = {
           items: [
             { label: 'Getting Started', to: '/docs/getting-started/installation' },
             { label: 'Guides', to: '/docs/guides/authentication' },
-            { label: 'CLI Reference', to: '/docs/reference/cli/overview' },
+            { label: 'CLI Reference', to: '/docs/reference/cli' },
           ],
         },
         {

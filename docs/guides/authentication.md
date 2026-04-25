@@ -343,5 +343,5 @@ ppds auth create
 
 ## Next steps
 
-- [CLI Command Reference](/docs/reference/cli/overview)
-- [Libraries Overview](/docs/reference/libraries/overview)
+- [CLI Command Reference](/docs/reference/cli)
+- [Libraries Overview](/docs/reference/libraries)
