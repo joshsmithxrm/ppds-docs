@@ -41,6 +41,8 @@ Gets or sets the Power Platform environment ID.
 
 Gets the environment type as a string.
 Maps from Microsoft.Xrm.Sdk.Organization.OrganizationType enum values.
+Sentinels -1 / -2 are produced by BAP discovery (see BapEnvironmentService.MapEnvironmentSku)
+to distinguish a "Default" environment and an unrecognized SKU from a real Production org.
 
 #### FriendlyName
 

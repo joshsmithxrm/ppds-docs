@@ -56,6 +56,17 @@ Gets the MSAL Azure cloud instance for the specified cloud environment.
 
 - Returns: The Azure cloud instance.
 
+#### GetBapApiUrl
+
+`string GetBapApiUrl(CloudEnvironment cloud)`
+
+Gets the BAP (Business Application Platform) API base URL for the specified cloud environment.
+Used for environment discovery via the admin API when Global Discovery is not available.
+
+- Param `cloud`: The cloud environment.
+
+- Returns: The BAP API base URL.
+
 #### GetFlowPortalUrl
 
 `string GetFlowPortalUrl(CloudEnvironment cloud)`
