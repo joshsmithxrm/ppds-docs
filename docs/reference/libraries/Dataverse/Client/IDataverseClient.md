@@ -25,6 +25,14 @@ Cloning is significantly faster than creating a new connection.
 
 - Returns: A cloned client instance.
 
+#### GetRawWebApiAsync
+
+`Task<string> GetRawWebApiAsync(string queryString, CancellationToken ct)`
+
+GETs a raw WebAPI query string and returns the response body as JSON.
+Used to traverse OData navigation properties not exposed as SDK attributes.
+Returns null on 404 or if the response is empty.
+
 
 ### Properties
 

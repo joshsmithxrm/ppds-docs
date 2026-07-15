@@ -27,9 +27,9 @@ Initializes a new instance of the `PPDS.Migration.Export.ParallelExporter` class
 
 - Param `dataWriter`: The data writer.
 
-#### ParallelExporter(IDataverseConnectionPool connectionPool, ICmtSchemaReader schemaReader, ICmtDataWriter dataWriter, FileColumnTransferHelper fileTransferHelper, IOptions&lt;MigrationOptions&gt; migrationOptions, ILogger&lt;ParallelExporter&gt; logger)
+#### ParallelExporter(IDataverseConnectionPool connectionPool, ICmtSchemaReader schemaReader, ICmtDataWriter dataWriter, IJsonDataWriter jsonDataWriter, FileColumnTransferHelper fileTransferHelper, IOptions&lt;MigrationOptions&gt; migrationOptions, ILogger&lt;ParallelExporter&gt; logger)
 
-`ParallelExporter(IDataverseConnectionPool connectionPool, ICmtSchemaReader schemaReader, ICmtDataWriter dataWriter, FileColumnTransferHelper fileTransferHelper, IOptions<MigrationOptions> migrationOptions, ILogger<ParallelExporter> logger)`
+`ParallelExporter(IDataverseConnectionPool connectionPool, ICmtSchemaReader schemaReader, ICmtDataWriter dataWriter, IJsonDataWriter jsonDataWriter, FileColumnTransferHelper fileTransferHelper, IOptions<MigrationOptions> migrationOptions, ILogger<ParallelExporter> logger)`
 
 Initializes a new instance of the `PPDS.Migration.Export.ParallelExporter` class.
 
@@ -37,7 +37,9 @@ Initializes a new instance of the `PPDS.Migration.Export.ParallelExporter` class
 
 - Param `schemaReader`: The schema reader.
 
-- Param `dataWriter`: The data writer.
+- Param `dataWriter`: The CMT XML data writer.
+
+- Param `jsonDataWriter`: The JSON data writer (used when `PPDS.Migration.Export.ExportOptions.Format` is `PPDS.Migration.Export.ExportDataFormat.Json`).
 
 - Param `fileTransferHelper`: Optional file column transfer helper for downloading file data.
 

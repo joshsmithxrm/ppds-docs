@@ -146,6 +146,14 @@ Disposes of the client and releases resources.
 
 *(inherited from `Microsoft.PowerPlatform.Dataverse.Client.IOrganizationServiceAsync2.ExecuteAsync(Microsoft.Xrm.Sdk.OrganizationRequest,System.Threading.CancellationToken)`)*
 
+#### GetRawWebApiAsync
+
+`Task<string> GetRawWebApiAsync(string queryString, CancellationToken ct)`
+
+GETs a raw WebAPI query string and returns the response body as JSON.
+Used to traverse OData navigation properties not exposed as SDK attributes.
+Returns null on 404 or if the response is empty.
+
 #### Retrieve
 
 `Entity Retrieve(string entityName, Guid id, ColumnSet columnSet)`

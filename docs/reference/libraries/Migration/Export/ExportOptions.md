@@ -21,6 +21,13 @@ Options for export operations.
 Gets or sets the degree of parallelism for entity export.
 Default: ProcessorCount * 2
 
+#### Format
+
+`ExportDataFormat Format { get; set; }`
+
+Gets or sets the serialization format for the exported data.
+Default: `PPDS.Migration.Export.ExportDataFormat.Cmt` (CMT-compatible XML ZIP).
+
 #### IncludeFileData
 
 `bool IncludeFileData { get; set; }`

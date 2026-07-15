@@ -32,6 +32,12 @@ Gets or sets the color associated with the option (hex string).
 
 Gets or sets the description for the new option.
 
+#### DryRun
+
+`bool DryRun { get; set; }`
+
+Gets or sets whether this is a dry-run (validation only, no changes persisted) (#1172).
+
 #### EntityLogicalName
 
 `string EntityLogicalName { get; set; }`

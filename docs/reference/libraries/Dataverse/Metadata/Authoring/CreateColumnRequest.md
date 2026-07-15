@@ -146,6 +146,12 @@ Gets or sets the local option definitions for new Choice/Choices columns.
 
 Gets or sets the precision for Decimal, Double, and Money columns.
 
+#### Publish
+
+`bool Publish { get; set; }`
+
+Gets or sets whether to publish the entity after the column is created (#1161).
+
 #### RequiredLevel
 
 `string RequiredLevel { get; set; }`

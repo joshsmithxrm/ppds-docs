@@ -16,7 +16,7 @@ Result of an environment resolution attempt.
 
 #### Failed
 
-`EnvironmentResolutionResult Failed(string errorMessage)`
+`EnvironmentResolutionResult Failed(string errorMessage, string errorCode)`
 
 Creates a failed result.
 
@@ -34,6 +34,13 @@ Creates a successful result.
 `EnvironmentInfo Environment { get; set; }`
 
 Gets the resolved environment info (null if failed).
+
+#### ErrorCode
+
+`string ErrorCode { get; set; }`
+
+Gets the structured error code carried from the underlying failure (null if successful or unknown).
+Values come from `PPDS.Auth.AuthErrorCodes`.
 
 #### ErrorMessage
 
