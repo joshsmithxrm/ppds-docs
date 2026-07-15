@@ -15,6 +15,12 @@ Method used to resolve an environment.
 
 ### Fields
 
+#### BapDiscovery
+
+`ResolutionMethod BapDiscovery`
+
+Resolved via BAP Environment Discovery (service principal).
+
 #### DirectConnection
 
 `ResolutionMethod DirectConnection`

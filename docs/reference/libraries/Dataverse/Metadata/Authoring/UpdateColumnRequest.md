@@ -98,6 +98,12 @@ Gets or sets the updated minimum value.
 
 Gets or sets the updated precision.
 
+#### Publish
+
+`bool Publish { get; set; }`
+
+Gets or sets whether to publish the entity after the column is updated (#1171).
+
 #### RequiredLevel
 
 `string RequiredLevel { get; set; }`

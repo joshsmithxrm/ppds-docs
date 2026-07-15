@@ -116,6 +116,12 @@ Gets or sets the max length for the primary attribute.
 
 Gets or sets the schema name for the primary attribute.
 
+#### Publish
+
+`bool Publish { get; set; }`
+
+Gets or sets whether to publish the entity after it is created (#1171).
+
 #### SchemaName
 
 `string SchemaName { get; set; }`

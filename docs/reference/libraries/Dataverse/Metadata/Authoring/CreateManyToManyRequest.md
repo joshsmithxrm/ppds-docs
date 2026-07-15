@@ -48,7 +48,9 @@ Gets or sets the navigation property name on Entity2.
 
 `string IntersectEntitySchemaName { get; set; }`
 
-Gets or sets the schema name of the intersect entity.
+Gets or sets the schema name for the intersect entity that Dataverse will auto-create
+to store many-to-many associations. If null or empty, defaults to `PPDS.Dataverse.Metadata.Authoring.CreateManyToManyRequest.SchemaName`
+(matches Power Apps Maker convention; see Microsoft Learn CreateManyToManyRequest sample).
 
 #### SchemaName
 

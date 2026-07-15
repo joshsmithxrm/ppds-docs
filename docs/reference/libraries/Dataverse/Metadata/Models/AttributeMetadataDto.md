@@ -56,11 +56,29 @@ Gets whether the attribute can be secured for read operations.
 
 Gets whether the attribute can be secured for update operations.
 
+#### ColumnNumber
+
+`Nullable<int> ColumnNumber { get; set; }`
+
+Gets the physical column number of the attribute.
+
+#### CreatedOn
+
+`Nullable<DateTime> CreatedOn { get; set; }`
+
+Gets when the attribute was created.
+
 #### DateTimeBehavior
 
 `string DateTimeBehavior { get; set; }`
 
 Gets the date time behavior for datetime attributes.
+
+#### DeprecatedVersion
+
+`string DeprecatedVersion { get; set; }`
+
+Gets the version when this attribute was deprecated.
 
 #### Description
 
@@ -73,6 +91,12 @@ Gets the description of the attribute.
 `string DisplayName { get; set; }`
 
 Gets the attribute display name.
+
+#### ExternalName
+
+`string ExternalName { get; set; }`
+
+Gets the external name for virtual entity providers.
 
 #### Format
 
@@ -92,11 +116,23 @@ Gets the formula definition for calculated fields.
 
 Gets the version when this attribute was introduced.
 
+#### IsAuditEnabled
+
+`bool IsAuditEnabled { get; set; }`
+
+Gets whether auditing is enabled for this attribute.
+
 #### IsCustomAttribute
 
 `bool IsCustomAttribute { get; set; }`
 
 Gets whether this is a custom attribute.
+
+#### IsCustomizable
+
+`bool IsCustomizable { get; set; }`
+
+Gets whether the attribute is customizable.
 
 #### IsFilterable
 
@@ -134,6 +170,12 @@ Gets whether this attribute is the primary ID.
 
 Gets whether this attribute is the primary name.
 
+#### IsRenameable
+
+`bool IsRenameable { get; set; }`
+
+Gets whether the attribute can be renamed.
+
 #### IsRetrievable
 
 `bool IsRetrievable { get; set; }`
@@ -157,6 +199,12 @@ Gets whether field-level security is enabled for this attribute.
 `bool IsSortable { get; set; }`
 
 Gets whether the attribute is sortable.
+
+#### IsValidForAdvancedFind
+
+`bool IsValidForAdvancedFind { get; set; }`
+
+Gets whether the attribute appears in Advanced Find.
 
 #### IsValidForCreate
 
@@ -217,6 +265,12 @@ Gets the unique metadata identifier.
 `Nullable<decimal> MinValue { get; set; }`
 
 Gets the minimum value for numeric attributes.
+
+#### ModifiedOn
+
+`Nullable<DateTime> ModifiedOn { get; set; }`
+
+Gets when the attribute was last modified.
 
 #### OptionSetName
 

@@ -5,7 +5,7 @@
 | Command ID | Title | Category | Default Keybinding | When Clause |
 |---|---|---|---|---|
 | `ppds.configureEnvironment` | Configure Environment | PPDS |  |  |
-| `ppds.copyEnvironmentUrl` | Copy URL |  |  |  |
+| `ppds.copyEnvironmentUrl` | Copy URL | PPDS |  |  |
 | `ppds.createProfile` | Create Profile | PPDS |  |  |
 | `ppds.dataExplorer` | Open Data Explorer | PPDS |  |  |
 | `ppds.debug.daemonStatus` | Daemon Status | PPDS Debug |  |  |
@@ -18,44 +18,44 @@
 | `ppds.exportCellResultsJson` | Export Cell Results to JSON | PPDS |  |  |
 | `ppds.invalidateProfile` | Invalidate Tokens | PPDS |  |  |
 | `ppds.listProfiles` | List Profiles | PPDS |  |  |
-| `ppds.moveProfileDown` | Move Down |  |  |  |
-| `ppds.moveProfileUp` | Move Up |  |  |  |
+| `ppds.moveProfileDown` | Move Down | PPDS |  |  |
+| `ppds.moveProfileUp` | Move Up | PPDS |  |  |
 | `ppds.newNotebook` | New Notebook | PPDS |  |  |
 | `ppds.openCellInDataExplorer` | Open in Data Explorer | PPDS |  |  |
 | `ppds.openConnectionReferences` | Open Connection References | PPDS |  |  |
-| `ppds.openConnectionReferencesForEnv` | Open Connection References |  |  |  |
-| `ppds.openDataExplorerForEnv` | Open Data Explorer |  |  |  |
+| `ppds.openConnectionReferencesForEnv` | Open Connection References | PPDS |  |  |
+| `ppds.openDataExplorerForEnv` | Open Data Explorer | PPDS |  |  |
 | `ppds.openDocumentation` | Open Documentation | PPDS |  |  |
 | `ppds.openEnvironmentVariables` | Open Environment Variables | PPDS |  |  |
-| `ppds.openEnvironmentVariablesForEnv` | Open Environment Variables |  |  |  |
+| `ppds.openEnvironmentVariablesForEnv` | Open Environment Variables | PPDS |  |  |
 | `ppds.openImportJobs` | Open Import Jobs | PPDS |  |  |
-| `ppds.openImportJobsForEnv` | Open Import Jobs |  |  |  |
-| `ppds.openInDynamics` | Open in Dynamics 365 |  |  |  |
-| `ppds.openInMaker` | Open in Maker Portal |  |  |  |
+| `ppds.openImportJobsForEnv` | Open Import Jobs | PPDS |  |  |
+| `ppds.openInDynamics` | Open in Dynamics 365 | PPDS |  |  |
+| `ppds.openInMaker` | Open in Maker Portal | PPDS |  |  |
 | `ppds.openMetadataBrowser` | Open Metadata Browser | PPDS |  |  |
 | `ppds.openMetadataBrowserForEnv` | Open Metadata Browser | PPDS |  |  |
 | `ppds.openNotebooks` | Open Notebooks | PPDS |  |  |
 | `ppds.openPlugins` | Open Plugin Registration | PPDS |  |  |
-| `ppds.openPluginsForEnv` | Open Plugin Registration |  |  |  |
+| `ppds.openPluginsForEnv` | Open Plugin Registration | PPDS |  |  |
 | `ppds.openPluginTraces` | Open Plugin Traces | PPDS |  |  |
-| `ppds.openPluginTracesForEnv` | Open Plugin Traces |  |  |  |
+| `ppds.openPluginTracesForEnv` | Open Plugin Traces | PPDS |  |  |
 | `ppds.openQueryInNotebook` | Open Query in Notebook | PPDS |  |  |
 | `ppds.openSolutions` | Open Solutions | PPDS |  |  |
-| `ppds.openSolutionsForEnv` | Open Solutions |  |  |  |
+| `ppds.openSolutionsForEnv` | Open Solutions | PPDS |  |  |
 | `ppds.openWebResources` | Open Web Resources | PPDS |  |  |
-| `ppds.openWebResourcesForEnv` | Open Web Resources |  |  |  |
+| `ppds.openWebResourcesForEnv` | Open Web Resources | PPDS |  |  |
 | `ppds.pluginTreeDisableStep` | Disable Step | PPDS |  |  |
 | `ppds.pluginTreeDownload` | Download Binary | PPDS |  |  |
 | `ppds.pluginTreeEnableStep` | Enable Step | PPDS |  |  |
 | `ppds.pluginTreeUnregister` | Unregister | PPDS |  |  |
 | `ppds.profileDetails` | Profile Details | PPDS |  |  |
-| `ppds.refreshProfiles` | Refresh |  |  |  |
-| `ppds.removeEnvironment` | Remove Environment |  |  |  |
+| `ppds.refreshProfiles` | Refresh | PPDS |  |  |
+| `ppds.removeEnvironment` | Remove Environment | PPDS |  |  |
 | `ppds.renameProfile` | Rename Profile | PPDS |  |  |
 | `ppds.restartDaemon` | Restart Daemon | PPDS |  |  |
 | `ppds.selectNotebookEnvironment` | Select Notebook Environment | PPDS |  |  |
 | `ppds.selectProfile` | Select Profile | PPDS |  |  |
-| `ppds.setDefaultEnvironment` | Set as Default |  |  |  |
+| `ppds.setDefaultEnvironment` | Set as Default | PPDS |  |  |
 | `ppds.showLogs` | Show Logs | PPDS |  |  |
-| `ppds.testConnection` | Test Connection |  |  |  |
+| `ppds.testConnection` | Test Connection | PPDS |  |  |
 | `ppds.toggleNotebookCellLanguage` | Toggle SQL/FetchXML | PPDS |  |  |
