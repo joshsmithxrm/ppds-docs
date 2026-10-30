@@ -1,17 +1,17 @@
 {
   "status": "unpublished-stable-version-simulation",
-  "source_commit": "ce615d8046ea23fa9df0343cb9b23e8ad9027b9c",
-  "generator_commit": "ce615d8046ea23fa9df0343cb9b23e8ad9027b9c",
+  "source_commit": "6fec5a6909900b5356defdef3eea893fdaece685",
+  "generator_commit": "6fec5a6909900b5356defdef3eea893fdaece685",
   "generator_target": "Unchanged net8.0 projects; launched with dotnet --roll-forward LatestMajor to load net10.0 input assemblies",
   "runtime_artifacts": "Candidate owner disposable clone with local-only simulated release tags and no remote; CLI 1.4.2 and MCP 1.2.2 version strings do not establish public availability.",
   "binary_sha256": {
-    "ppds-mcp-server.dll": "cb0d72aa82fd082e5ec4521b90439ffd00865b0ff2de8696c26ff8195fb83a2e",
-    "PPDS.Auth.dll": "0241613d7115efce81b7907c010038b56d2af85fda175a9901ae16298ee2220c",
-    "PPDS.Dataverse.dll": "2d708efe49fa7d72c9589b6d36442a6956a87ff7a246ef9c6420fa81d5e5e592",
-    "ppds.dll": "378d55099f8512b7f75b13c1f47ab0f2aeafd5a1954eee6c6bbe269cbd0a5c35",
-    "PPDS.Migration.dll": "13f6d24c13b5e84cc904218900d16a8fd8e01ca9fd7f00255d93d649a2b3e38f",
-    "PPDS.Plugins.dll": "2b9985a42a7704b5f9aa890635a282a43d7e0f4b282faafd058dac55370d341f",
-    "PPDS.Query.dll": "07ff9250ce62cff0daa6b1d5581b18dad45397c00ddd8cea310a33cb3080b8c4"
+    "ppds-mcp-server.dll": "ae3bda4fb2cbad77b1280673f1bc0c6090665d24038fa24c25e303f1aa6f1fdf",
+    "PPDS.Auth.dll": "bddc241704048bfeaf49dcd081142f4402c783ab1c2ed97c06f0b5cab2cbfe1f",
+    "PPDS.Dataverse.dll": "d9659db081e13fe0f5c01bf74c4ba56fb0ca77941bc9f22a164be68c174f6660",
+    "ppds.dll": "1466db34d01d2f46d3a67265d849a009fa17062e65faec22a0657e4f08f1e744",
+    "PPDS.Migration.dll": "c9384a11be15b4e873e45fe5e9259fc43cd299d2e64b48ee689988fa746f8106",
+    "PPDS.Plugins.dll": "f77b2ac526f7bf7661332fd4667e321267beda49cec1988182daa1af471fc053",
+    "PPDS.Query.dll": "e75273c7bd81879c70255fbccdd750d567dc8981643c8c7fd86a8aeeee96f5fb"
   },
   "generated_files": [
     "cli/api/_index.md",
@@ -809,5 +809,18 @@
     "libraries/Migration/_index.md": "libraries/Migration/api-reference.md",
     "libraries/Plugins/_index.md": "libraries/Plugins/api-reference.md"
   },
-  "preservation": "Existing curated files were checked and not overwritten. Five generated indexes map to the existing api-reference.md routes; their content is unchanged from generator output."
+  "preservation": "Existing curated files were checked and not overwritten. Five generated indexes map to the existing api-reference.md routes; their content is unchanged from generator output.",
+  "artifact_manifest_verification": {
+    "file_count": 244,
+    "manifest_sha256": "d98fc9691b4e504d54757ba14f6e0aa245315291a8d939811f547364115fd401",
+    "result": "All paths, lengths, and SHA256 values matched before and after copying; CLI and MCP additionally matched the coordinator-supplied hashes."
+  },
+  "candidate_pr": "https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1473",
+  "recapture_comparison": {
+    "generated_files": 785,
+    "byte_different": [],
+    "previous_source_commit": "ce615d8046ea23fa9df0343cb9b23e8ad9027b9c",
+    "added": [],
+    "removed": []
+  }
 }

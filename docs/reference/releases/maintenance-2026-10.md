@@ -24,7 +24,7 @@ Published versions were verified on October 29, 2026. Each product retains its
 own version line; all candidate tags must identify the reviewed release commit.
 
 The reference pages in this branch were generated from commit
-`ce615d8046ea23fa9df0343cb9b23e8ad9027b9c`, using CLI 1.4.2 / MCP 1.2.2
+`6fec5a6909900b5356defdef3eea893fdaece685`, using CLI 1.4.2 / MCP 1.2.2
 assemblies from a disposable local release simulation. Those version strings
 do not establish public availability. The
 [generation provenance](https://github.com/joshsmithxrm/ppds-docs/blob/codex/maintenance-docs-20261029/validation/candidate-provenance.json)
