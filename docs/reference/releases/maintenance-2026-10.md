@@ -20,10 +20,13 @@ commands continue to select the [published versions](../../getting-started/insta
 | PPDS.Mcp | 1.2.1 | 1.2.2 |
 | PPDS Extension | 1.6.1 | 1.6.2 |
 | PPDS Skills | 0.1.1 | 0.1.2 |
+| PPDS.Tools | 1.1.0 stable; 1.2.0-alpha2 prerelease | 1.2.0-alpha3 prerelease |
+| PPDS ALM | 1.0.0 (`v1` / `v1.0.0`) | 1.0.1 |
 
-Published versions were verified on October 29, 2026. Each product retains its
+Published versions were verified on October 29, 2026, with Tools and ALM
+checked on October 30. Each product retains its
 own version line; all candidate tags must identify the reviewed release commit.
-Skills has its own reviewed repository commit. The Extension row refers to
+Skills, Tools, and ALM each have their own reviewed repository commit. The Extension row refers to
 the maintained extension in the main PPDS repository; the retired standalone
 extension repository and Demo are outside this release.
 
@@ -74,6 +77,49 @@ The Extension includes patched DOMPurify in notebook rendering, updates
 vscode-jsonrpc, and targets bundled CLI 1.4.2. Node modernization is deferred.
 See the [cryptography servicing PR](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1470)
 and [RPC update](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1462).
+
+## PowerShell and ALM compatibility
+
+### PPDS.Tools
+
+[Tools #16](https://github.com/joshsmithxrm/ppds-tools/pull/16) prepares
+**1.2.0-alpha3**, repairing all 12 cmdlets in the prerelease CLI-wrapper API.
+Stable **1.1.0** retains its native implementation and is unchanged. The fixes
+redact supplied credentials in diagnostics, parse complete JSON and plugin
+envelopes, read migration progress from stderr, and propagate failures. They
+also preserve arguments, relative paths and interactive prompts, and terminate
+the owned CLI process when PowerShell cancels a call.
+
+The tested baseline is published CLI **1.4.1**: 143 Pester tests pass, including
+offline extraction and schema checks. The three packaged offline checks also
+pass against the **1.4.2 candidate**. Authentication, deployment and migration
+use mock boundaries; no live-service success is claimed. See the
+[reviewed compatibility details](https://github.com/joshsmithxrm/ppds-tools/blob/a7ca62bd97810d3837a8a602bdf8487e9faa512b/docs/CLI_COMPATIBILITY.md).
+The source merge does not publish alpha3 or promote the API to stable.
+
+### PPDS ALM
+
+[ALM #35](https://github.com/joshsmithxrm/ppds-alm/pull/35) prepares **1.0.1**.
+Plugin builds select the evaluated MSBuild `TargetPath` using the selected
+solution's context. Ambiguous builds require `plugin-project` or
+`plugin-target-framework`. Plugin workflows use current extraction,
+authentication, diff and deployment contracts; failed or invalid drift results
+stop deployment, while a valid drift exit code 1 remains successful. Cleanup
+removes only the temporary named profile.
+
+The workflows keep the consumer checkout separate from their composite
+actions, fetched from `job.workflow_repository` at `job.workflow_sha`.
+These identity fields require **GitHub.com**; this patch does not support
+GitHub Enterprise Server. The 19 offline tests pass against both published
+CLI **1.4.1** and the **1.4.2 candidate**, including real MSBuild selection
+and synthetic `net462` extraction. Authentication, diff and deploy parser
+checks use `--help`, with mocked execution boundaries; they do not validate
+live deployment. See the [reviewed test scope](https://github.com/joshsmithxrm/ppds-alm/blob/b96ef053de12be54121f55e97ee51628244174aa/tests/README.md).
+
+The stable `v1` and `v1.0.0` refs remain unchanged until publication approval.
+The source merge affects consumers that explicitly opt into `main`; it does
+not deliver these fixes to stable-tag consumers. The release will create
+`v1.0.1` and update `v1`, preserving the existing `v1.0.0` tag.
 
 ## Release verification
 
