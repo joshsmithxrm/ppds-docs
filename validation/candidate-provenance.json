@@ -1,17 +1,29 @@
 {
   "status": "unpublished-stable-version-simulation",
-  "source_commit": "6fec5a6909900b5356defdef3eea893fdaece685",
-  "generator_commit": "6fec5a6909900b5356defdef3eea893fdaece685",
+  "source_commit": "d7ee9c5d9852ea5a67dd66f421fcc8c22a505ba6",
+  "source_tree": "bf240e8c3afb1cd0a1ce37fdd1c6bb3d187002b5",
+  "generator_commit": "d7ee9c5d9852ea5a67dd66f421fcc8c22a505ba6",
   "generator_target": "Unchanged net8.0 projects; launched with dotnet --roll-forward LatestMajor to load net10.0 input assemblies",
-  "runtime_artifacts": "Candidate owner disposable clone with local-only simulated release tags and no remote; CLI 1.4.2 and MCP 1.2.2 version strings do not establish public availability.",
+  "runtime_artifacts": "Two complete framework-dependent publish directories from the final-main local stable-version simulation; CLI 1.4.2 and MCP 1.2.2 are not public packages.",
+  "artifact_manifest_verification": {
+    "file_count": 468,
+    "manifest_sha256": "b2135aa1e4697bd2b39207dfe9484f2909822847e934544c56eeebb2573860fe",
+    "result": "All 468 paths and SHA256 values matched before and after copying the two complete publish directories. Measured source and copy lengths matched; the supplied manifest contains hashes, not lengths."
+  },
   "binary_sha256": {
-    "ppds-mcp-server.dll": "ae3bda4fb2cbad77b1280673f1bc0c6090665d24038fa24c25e303f1aa6f1fdf",
-    "PPDS.Auth.dll": "bddc241704048bfeaf49dcd081142f4402c783ab1c2ed97c06f0b5cab2cbfe1f",
-    "PPDS.Dataverse.dll": "d9659db081e13fe0f5c01bf74c4ba56fb0ca77941bc9f22a164be68c174f6660",
-    "ppds.dll": "1466db34d01d2f46d3a67265d849a009fa17062e65faec22a0657e4f08f1e744",
-    "PPDS.Migration.dll": "c9384a11be15b4e873e45fe5e9259fc43cd299d2e64b48ee689988fa746f8106",
-    "PPDS.Plugins.dll": "f77b2ac526f7bf7661332fd4667e321267beda49cec1988182daa1af471fc053",
-    "PPDS.Query.dll": "e75273c7bd81879c70255fbccdd750d567dc8981643c8c7fd86a8aeeee96f5fb"
+    "reference-cli/PPDS.Auth.dll": "ded2b56b80146702745ac04510928b581ccccd6590b252c42de3a10a8682dd8a",
+    "reference-cli/PPDS.Dataverse.dll": "fbd9d92489313e555935d28344c6d54806533264c64f15026910e4064ce24244",
+    "reference-cli/ppds.dll": "c0a31a0b3d07b6dbc57036ebba1fbb8700c8726ae0217469fa660a1d10e32495",
+    "reference-cli/PPDS.Migration.dll": "ef737e7689ef176b93250ac7caae355a187da5bf68545c5102c912e873fc95fb",
+    "reference-cli/PPDS.Plugins.dll": "600060f859144b369c491414badb719d496863a70b73b8f31066956eaa12cd1b",
+    "reference-cli/PPDS.Query.dll": "090f9f25a15633d533d3a7e94441a64d97998eb24a7c967c7c587b187bade546",
+    "reference-mcp/ppds-mcp-server.dll": "459f8aa7ece3b0ef991542733273bc4f808afa6b9d6959465904ec4ed6b2296e",
+    "reference-mcp/PPDS.Auth.dll": "ded2b56b80146702745ac04510928b581ccccd6590b252c42de3a10a8682dd8a",
+    "reference-mcp/PPDS.Dataverse.dll": "fbd9d92489313e555935d28344c6d54806533264c64f15026910e4064ce24244",
+    "reference-mcp/ppds.dll": "c0a31a0b3d07b6dbc57036ebba1fbb8700c8726ae0217469fa660a1d10e32495",
+    "reference-mcp/PPDS.Migration.dll": "ef737e7689ef176b93250ac7caae355a187da5bf68545c5102c912e873fc95fb",
+    "reference-mcp/PPDS.Plugins.dll": "600060f859144b369c491414badb719d496863a70b73b8f31066956eaa12cd1b",
+    "reference-mcp/PPDS.Query.dll": "090f9f25a15633d533d3a7e94441a64d97998eb24a7c967c7c587b187bade546"
   },
   "generated_files": [
     "cli/api/_index.md",
@@ -800,6 +812,12 @@
     "mcp/tools/ppds_web_resources_list.md",
     "mcp/tools/ppds_web_resources_publish.md"
   ],
+  "generation_comparison": {
+    "previous_source_commit": "6fec5a6909900b5356defdef3eea893fdaece685",
+    "changed_files": [],
+    "added_files": [],
+    "removed_files": []
+  },
   "public_release_recapture_pending": true,
   "existing_generated_files_not_emitted": [],
   "index_route_mapping": {
@@ -809,18 +827,5 @@
     "libraries/Migration/_index.md": "libraries/Migration/api-reference.md",
     "libraries/Plugins/_index.md": "libraries/Plugins/api-reference.md"
   },
-  "preservation": "Existing curated files were checked and not overwritten. Five generated indexes map to the existing api-reference.md routes; their content is unchanged from generator output.",
-  "artifact_manifest_verification": {
-    "file_count": 244,
-    "manifest_sha256": "d98fc9691b4e504d54757ba14f6e0aa245315291a8d939811f547364115fd401",
-    "result": "All paths, lengths, and SHA256 values matched before and after copying; CLI and MCP additionally matched the coordinator-supplied hashes."
-  },
-  "candidate_pr": "https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1473",
-  "recapture_comparison": {
-    "generated_files": 785,
-    "byte_different": [],
-    "previous_source_commit": "ce615d8046ea23fa9df0343cb9b23e8ad9027b9c",
-    "added": [],
-    "removed": []
-  }
+  "preservation": "Existing curated files were checked and not overwritten. Five generated indexes map to existing api-reference.md routes; their content is unchanged from generator output."
 }

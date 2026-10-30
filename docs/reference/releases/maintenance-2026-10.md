@@ -31,8 +31,8 @@ the maintained extension in the main PPDS repository; the retired standalone
 extension repository and Demo are outside this release.
 
 The reference pages in this branch were generated from commit
-`6fec5a6909900b5356defdef3eea893fdaece685`, using CLI 1.4.2 / MCP 1.2.2
-assemblies from a disposable local release simulation. Those version strings
+`d7ee9c5d9852ea5a67dd66f421fcc8c22a505ba6`, using CLI 1.4.2 / MCP 1.2.2
+assemblies from the final-main local release simulation. Those version strings
 do not establish public availability. The
 [generation provenance](https://github.com/joshsmithxrm/ppds-docs/blob/codex/maintenance-docs-20261029/validation/candidate-provenance.json)
 records source/generator commits, binary hashes, and the existing API-index
