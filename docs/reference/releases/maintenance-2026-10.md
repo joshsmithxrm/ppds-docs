@@ -19,9 +19,13 @@ commands continue to select the [published versions](../../getting-started/insta
 | PPDS.Cli | 1.4.1 | 1.4.2 |
 | PPDS.Mcp | 1.2.1 | 1.2.2 |
 | PPDS Extension | 1.6.1 | 1.6.2 |
+| PPDS Skills | 0.1.1 | 0.1.2 |
 
 Published versions were verified on October 29, 2026. Each product retains its
 own version line; all candidate tags must identify the reviewed release commit.
+Skills has its own reviewed repository commit. The Extension row refers to
+the maintained extension in the main PPDS repository; the retired standalone
+extension repository and Demo are outside this release.
 
 The reference pages in this branch were generated from commit
 `6fec5a6909900b5356defdef3eea893fdaece685`, using CLI 1.4.2 / MCP 1.2.2
@@ -72,6 +76,25 @@ See the [cryptography servicing PR](https://github.com/joshsmithxrm/power-platfo
 and [RPC update](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1462).
 
 ## Release verification
+
+### Companion documentation and skills
+
+The [AI agent installation guide](../../getting-started/ai-agent-skills.md)
+covers Claude Code and GitHub Copilot CLI. Skills 0.1.2 includes candidate
+capture provenance inside the core skill, so copying all seven skill folders
+retains it. Static validation rejects relative links outside that installed
+tree. The Linux static, release-recapture, and opt-in live-evaluation workflows
+use Ubuntu 24.04 to preserve Python 3.8 support; the latter remains opt-in.
+
+Docs and skills stay on their reviewed preparation branches until publication
+is approved: merging docs deploys the public site, and merging skills makes
+the plugin available through its repository-backed marketplace. Public CLI
+and MCP packages must be verified and captured before skills are presented
+as tested against those published packages. For equal-version recapture,
+use the [manual contributor procedure](https://github.com/joshsmithxrm/ppds-skills/blob/codex/maintenance-skills-20261029/CONTRIBUTING.md#manual-offline-or-what-the-automation-runs-under-the-hood);
+the scheduled workflow skips versions that are not newer than its capture.
+
+### Combined product checks
 
 Final combined tests, package-version checks, and public-feed verification
 remain release gates. Individual PR results do not certify the combined

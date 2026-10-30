@@ -105,6 +105,7 @@ candidate's `net48` acceptance and loose-assembly requirements.
 
 ## Next Steps
 
+- [Install skills for AI agents](ai-agent-skills.md) for Claude Code or GitHub Copilot CLI
 - [Configure authentication](/docs/guides/authentication) to connect to your environment
 - [Explore the CLI commands](/docs/reference/cli)
 - [Learn the libraries](/docs/reference/libraries)
