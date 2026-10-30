@@ -110,11 +110,18 @@ removes only the temporary named profile.
 The workflows keep the consumer checkout separate from their composite
 actions, fetched from `job.workflow_repository` at `job.workflow_sha`.
 These identity fields require **GitHub.com**; this patch does not support
-GitHub Enterprise Server. The 19 offline tests pass against both published
-CLI **1.4.1** and the **1.4.2 candidate**, including real MSBuild selection
-and synthetic `net462` extraction. Authentication, diff and deploy parser
-checks use `--help`, with mocked execution boundaries; they do not validate
-live deployment. See the [reviewed test scope](https://github.com/joshsmithxrm/ppds-alm/blob/b96ef053de12be54121f55e97ee51628244174aa/tests/README.md).
+GitHub Enterprise Server. Real MSBuild selection, synthetic `net462`
+extraction, and mocked workflow execution provide separate offline coverage.
+
+[Validation follow-up #36](https://github.com/joshsmithxrm/ppds-alm/pull/36)
+corrects the authentication, diff and deploy evidence: both tested CLI versions
+return successful `--help` output even for nonexistent options. Tests now
+inspect actual advertised option declarations, value requirements and enum
+choices, with negative controls. This establishes advertised syntax, **not
+runtime parsing or live behavior**. All **22 hosted tests** pass with published
+CLI **1.4.1**; **four focused checks** also pass against each of CLI 1.4.1 and
+the **1.4.2 candidate**. No full 22-test candidate run is claimed. See the
+[corrected test scope](https://github.com/joshsmithxrm/ppds-alm/blob/94087a46b56a81675256ade758f11a23ea6b4296/tests/README.md).
 
 The stable `v1` and `v1.0.0` refs remain unchanged until publication approval.
 The source merge affects consumers that explicitly opt into `main`; it does
