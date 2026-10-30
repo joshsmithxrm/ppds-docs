@@ -14,6 +14,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'guides/authentication',
         'guides/consumption-patterns',
+        'guides/metadata-editing',
+        'guides/plugin-packages',
       ],
     },
     {

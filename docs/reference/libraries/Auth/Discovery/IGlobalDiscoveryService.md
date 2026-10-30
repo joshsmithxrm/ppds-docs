@@ -5,6 +5,7 @@
 - Namespace: `PPDS.Auth.Discovery`
 - Assembly: `PPDS.Auth`
 - Kind: Interface
+- Implements: `IEnvironmentDiscoveryService`
 
 ## Summary
 
