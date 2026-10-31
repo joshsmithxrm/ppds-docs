@@ -42,6 +42,6 @@ Read the per-flow status and phase, counts, excluded entries and errors. `succee
 
 Known preflight blockers make zero writes. A later failure, cancellation or uncertain result stops further writes while retaining earlier outcomes. A timeout after submission is `unknown`; inspect state before retrying. There is no automatic resubmission or rollback, and no inferred ordering for child-flow dependencies.
 
-Use `ppds flows disable` with the same selector rules to turn a flow off. Disabling does not require healthy connection bindings and does not cancel runs already in progress. Activation is never implicit in solution import.
+Use `ppds flows disable` with the same selector rules to turn a flow off. Disabling does not require healthy connection bindings and does not cancel runs already in progress. PPDS does not automatically invoke this activation workflow after solution import. Dataverse can import flows in an enabled state; inspect their imported state before planning changes.
 
 See the [flow specification](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/specs/flows.md) and generated CLI reference for complete options.

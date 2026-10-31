@@ -31,4 +31,4 @@ Record links use the executed URL. Export dialogs identify the actual target and
 
 Interrupting a notebook cancels its active request and discards its queued work. It does not cancel another notebook. Cancelling an individual cell does not cancel the next cell. Closing a notebook cancels its own work and clears its result cache.
 
-For shared write safeguards, see [environment safety](environment-safety.md). For implementation details and acceptance criteria, see the [query and notebook specification](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/specs/query.md).
+For shared write safeguards, see [environment safety](environment-safety.md). For implementation details and acceptance criteria, see the [notebook specification](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/specs/data-explorer.md).
