@@ -1,19 +1,19 @@
 {
-  "status": "unpublished-local-source-candidate",
-  "source_commit": "6932dcd52a38c5fe65bff19e7ce7d1c2d5709304",
+  "status": "unpublished-feature-draft-candidate",
+  "source_commit": "a9761537c4ad5d7f2276fd593b5924074484421c",
   "build_configuration": "Release",
   "target_framework": "net8.0",
   "capture_platform": "Windows x64",
   "binaries": {
     "cli": {
       "path": "src/PPDS.Cli/bin/Release/net8.0/ppds.dll",
-      "version": "1.4.3-alpha.0.8+6932dcd52a38c5fe65bff19e7ce7d1c2d5709304",
-      "sha256": "88ae34ef7c002897d25c7843bac30716460e44b01619558f71551b89e5f54be1"
+      "version": "1.4.3-alpha.0.20+a9761537c4ad5d7f2276fd593b5924074484421c",
+      "sha256": "53f4ec4dc827b3ea557733d9b07b3eca49baff3fdc907cf119b4098765e37564"
     },
     "mcp": {
       "path": "src/PPDS.Mcp/bin/Release/net8.0/ppds-mcp-server.dll",
-      "version": "1.2.3-alpha.0.8+6932dcd52a38c5fe65bff19e7ce7d1c2d5709304",
-      "sha256": "b4b5f7cf8e44638dff349c965ccb7bdd102b6b5c3f841eef8b4d3a529aeb9b93"
+      "version": "1.2.3-alpha.0.20+a9761537c4ad5d7f2276fd593b5924074484421c",
+      "sha256": "f5454d3cf59aedd36ea3e8453696b8e4c4f722195701b2097d1f9d8995cba554"
     }
   },
   "publication_claim": false,
@@ -23,18 +23,22 @@
     "cli": {
       "commit": "6932dcd52a38c5fe65bff19e7ce7d1c2d5709304",
       "path": "scripts/docs-gen/cli-reflect/bin/Release/net8.0/PPDS.DocsGen.Cli.dll",
-      "sha256": "4086ac0cedefaab5a167cb20557c3abbc1758fb28e945f2df614fcee405c43d2"
+      "sha256": "4086ac0cedefaab5a167cb20557c3abbc1758fb28e945f2df614fcee405c43d2",
+      "source_verified_unchanged_at": "a9761537c4ad5d7f2276fd593b5924074484421c"
     },
     "mcp": {
       "commit": "c9328fcca91f8f3b4ec7b5326ef9190519ec521d",
       "path": "scripts/docs-gen/mcp-reflect/bin/Release/net8.0/mcp-reflect.dll",
       "sha256": "e6c39e30fb8a87dfcb171dc54e6bd100a9cceec0cf7df8fedcb5535f5d0445a7",
-      "correction": "Exclude server-injected MCP progress from input schema; product binaries unchanged."
+      "correction": "Exclude server-injected MCP progress from input schema; corrected generator binary retained unchanged.",
+      "source_verified_unchanged_at": "a9761537c4ad5d7f2276fd593b5924074484421c",
+      "integrated_commit": "575457225dcbfc84253bcb36c1be8d2bedebba22"
     },
     "extension": {
       "commit": "6932dcd52a38c5fe65bff19e7ce7d1c2d5709304",
       "path": "scripts/docs-gen/ext-reflect/generate.js",
-      "sha256": "e11fb6048c0e9f8193fcfb2c692457a387aadc13f0470c9ba9082ffa713fb45a"
+      "sha256": "e11fb6048c0e9f8193fcfb2c692457a387aadc13f0470c9ba9082ffa713fb45a",
+      "source_verified_unchanged_at": "a9761537c4ad5d7f2276fd593b5924074484421c"
     }
   },
   "generated_file_counts": {
@@ -344,9 +348,12 @@
     "mcp/tools/ppds_web_resources_publish.md": "5569ede91b0d186310adcd2bd3c15c0a3b922db0bfce49fd40fcd29dc73cf704"
   },
   "validation": {
-    "typecheck": "passed",
-    "site_build": "passed",
+    "typecheck": "passed after final a976 recapture",
+    "site_build": "passed after final a976 recapture",
     "authored_guides": "five pages inspected in light and dark themes",
-    "live_behavior": "not established by this documentation validation"
-  }
+    "live_behavior": "not established by this documentation validation",
+    "protocol_schema": "All 45 generated tool parameter names and requiredness match actual readonly tools/list capture."
+  },
+  "full_protocol_tools_list_sha256": "96478cb4d07ee7da33d846cce5da21794a92bf9bddfb311748fbaa8cb6edf20c",
+  "prior_candidate_record": "Historical 6932 captures and provenance retained in release-review artifacts under historical-capture-6932; source history remains in this branch."
 }
