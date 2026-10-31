@@ -12,14 +12,15 @@ The Power Platform Developer Suite (PPDS) ships a set of focused .NET libraries 
 
 | Package | Published stable version | Target | Description |
 |---------|---------|--------|-------------|
-| [`PPDS.Auth`](https://www.nuget.org/packages/PPDS.Auth) | `1.1.1` | `net8.0;net9.0;net10.0` | Credential providers, auth profiles, DPAPI-encrypted credential store |
-| [`PPDS.Dataverse`](https://www.nuget.org/packages/PPDS.Dataverse) | `1.3.1` | `net8.0;net9.0;net10.0` | Connection pooling, bulk operations, throttle-aware resilience |
-| [`PPDS.Migration`](https://www.nuget.org/packages/PPDS.Migration) | `1.2.1` | `net8.0;net9.0;net10.0` | Parallel exporter and tiered importer over CMT-format archives |
-| [`PPDS.Plugins`](https://www.nuget.org/packages/PPDS.Plugins) | `3.0.0` | `net462` | Declarative attributes for plugin steps, images, and Custom APIs |
-| [`PPDS.Query`](https://www.nuget.org/packages/PPDS.Query) | `1.0.1` | `net8.0;net9.0;net10.0` | SQL engine, FetchXML translation, and ADO.NET provider |
+| [`PPDS.Auth`](https://www.nuget.org/packages/PPDS.Auth) | `1.1.2` | `net8.0;net9.0;net10.0` | Credential providers, auth profiles, DPAPI-encrypted credential store |
+| [`PPDS.Dataverse`](https://www.nuget.org/packages/PPDS.Dataverse) | `1.3.2` | `net8.0;net9.0;net10.0` | Connection pooling, bulk operations, throttle-aware resilience |
+| [`PPDS.Migration`](https://www.nuget.org/packages/PPDS.Migration) | `1.2.2` | `net8.0;net9.0;net10.0` | Parallel exporter and tiered importer over CMT-format archives |
+| [`PPDS.Plugins`](https://www.nuget.org/packages/PPDS.Plugins) | `3.0.1` | `net462` | Declarative attributes for plugin steps, images, and Custom APIs |
+| [`PPDS.Query`](https://www.nuget.org/packages/PPDS.Query) | `1.0.2` | `net8.0;net9.0;net10.0` | SQL engine, FetchXML translation, and ADO.NET provider |
 
-Versions above were verified on October 29, 2026. The proposed next versions
-are listed separately in the [maintenance candidate](../releases/maintenance-2026-10.md).
+Versions above were verified from public packages on October 30, 2026.
+See the [maintenance release notes](../releases/maintenance-2026-10.md) for
+the changes and validation scope.
 
 `PPDS.Plugins` targets `net462` as a compatibility baseline; plugin consumers
 can target .NET Framework 4.6.2 through 4.8. The CLI's accepted package asset
