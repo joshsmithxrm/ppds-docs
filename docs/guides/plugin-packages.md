@@ -6,14 +6,13 @@ description: Select supported package frameworks and diagnose local reference-ca
 # Prepare plugin packages and recover extraction
 
 Power Platform Developer Suite (PPDS) extracts registration metadata locally
-before deploying plugins. This guide describes the **CLI 1.4.2 maintenance
-candidate**. The published 1.4.1 release does not contain its `net48` package
-acceptance or protected-cache fixes.
+before deploying plugins. This guide describes published **CLI 1.4.2**,
+including `net48` package acceptance and protected-cache fixes.
 
 ## Choose a framework and deployment path
 
 `PPDS.Plugins` retains its `net462` library target and is compatible with
-plugin projects targeting .NET Framework 4.6.2 through 4.8. The candidate
+plugin projects targeting .NET Framework 4.6.2 through 4.8. CLI 1.4.2
 accepts NuGet plugin packages containing `lib/net462`, `lib/net471`, or
 `lib/net48`. The library's own target does not require every consumer to use
 that exact asset group.
@@ -39,7 +38,7 @@ re-extract after changing the package.
 
 ## Resolve package validation errors
 
-The candidate validates one unambiguous primary assembly and its runtime
+CLI 1.4.2 validates one unambiguous primary assembly and its runtime
 `IPlugin` types before connection or upload. It verifies SDK/registration
 attribute assembly identities and rejects missing configured types, stale
 extraction evidence, and ambiguous primaries. A type can implement `IPlugin`
@@ -52,7 +51,7 @@ separate destructive operation, not an automatic rollback.
 
 ## Recover reference extraction
 
-Single-file installs carry .NET Framework reference assemblies. The candidate
+Single-file installs carry .NET Framework reference assemblies. CLI 1.4.2
 uses `PPDS/cache/net462-ref/<resource-hash>` beneath the operating system's
 local application-data directory. It validates ownership, permissions, and
 links before cache reads or repair. Missing or truncated expected files are

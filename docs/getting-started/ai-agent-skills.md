@@ -25,11 +25,12 @@ configure authentication, or connect an MCP server for you. The CLI works
 without MCP; see the [MCP reference](../reference/mcp/index.md) if your host
 needs that integration.
 
-The [maintenance candidate](../reference/releases/maintenance-2026-10.md)
-prepares skills 0.1.2 against unpublished CLI 1.4.2 / MCP 1.2.2 artifacts.
-The install commands below select the public repository, not that preparation
-branch. Check the installed skill's tested versions and use your installed
-CLI's live `--help` if they differ.
+The [maintenance release](../reference/releases/maintenance-2026-10.md)
+includes skills 0.1.2, recaptured from the published CLI 1.4.2 / MCP 1.2.2
+packages. The install commands below select the public repository. Check the
+installed skill's tested versions and use your installed CLI's live `--help`
+if they differ. [Public capture provenance](https://github.com/joshsmithxrm/ppds-skills/blob/v0.1.2/skills/ppds-core/references/candidate-provenance.json)
+is included with copied skill folders.
 
 ## Claude Code
 

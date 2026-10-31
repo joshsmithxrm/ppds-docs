@@ -14,6 +14,7 @@ ppds auth create [options]
 
 | Long | Short | Type | Default | Description |
 | --- | --- | --- | --- | --- |
+| `--accept-cleartext-caching` |  | `bool` |  | Accept cleartext credential storage on Linux when secure storage (libsecret) is unavailable |
 | `--applicationId` | `-id` | `string` |  | Optional: The application ID to authenticate with |
 | `--azureDevOpsFederated` | `-adof` | `bool` |  | Use Azure DevOps Federation for Service Principal Auth; requires --tenant and --applicationId arguments |
 | `--certificateDiskPath` | `-cdp` | `string` |  | Optional: The certificate disk path to authenticate with |

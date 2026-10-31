@@ -6,8 +6,8 @@ description: Inspect drafts, preserve view projections, and publish scoped metad
 # Edit views forms and app selections
 
 Power Platform Developer Suite (PPDS) edits views and forms through the CLI.
-This guide describes the **CLI 1.4.2 maintenance candidate**, including fixes
-that are not in the published 1.4.1 release. See the [candidate notes](../reference/releases/maintenance-2026-10.md).
+This guide describes the published **CLI 1.4.2 maintenance release**.
+See the [release notes](../reference/releases/maintenance-2026-10.md).
 
 ## Select and inspect the target
 
@@ -28,7 +28,7 @@ the platform rejected that write. Save the original draft before an edit.
 
 ## Keep visible columns and query projections aligned
 
-The candidate's `views add-column` maintains the layout cell and FetchXML
+CLI 1.4.2's `views add-column` maintains the layout cell and FetchXML
 projection, including repair of an existing cell whose projection is missing.
 It preserves other filters, sorts, keys, and links.
 
@@ -88,7 +88,7 @@ specified. Execute the saved query afterward to check what the app displays.
 
 ## Preserve app selections and localized navigation
 
-The candidate resolves the complete requested form/view/chart selection
+CLI 1.4.2 resolves the complete requested form/view/chart selection
 before changing the app. Duplicate names return candidate IDs; use an ID to
 disambiguate. Retained selections stay in place, additions precede removals,
 and later server failures can leave partial state. Inspect the app draft before
@@ -106,7 +106,7 @@ languages; ambiguous labels require disambiguation. Use app mutations'
 
 ## Preserve Timeline configuration
 
-The candidate's FormXML schema accepts the standard Timeline parameter
+CLI 1.4.2's FormXML schema accepts the standard Timeline parameter
 `UClientActivitiesConfigurationJSON`. Direct XML writes and unrelated
 structured edits preserve that configuration while known parameter types and
 form structure remain validated. This is a specific schema correction;
