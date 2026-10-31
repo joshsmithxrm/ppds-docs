@@ -9,6 +9,8 @@
 ## Summary
 
 Request to update an existing option value in an option set.
+Target the option by `PPDS.Dataverse.Metadata.Authoring.UpdateOptionValueRequest.Value` or `PPDS.Dataverse.Metadata.Authoring.UpdateOptionValueRequest.Label` (exactly one);
+`PPDS.Dataverse.Metadata.Authoring.UpdateOptionValueRequest.NewLabel` carries the updated label (#1170).
 
 ## Members
 
@@ -32,6 +34,12 @@ Gets or sets the updated color for the option (hex string).
 
 Gets or sets the updated description for the option.
 
+#### DryRun
+
+`bool DryRun { get; set; }`
+
+Gets or sets whether this is a dry-run (validation only, no changes persisted) (#1172).
+
 #### EntityLogicalName
 
 `string EntityLogicalName { get; set; }`
@@ -42,7 +50,13 @@ Gets or sets the entity logical name (for local option sets).
 
 `string Label { get; set; }`
 
-Gets or sets the updated label for the option.
+Gets or sets the target option current label (mutually exclusive with `PPDS.Dataverse.Metadata.Authoring.UpdateOptionValueRequest.Value`).
+
+#### NewLabel
+
+`string NewLabel { get; set; }`
+
+Gets or sets the new label to apply (optional; the current label is preserved when omitted).
 
 #### OptionSetName
 
@@ -58,7 +72,7 @@ Gets or sets the unique name of the solution containing the option set.
 
 #### Value
 
-`int Value { get; set; }`
+`Nullable<int> Value { get; set; }`
 
-Gets or sets the numeric value of the option to update.
+Gets or sets the target option value (mutually exclusive with `PPDS.Dataverse.Metadata.Authoring.UpdateOptionValueRequest.Label`).
 

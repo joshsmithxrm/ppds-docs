@@ -9,6 +9,7 @@
 ## Summary
 
 Request to delete an option value from an option set.
+Target the option by `PPDS.Dataverse.Metadata.Authoring.DeleteOptionValueRequest.Value` or `PPDS.Dataverse.Metadata.Authoring.DeleteOptionValueRequest.Label` (exactly one).
 
 ## Members
 
@@ -20,11 +21,23 @@ Request to delete an option value from an option set.
 
 Gets or sets the attribute logical name (for local option sets).
 
+#### DryRun
+
+`bool DryRun { get; set; }`
+
+Gets or sets whether this is a dry-run (validate the target exists, no changes persisted) (#1172).
+
 #### EntityLogicalName
 
 `string EntityLogicalName { get; set; }`
 
 Gets or sets the entity logical name (for local option sets).
+
+#### Label
+
+`string Label { get; set; }`
+
+Gets or sets the target option label (mutually exclusive with `PPDS.Dataverse.Metadata.Authoring.DeleteOptionValueRequest.Value`) (#1169).
 
 #### OptionSetName
 
@@ -40,7 +53,7 @@ Gets or sets the unique name of the solution containing the option set.
 
 #### Value
 
-`int Value { get; set; }`
+`Nullable<int> Value { get; set; }`
 
-Gets or sets the numeric value of the option to delete.
+Gets or sets the target option value (mutually exclusive with `PPDS.Dataverse.Metadata.Authoring.DeleteOptionValueRequest.Label`).
 

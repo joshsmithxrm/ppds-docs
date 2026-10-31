@@ -86,6 +86,18 @@ The maximum number of alternate keys per entity has been reached.
 
 A required field is missing or empty.
 
+#### OptionNotFound
+
+`string OptionNotFound`
+
+The targeted status reason or local option was not found by value or label.
+
+#### SdkOperationFailed
+
+`string SdkOperationFailed`
+
+The Dataverse SDK call failed with an unexpected error.
+
 #### UseRelationshipForLookup
 
 `string UseRelationshipForLookup`

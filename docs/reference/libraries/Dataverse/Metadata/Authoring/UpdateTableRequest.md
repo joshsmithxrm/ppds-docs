@@ -62,6 +62,24 @@ Gets or sets whether the table supports activities.
 
 Gets or sets whether the table supports notes (annotations).
 
+#### IconMediumName
+
+`string IconMediumName { get; set; }`
+
+Gets or sets the 32×32 icon web resource logical name.
+
+#### IconSmallName
+
+`string IconSmallName { get; set; }`
+
+Gets or sets the 16×16 icon web resource logical name.
+
+#### IconVectorName
+
+`string IconVectorName { get; set; }`
+
+Gets or sets the SVG vector icon web resource logical name (used as primary icon in modern Dataverse).
+
 #### IsAuditEnabled
 
 `Nullable<bool> IsAuditEnabled { get; set; }`
@@ -91,6 +109,12 @@ Gets or sets whether the table is valid for queues.
 `string PluralDisplayName { get; set; }`
 
 Gets or sets the updated plural display name.
+
+#### Publish
+
+`bool Publish { get; set; }`
+
+Gets or sets whether to publish the entity after it is updated (#1171).
 
 #### SolutionUniqueName
 

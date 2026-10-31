@@ -5,7 +5,7 @@
 - Namespace: `PPDS.Auth.Discovery`
 - Assembly: `PPDS.Auth`
 - Kind: Class
-- Implements: `IGlobalDiscoveryService`, `IDisposable`
+- Implements: `IEnvironmentDiscoveryService`, `IGlobalDiscoveryService`, `IDisposable`
 
 ## Summary
 

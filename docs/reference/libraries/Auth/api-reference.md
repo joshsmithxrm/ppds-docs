@@ -7,6 +7,7 @@
 | Type | Summary |
 |------|---------|
 | [ICredentialProvider](./Credentials/ICredentialProvider.md) | Provides authenticated ServiceClient instances for a specific auth method. |
+| [IEnvironmentDiscoveryService](./Discovery/IEnvironmentDiscoveryService.md) | Common interface for services that discover Dataverse environments. |
 | [IGlobalDiscoveryService](./Discovery/IGlobalDiscoveryService.md) | Service for discovering Dataverse environments via the Global Discovery Service. |
 | [IPowerPlatformTokenProvider](./Credentials/IPowerPlatformTokenProvider.md) | Provides access tokens for Power Platform REST APIs (Power Apps, Power Automate, etc.). |
 | [ISecureCredentialStore](./Credentials/ISecureCredentialStore.md) | Provides secure, platform-native credential storage for service principal secrets. |
@@ -17,10 +18,12 @@
 |------|---------|
 | [AmbiguousMatchException](./Discovery/AmbiguousMatchException.md) | Exception thrown when multiple environments match a given identifier. |
 | [AuthDebugLog](./AuthDebugLog.md) | Controls debug logging output for the auth library. |
+| [AuthErrorCodes](./AuthErrorCodes.md) | Hierarchical error codes used by PPDS.Auth's `PPDS.Auth.Credentials.AuthenticationException`. |
 | [AuthProfile](./Profiles/AuthProfile.md) | An authentication profile containing credentials and environment binding. |
 | [AuthenticationException](./Credentials/AuthenticationException.md) | Exception thrown when authentication fails. |
 | [AuthenticationOutput](./AuthenticationOutput.md) | Controls authentication status output for the auth library. |
 | [AzureDevOpsFederatedCredentialProvider](./Credentials/AzureDevOpsFederatedCredentialProvider.md) | Provides authentication using Azure DevOps OIDC (workload identity federation). |
+| [BapEnvironmentService](./Discovery/BapEnvironmentService.md) | Discovers Dataverse environments via the BAP (Business Application Platform) admin API. |
 | [CertificateFileCredentialProvider](./Credentials/CertificateFileCredentialProvider.md) | Provides authentication using a certificate file (PFX/P12). |
 | [CertificateStoreCredentialProvider](./Credentials/CertificateStoreCredentialProvider.md) | Provides authentication using a certificate from the Windows certificate store. |
 | [ClientSecretCredentialProvider](./Credentials/ClientSecretCredentialProvider.md) | Provides authentication using client ID and client secret (Service Principal). |

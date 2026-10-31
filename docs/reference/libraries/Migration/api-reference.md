@@ -15,6 +15,7 @@
 | [IExporter](./Export/IExporter.md) | Interface for exporting data from Dataverse. |
 | [IImportPhaseProcessor](./Import/IImportPhaseProcessor.md) | Processes a phase of the import pipeline. |
 | [IImporter](./Import/IImporter.md) | Interface for importing data to Dataverse. |
+| [IJsonDataWriter](./Formats/IJsonDataWriter.md) | Writes migration data to a PPDS-native JSON document. |
 | [IPluginStepManager](./Import/IPluginStepManager.md) | Interface for managing plugin steps during import. |
 | [IPostImportHandler](./Import/Handlers/IPostImportHandler.md) | Executes post-import processing for an entity. |
 | [IProgressReporter](./Progress/IProgressReporter.md) | Interface for reporting migration progress. |
@@ -82,6 +83,7 @@
 | [ImportWarning](./Progress/ImportWarning.md) | Represents a warning that occurred during import. |
 | [ImportWarningCodes](./Progress/ImportWarningCodes.md) | Standard warning codes for import operations. |
 | [IncidentHandler](./Import/Handlers/IncidentHandler.md) | Handles state transitions for incident (case) records. |
+| [JsonDataWriter](./Formats/JsonDataWriter.md) | Writes migration data as a PPDS-native JSON document. |
 | [JsonProgressReporter](./Progress/JsonProgressReporter.md) | Progress reporter that writes JSON lines to a TextWriter. |
 | [LeadHandler](./Import/Handlers/LeadHandler.md) | Handles state transitions for lead records. |
 | [ManyToManyRelationshipData](./Models/ManyToManyRelationshipData.md) | Represents grouped M2M associations for one source record. |
@@ -138,6 +140,7 @@
 | [BulkOperationType](./Import/BulkOperationType.md) | The type of bulk operation to execute. |
 | [DateMode](./Models/DateMode.md) | Determines how date/time fields are adjusted during import. |
 | [DependencyType](./Models/DependencyType.md) | Type of dependency between entities. |
+| [ExportDataFormat](./Export/ExportDataFormat.md) | Serialization format for exported migration data. |
 | [ImportMode](./Import/ImportMode.md) | Import mode for handling records. |
 | [MigrationPhase](./Progress/MigrationPhase.md) | Phase of the migration operation. |
 

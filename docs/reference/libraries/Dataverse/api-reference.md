@@ -31,7 +31,9 @@
 | [AdaptiveAggregateScanNode](./Query/Planning/Nodes/AdaptiveAggregateScanNode.md) | Wraps a FetchXML aggregate scan with adaptive retry. When the Dataverse |
 | [AdaptiveBatchSizer](./BulkOperations/AdaptiveBatchSizer.md) | Dynamically adjusts DML batch size based on observed execution times. |
 | [AdaptiveThrottleManager](./BulkOperations/AdaptiveThrottleManager.md) | Dynamically adjusts the degree of parallelism (DOP) for bulk DML operations |
+| [AddColumnOptionRequest](./Metadata/Authoring/AddColumnOptionRequest.md) | Request to add an option to a column-scoped (local) option set (#1161). |
 | [AddOptionValueRequest](./Metadata/Authoring/AddOptionValueRequest.md) | Request to add a new option value to an existing option set. |
+| [AddStatusReasonRequest](./Metadata/Authoring/AddStatusReasonRequest.md) | Request to add a status reason (statuscode option value) to an entity. |
 | [AsyncOperation](./Generated/AsyncOperation.md) | Process whose execution can proceed independently or in the background. |
 | [AttributeMetadataDto](./Metadata/Models/AttributeMetadataDto.md) | Detailed attribute metadata for entity browsing. |
 | [AuthenticationErrorDetector](./Resilience/AuthenticationErrorDetector.md) | Detects authentication and authorization failures from Dataverse operations. |
@@ -50,6 +52,7 @@
 | [ClientAggregateNode](./Query/Planning/Nodes/ClientAggregateNode.md) | Computes aggregate functions client-side from raw (non-aggregated) input rows. |
 | [ClientFilterNode](./Query/Planning/Nodes/ClientFilterNode.md) | Filters rows by evaluating a condition client-side. |
 | [ClientWindowNode](./Query/Planning/Nodes/ClientWindowNode.md) | Computes window functions (ROW_NUMBER, RANK, DENSE_RANK, aggregate OVER) client-side. |
+| [ColumnOptionInfo](./Metadata/Authoring/ColumnOptionInfo.md) | Projection of a single option on a column-scoped (local) option set (#1161). |
 | [CompiledPredicate](./Query/Execution/CompiledPredicate.md) | Compiled predicate: evaluates against a row and returns true/false. |
 | [CompiledScalarExpression](./Query/Execution/CompiledScalarExpression.md) | Compiled scalar expression: evaluates against a row and returns a value. |
 | [ConcatenateNode](./Query/Planning/Nodes/ConcatenateNode.md) | Concatenates rows from multiple child nodes sequentially. |
@@ -127,6 +130,7 @@
 | [OptionDefinition](./Metadata/Authoring/OptionDefinition.md) | Defines a single option value for a choice or choices column. |
 | [OptionSetMetadataDto](./Metadata/Models/OptionSetMetadataDto.md) | Full option set metadata including all values. |
 | [OptionSetSummary](./Metadata/Models/OptionSetSummary.md) | Summary information for a global option set in list views. |
+| [OptionValueDeriver](./Metadata/Authoring/OptionValueDeriver.md) | Pure helper that picks a numeric option value for status-reason add and local-column option-add. |
 | [OptionValueDto](./Metadata/Models/OptionValueDto.md) | Represents a single option value in an option set. |
 | [ParallelPartitionNode](./Query/Planning/Nodes/ParallelPartitionNode.md) | Executes child plan nodes in parallel, limited by pool capacity. |
 | [PlanExecutor](./Query/Execution/PlanExecutor.md) | Executes a query plan by consuming the root node's IAsyncEnumerable |
@@ -159,6 +163,8 @@
 | [ReactivateKeyRequest](./Metadata/Authoring/ReactivateKeyRequest.md) | Request to reactivate a failed alternate key on a Dataverse table. |
 | [RelationshipMetadataDto](./Metadata/Models/RelationshipMetadataDto.md) | Represents a one-to-many or many-to-one relationship. |
 | [RemoteScanNode](./Query/Planning/Nodes/RemoteScanNode.md) | Executes a FetchXML query against a remote environment's connection pool. |
+| [RemoveColumnOptionRequest](./Metadata/Authoring/RemoveColumnOptionRequest.md) | Request to remove an option from a column-scoped (local) option set (#1161). |
+| [RemoveStatusReasonRequest](./Metadata/Authoring/RemoveStatusReasonRequest.md) | Request to remove a status reason from an entity. |
 | [ReorderOptionsRequest](./Metadata/Authoring/ReorderOptionsRequest.md) | Request to reorder the option values in an option set. |
 | [ResilienceOptions](./Resilience/ResilienceOptions.md) | Configuration options for resilience and retry behavior. |
 | [Role](./Generated/Role.md) | Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system. |
@@ -178,6 +184,7 @@
 | [Solution](./Generated/Solution.md) | A solution which contains CRM customizations. |
 | [SolutionComponent](./Generated/SolutionComponent.md) | A component of a CRM solution. |
 | [SqlCursorContextResult](./Sql/Intellisense/SqlCursorContextResult.md) | Result of cursor context analysis for SQL IntelliSense. |
+| [StatusReasonInfo](./Metadata/Authoring/StatusReasonInfo.md) | Projection of a statuscode option value for list output. |
 | [StringFunctions](./Query/Execution/Functions/StringFunctions.md) | T-SQL string functions evaluated client-side. |
 | [SystemUser](./Generated/SystemUser.md) | Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database. |
 | [TdsCompatibilityChecker](./Query/TdsCompatibilityChecker.md) | Determines whether a SQL query can be executed via the Dataverse TDS Endpoint. |
@@ -187,11 +194,13 @@
 | [ThrottleState](./Resilience/ThrottleState.md) | Represents the throttle state for a connection. |
 | [ThrottleTracker](./Resilience/ThrottleTracker.md) | Tracks throttle state for connections using a thread-safe concurrent dictionary. |
 | [TranspileResult](./Sql/Transpilation/TranspileResult.md) | Result of SQL to FetchXML transpilation, including virtual column metadata. |
+| [UpdateColumnOptionRequest](./Metadata/Authoring/UpdateColumnOptionRequest.md) | Request to update an option on a column-scoped (local) option set (#1161). |
 | [UpdateColumnRequest](./Metadata/Authoring/UpdateColumnRequest.md) | Request to update an existing column (attribute) on a Dataverse table. |
 | [UpdateGlobalChoiceRequest](./Metadata/Authoring/UpdateGlobalChoiceRequest.md) | Request to update an existing global choice (option set) in Dataverse. |
 | [UpdateOptionValueRequest](./Metadata/Authoring/UpdateOptionValueRequest.md) | Request to update an existing option value in an option set. |
 | [UpdateRelationshipRequest](./Metadata/Authoring/UpdateRelationshipRequest.md) | Request to update an existing Dataverse relationship. |
 | [UpdateStateValueRequest](./Metadata/Authoring/UpdateStateValueRequest.md) | Request to update a state or status option value label. |
+| [UpdateStatusReasonRequest](./Metadata/Authoring/UpdateStatusReasonRequest.md) | Request to update an existing status reason on an entity. |
 | [UpdateTableRequest](./Metadata/Authoring/UpdateTableRequest.md) | Request to update an existing Dataverse table (entity). |
 | [ValidationMessage](./Metadata/Authoring/ValidationMessage.md) | Represents a validation message produced during a dry-run or schema authoring operation. |
 | [VariableScope](./Query/Execution/VariableScope.md) | Manages SQL variable declarations and values. |

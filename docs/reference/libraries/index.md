@@ -10,14 +10,22 @@ The Power Platform Developer Suite (PPDS) ships a set of focused .NET libraries 
 
 ## Packages
 
-| Package | Version | Target | Description |
+| Package | Published stable version | Target | Description |
 |---------|---------|--------|-------------|
-| [`PPDS.Auth`](https://www.nuget.org/packages/PPDS.Auth) | `1.0.0-beta.8` | `net8.0;net9.0;net10.0` | Credential providers, auth profiles, DPAPI-encrypted credential store |
-| [`PPDS.Dataverse`](https://www.nuget.org/packages/PPDS.Dataverse) | `1.0.0-beta.7` | `net8.0;net9.0;net10.0` | Connection pooling, bulk operations, throttle-aware resilience |
-| [`PPDS.Migration`](https://www.nuget.org/packages/PPDS.Migration) | `1.0.0-beta.8` | `net8.0;net9.0;net10.0` | Parallel exporter and tiered importer over CMT-format archives |
-| [`PPDS.Plugins`](https://www.nuget.org/packages/PPDS.Plugins) | `2.1.0-beta.1` | `net462` | Declarative attributes for plugin steps, images, and Custom APIs |
+| [`PPDS.Auth`](https://www.nuget.org/packages/PPDS.Auth) | `1.1.2` | `net8.0;net9.0;net10.0` | Credential providers, auth profiles, DPAPI-encrypted credential store |
+| [`PPDS.Dataverse`](https://www.nuget.org/packages/PPDS.Dataverse) | `1.3.2` | `net8.0;net9.0;net10.0` | Connection pooling, bulk operations, throttle-aware resilience |
+| [`PPDS.Migration`](https://www.nuget.org/packages/PPDS.Migration) | `1.2.2` | `net8.0;net9.0;net10.0` | Parallel exporter and tiered importer over CMT-format archives |
+| [`PPDS.Plugins`](https://www.nuget.org/packages/PPDS.Plugins) | `3.0.1` | `net462` | Declarative attributes for plugin steps, images, and Custom APIs |
+| [`PPDS.Query`](https://www.nuget.org/packages/PPDS.Query) | `1.0.2` | `net8.0;net9.0;net10.0` | SQL engine, FetchXML translation, and ADO.NET provider |
 
-The `net462` target on `PPDS.Plugins` is required for plugin assembly compatibility with the Dataverse sandbox. The other packages are multi-targeted at current LTS and STS .NET releases.
+Versions above were verified from public packages on October 30, 2026.
+See the [maintenance release notes](../releases/maintenance-2026-10.md) for
+the changes and validation scope.
+
+`PPDS.Plugins` targets `net462` as a compatibility baseline; plugin consumers
+can target .NET Framework 4.6.2 through 4.8. The CLI's accepted package asset
+groups are a separate deployment constraint; see [plugin packages](../../guides/plugin-packages.md).
+The other libraries target .NET 8, 9, and 10.
 
 ## PPDS.Auth
 
@@ -179,7 +187,7 @@ var importResult = await importer.ImportAsync(
 
 ## PPDS.Plugins
 
-Attribute-based plugin registration. Decorate your plugin classes and the CLI (or your own tooling) reads the attributes to register steps, images, and Custom APIs against Dataverse. The package targets `net462` to match the Dataverse plugin sandbox.
+Attribute-based plugin registration. Decorate your plugin classes and the CLI (or your own tooling) reads the attributes to register steps, images, and Custom APIs against Dataverse. The package retains its `net462` compatibility target for .NET Framework plugin projects.
 
 ### Installation
 
@@ -199,9 +207,9 @@ dotnet add package PPDS.Plugins
 | `PluginDeployment`, `PluginInvocationSource` | Deployment target and pipeline source (new in 2.1) |
 | `ApiBindingType`, `ApiParameterType`, `ParameterDirection`, `ApiProcessingStepType` | Custom API enums (new in 2.1) |
 
-### What's new in 2.1
+### Compatibility with 2.x
 
-`PluginStepAttribute` gained `Deployment`, `RunAsUser`, `CanBeBypassed`, `CanUseReadOnlyConnection`, and `InvocationSource` properties. `CustomApiAttribute` and `CustomApiParameterAttribute` add full Custom API authoring. Existing 2.0 plugins compile unchanged.
+`PluginStepAttribute` gained `Deployment`, `RunAsUser`, `CanBeBypassed`, `CanUseReadOnlyConnection`, and `InvocationSource` properties. `CustomApiAttribute` and `CustomApiParameterAttribute` add full Custom API authoring. These additions are source-compatible with 2.x. Version 3.0.0 changed the strong-name identity: consumers bound to the old public key token must rebuild against 3.x. See the [Plugins changelog](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Plugins/CHANGELOG.md#300---2026-04-18).
 
 ### Usage
 
@@ -246,11 +254,23 @@ public class ProcessOrderPlugin : IPlugin
 }
 ```
 
+## PPDS.Query
+
+The query library translates SQL to FetchXML and executes queries through the
+Dataverse connection pool. Its ADO.NET provider exposes `PpdsDbConnection`,
+`PpdsDbCommand`, and `PpdsDbDataReader` in `PPDS.Query.Provider`.
+
+```bash
+dotnet add package PPDS.Query
+```
+
+See the [Query library guide and examples](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Query/README.md).
+
 ## Versioning
 
-Each library is versioned independently and follows semantic versioning. `PPDS.Plugins` is on the 2.x line because the 1.x attribute surface has shipped; the other libraries are in 1.0 beta. The PPDS CLI pins specific library versions per release, so upgrading the CLI is the simplest way to stay on a known-good set.
+Each library is versioned independently and follows semantic versioning. `PPDS.Plugins` is on the stable 3.x line; Auth, Dataverse, Migration, and Query each have their own stable 1.x line. The PPDS CLI pins specific library versions per release, so upgrading the CLI is the simplest way to stay on a known-good set.
 
-Breaking changes are listed in each package's `CHANGELOG.md` in the main repo: [`PPDS.Auth`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Auth/CHANGELOG.md), [`PPDS.Dataverse`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Dataverse/CHANGELOG.md), [`PPDS.Migration`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Migration/CHANGELOG.md), [`PPDS.Plugins`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Plugins/CHANGELOG.md).
+Breaking changes are listed in each package's `CHANGELOG.md` in the main repo: [`PPDS.Auth`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Auth/CHANGELOG.md), [`PPDS.Dataverse`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Dataverse/CHANGELOG.md), [`PPDS.Migration`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Migration/CHANGELOG.md), [`PPDS.Plugins`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Plugins/CHANGELOG.md), [`PPDS.Query`](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/src/PPDS.Query/CHANGELOG.md).
 
 ## Next steps
 

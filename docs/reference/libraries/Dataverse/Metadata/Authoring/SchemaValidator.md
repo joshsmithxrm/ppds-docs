@@ -35,9 +35,17 @@ Validates a `PPDS.Dataverse.Metadata.Authoring.CreateKeyRequest`. Key attributes
 
 #### ValidateCreateManyToManyRequest
 
-`void ValidateCreateManyToManyRequest(CreateManyToManyRequest request, string publisherPrefix)`
+`void ValidateCreateManyToManyRequest(CreateManyToManyRequest request, string publisherPrefix, string resolvedIntersectSchemaName)`
 
 Validates a `PPDS.Dataverse.Metadata.Authoring.CreateManyToManyRequest`.
+
+- Param `request`: The request to validate.
+
+- Param `publisherPrefix`: The publisher prefix resolved from the target solution.
+
+- Param `resolvedIntersectSchemaName`: The intersect-entity schema name after caller-supplied defaulting (typically
+`PPDS.Dataverse.Metadata.Authoring.CreateManyToManyRequest.IntersectEntitySchemaName` falling back to
+`PPDS.Dataverse.Metadata.Authoring.CreateManyToManyRequest.SchemaName`). Required by the Dataverse SDK.
 
 #### ValidateCreateOneToManyRequest
 

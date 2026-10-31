@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Getting Started',
-      items: ['getting-started/installation'],
+      items: ['getting-started/installation', 'getting-started/ai-agent-skills'],
       collapsed: false,
     },
     {
@@ -14,6 +14,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'guides/authentication',
         'guides/consumption-patterns',
+        'guides/metadata-editing',
+        'guides/plugin-packages',
       ],
     },
     {
