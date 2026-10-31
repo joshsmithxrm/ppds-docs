@@ -14,6 +14,7 @@ ppds forms add-subgrid [options]
 
 | Long | Short | Type | Default | Description |
 | --- | --- | --- | --- | --- |
+| `--confirm-env` |  | `string` |  | Acknowledge writing to this exact resolved environment URL |
 | `--correlation-id` |  | `string` |  | Correlation ID for distributed tracing |
 | `--debug` |  | `bool` |  | Show trace-level diagnostic output |
 | `--default-view` |  | `Guid` |  | GUID of the default view (savedqueries record) to display in the sub-grid |
@@ -27,7 +28,7 @@ ppds forms add-subgrid [options]
 | `--max-rows` |  | `int?` |  | Maximum number of rows to display in the sub-grid |
 | `--output-format` | `-f` | `OutputFormat` |  | Output format |
 | `--profile` | `-p` | `string` |  | Authentication profile name |
-| `--publish` |  | `bool` |  | Publish customizations after writing |
+| `--publish` |  | `bool` |  | Publish all pending customizations for this table after writing |
 | `--quiet` | `-q` | `bool` |  | Show only warnings and errors |
 | `--relationship` |  | `string` |  | Relationship schema name used to filter the sub-grid records |
 | `--section` |  | `string` |  | Label or name of the section to add the sub-grid to |

@@ -40,6 +40,15 @@
 | [ppds_environment_variables_list](./tools/ppds_environment_variables_list.md) | List environment variable definitions and their current values. Shows default vs current values, type, and override status. Optionally filter by solution name. |
 | [ppds_environment_variables_set](./tools/ppds_environment_variables_set.md) | Set the current value of an environment variable. Creates the value record if none exists. AI agents can use this to fix misconfigurations during deployment troubleshooting. |
 
+## forms
+
+| Tool | Description |
+|------|-------------|
+| [ppds_forms_add_field](./tools/ppds_forms_add_field.md) | Add one existing column to an existing Main-form section by stable IDs. Saves and verifies an unpublished draft; never publishes. Use dryRun=true for a write-free preview. Avoid simultaneous editors when concurrencyMode is preflight-only. |
+| [ppds_forms_get](./tools/ppds_forms_get.md) | Inspect a form by ID. Use unpublished=true to inspect its draft and obtain the fingerprint required before editing or publishing. |
+| [ppds_forms_list](./tools/ppds_forms_list.md) | List forms for a Dataverse table, including stable IDs, form types and managed status. |
+| [ppds_forms_publish](./tools/ppds_forms_publish.md) | Publish ALL pending customizations for the selected table, including changes beyond the selected form. Requires confirmPublishEntity equal to the table logical name. Verifies only the selected form after entity-scoped publication. |
+
 ## importjobs
 
 | Tool | Description |
