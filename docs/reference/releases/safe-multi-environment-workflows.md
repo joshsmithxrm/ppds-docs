@@ -1,11 +1,11 @@
 ---
-title: Safe multi-environment workflows candidate
-description: Implemented release scope and validation boundaries before publication
+title: Safe multi-environment workflows feature draft
+description: Feature scope, CI and live validation status before release
 ---
 
-# Safe multi-environment workflows candidate
+# Safe multi-environment workflows feature draft
 
-This page describes an **unpublished release candidate** of Power Platform Developer Suite (PPDS). Package versions, release readiness and publication require separate verification. The [October maintenance release](maintenance-2026-10.md) remains the preceding published baseline.
+This page describes an **unpublished feature draft** of Power Platform Developer Suite (PPDS). The initial [docs](https://github.com/joshsmithxrm/ppds-docs/pull/31) and [skills](https://github.com/joshsmithxrm/ppds-skills/pull/23) drafts passed their required CI checks. Release readiness, final package versions and publication remain separate gates, tracked in [release #1489](https://github.com/joshsmithxrm/power-platform-developer-suite/issues/1489). The [October maintenance release](maintenance-2026-10.md) remains the preceding published baseline.
 
 ## User workflows
 
@@ -34,6 +34,8 @@ Web resource prefixes belong at the resource-name root, before slash-separated f
 
 ## Validation boundaries
 
-Deterministic unit, workflow and native-host checks do not establish live Dataverse behavior. Managed form publication and harmless managed/unmanaged flow roundtrips need approved sandbox fixtures and visible cleanup evidence. Generated reference/capture provenance records the exact candidate used; it is not evidence of a published package.
+Approved live fixtures passed unmanaged and managed form edit/publication roundtrips and locked-form rejection, with complete form fixture cleanup. Core flow checks passed 20 actual candidate CLI invocations across unmanaged and managed single-flow changes, unchanged-state results, solution batches and isolation from outside-solution flows.
+
+The complete flow suite remains pending: the missing-binding fixture failed to provision, so that live gate still needs a successful diagnostic run. Live notebook validation against Dataverse also remains pending. These bounded results do not establish release readiness. Generated reference/capture provenance records the exact candidate used; its help/schema capture performed no live operations and is not evidence of a published package.
 
 Per-cell notebook targets, general MCP form XML writing, new form layout authoring surfaces, automatic flow activation during import, and a broad dependency-upgrade bundle remain outside this increment.

@@ -5,7 +5,7 @@ description: Preview a named solution selection, inspect bindings, and verify ea
 
 # Enable or disable deployed cloud flows
 
-This guide covers the implemented **Safe multi-environment workflows release candidate** for Power Platform Developer Suite (PPDS). Flow activation is a CLI workflow; this release adds no MCP or Extension flow mutation surface.
+This guide covers the implemented **Safe multi-environment workflows feature draft** for Power Platform Developer Suite (PPDS). Flow activation is a CLI workflow; this increment adds no MCP or Extension flow mutation surface. See the [draft's validation status](../reference/releases/safe-multi-environment-workflows.md) for completed checks and remaining gates.
 
 Use it after deploying a solution and reviewing connection references. It changes solution-aware modern cloud-flow definitions. Classic workflows, desktop flows, templates and activation records are excluded from mutation and appear with reasons in batch output.
 
@@ -19,6 +19,8 @@ ppds flows enable --all --solution <solution-unique-name> --dry-run --profile <p
 ```
 
 Use exactly one selector: `--id`, `--name`, or `--all`. Names are exact unique/schema names, not fuzzy display names. `--all` requires a solution unique name; a solution supplied with a single-flow selector constrains membership. Ambiguity returns candidate IDs.
+
+Use `--name` only when the definition has an actual unique/schema name. Dataverse's [`uniquename` column is optional](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/entities/workflow#uniquename), so use `--id` when it is absent.
 
 The default cap is 100 eligible flows. An exceeded cap fails before writes and reports the full count; it never truncates the batch. Raise `--max-flows` only after reviewing the complete selection.
 
