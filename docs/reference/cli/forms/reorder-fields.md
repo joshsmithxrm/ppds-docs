@@ -14,6 +14,7 @@ ppds forms reorder-fields [options]
 
 | Long | Short | Type | Default | Description |
 | --- | --- | --- | --- | --- |
+| `--confirm-env` |  | `string` |  | Acknowledge writing to this exact resolved environment URL |
 | `--correlation-id` |  | `string` |  | Correlation ID for distributed tracing |
 | `--debug` |  | `bool` |  | Show trace-level diagnostic output |
 | `--entity` |  | `string` |  | Entity logical name |
@@ -22,7 +23,7 @@ ppds forms reorder-fields [options]
 | `--form` |  | `string` |  | Name or ID of the form |
 | `--output-format` | `-f` | `OutputFormat` |  | Output format |
 | `--profile` | `-p` | `string` |  | Authentication profile name |
-| `--publish` |  | `bool` |  | Publish customizations after writing |
+| `--publish` |  | `bool` |  | Publish all pending customizations for this table after writing |
 | `--quiet` | `-q` | `bool` |  | Show only warnings and errors |
 | `--section` |  | `string` |  | Label or name of the section containing the fields to reorder |
 | `--solution` |  | `string` |  | Solution unique name to associate the change with |

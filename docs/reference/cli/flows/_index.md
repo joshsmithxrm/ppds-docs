@@ -4,6 +4,8 @@
 
 | Command | Description |
 | --- | --- |
+| `disable` | Disable solution cloud flows (does not cancel existing runs) |
+| `enable` | Enable solution cloud flows with preflight and verified outcomes |
 | `get` | Get a cloud flow by workflow ID or unique name |
 | `list` | List cloud flows |
 | `url` | Get Power Automate maker URL for a flow |
