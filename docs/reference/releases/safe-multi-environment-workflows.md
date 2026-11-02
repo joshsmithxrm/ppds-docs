@@ -5,7 +5,7 @@ description: Approved release versions, upgrade guidance and validation status b
 
 # Safe multi-environment workflows release candidate
 
-This page describes an **unpublished release candidate** of Power Platform Developer Suite (PPDS). Core [PR #1495](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1495) is merged and validated at `5e9d5acc7c154f84a9216e18ab695d85c254dc2e`. The [docs](https://github.com/joshsmithxrm/ppds-docs/pull/31) and [skills](https://github.com/joshsmithxrm/ppds-skills/pull/23) drafts remain held for coordinated publication. Release preparation and approval remain separate gates, tracked in [release #1489](https://github.com/joshsmithxrm/power-platform-developer-suite/issues/1489). The [October maintenance release](maintenance-2026-10.md) remains the preceding published baseline.
+This page describes an **unpublished release candidate** of Power Platform Developer Suite (PPDS). Core [PR #1495](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1495) is merged at `5e9d5acc7c154f84a9216e18ab695d85c254dc2e`. Release preparation and the MCP target-selection security correction are in [PR #1503](https://github.com/joshsmithxrm/power-platform-developer-suite/pull/1503), validated at `7acceffd4150adfd876c7290844309116452a748`. That PR and the [docs](https://github.com/joshsmithxrm/ppds-docs/pull/31) and [skills](https://github.com/joshsmithxrm/ppds-skills/pull/23) drafts remain held for coordinated publication. Release preparation and approval remain separate gates, tracked in [release #1489](https://github.com/joshsmithxrm/power-platform-developer-suite/issues/1489). The [October maintenance release](maintenance-2026-10.md) remains the preceding published baseline.
 
 ## Approved versions and upgrade requirements
 
@@ -44,6 +44,18 @@ The propagation test timeout is configured by `PPDS_TEST_PROPAGATION_TIMEOUT_SEC
 Web resource prefixes belong at the resource-name root, before slash-separated folders, for example `contoso_scripts/site.js`. A supplied solution determines the expected publisher prefix. An unresolved solution or publisher remains an error; a naming mismatch is a warning.
 
 ## Validation boundaries
+
+### Security preparation
+
+The MCP security correction checks a requested environment URL against the session policy before attempting a direct connection. Ambiguous discovered names are rejected, and the resolved target is checked again before switching. The source review, regression tests and limitations are recorded in the [core security assessment](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/7acceffd4150adfd876c7290844309116452a748/docs/qa/security-review-safe-workflows-2026-11.md).
+
+The November 2 documentation dependency remediation reduces the full and production npm audit results from 18 critical and 24 high affected package entries to **zero critical and zero high**. Docusaurus remains on supported 3.x with React 18; builds use Node 24. Three compatibility tests exercise the actual callers of the scoped dependency overrides, alongside typechecking, the production build and local browser checks.
+
+The audits still report 18 moderate and three low affected package entries, propagated from two advisories. The minimatch advisory describes an optimization path absent from the installed v3 implementation; the installed SVGR consumer declares deepmerge but does not import it. These findings remain visible, with their reachability assessment and override removal conditions in the [dependency maintenance record](https://github.com/joshsmithxrm/ppds-docs/blob/codex/safe-workflows-docs/tools/dependency-overrides.md). This is not a claim that the audit has no findings.
+
+Documentation CI now blocks high/critical dependency findings before building or capturing pages. Build jobs have read-only repository access, Pages permissions belong only to deployment, and browser capture is isolated from the credentialed job that records validated JSON/PNG artifacts. Local tests verify the permission and artifact boundaries. Actual Pages deployment and credentialed capture recording remain unexecuted until separately authorized. The version-policy exception above does not waive security review.
+
+### Product and reference evidence
 
 Earlier candidate validation passed unmanaged and managed form edit/publication roundtrips and locked-form rejection, with complete form fixture cleanup. Earlier core flow checks passed 20 actual candidate CLI invocations across unmanaged and managed single-flow changes, unchanged-state results, solution batches and isolation from outside-solution flows. Those earlier flow fixtures were fully cleaned up, with no unknown submissions or cleanup errors; these results are historical evidence rather than a fresh result for the combined candidate below.
 
