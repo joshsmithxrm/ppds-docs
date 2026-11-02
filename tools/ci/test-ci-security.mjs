@@ -17,6 +17,9 @@ export function validate(workflows) {
   for (const [name, workflow] of Object.entries(workflows)) {
     assert.deepEqual(workflow.permissions, {}, `${name}: workflow must grant no default token permissions`);
     for (const [id, job] of Object.entries(workflow.jobs)) {
+      // jobs.<job_id>.env is evaluated before runner allocation. GitHub rejects
+      // runner.* here even though the same context is valid inside a step.
+      assert(!/\$\{\{[^}]*\brunner\./.test(JSON.stringify(job.env ?? {})), `${name}/${id}: runner context is unavailable in job env`);
       const deployment = name === 'deploy.yml' && id === 'deploy';
       assert.deepEqual(job.permissions, deployment ? { pages: 'write', 'id-token': 'write' } : { contents: 'read' }, `${name}/${id}: unexpected permissions`);
       for (const step of allSteps(job)) {
@@ -51,6 +54,9 @@ export function validate(workflows) {
   assert.deepEqual(Object.keys(capture.on), ['workflow_dispatch']);
   assert.equal(capture.jobs.record.needs, 'capture');
   assert.equal(capture.jobs.record.if, 'always() && !cancelled()');
+  for (const job of Object.values(capture.jobs)) {
+    assert.equal(job.steps[0].run, 'echo "AUDIT_OUT=$RUNNER_TEMP/audit-out" >> "$GITHUB_ENV"');
+  }
   assert(!/npm |npx |audit-capture\.mjs/.test(script(capture.jobs.record)), 'Recording cannot execute captured/dependency code');
   const recordSteps = capture.jobs.record.steps;
   const tokenIndex = recordSteps.findIndex(step => step.uses?.startsWith('actions/create-github-app-token@'));
@@ -76,7 +82,8 @@ for (const [name, mutate] of [
   ['removed audit', w => { w['test-deploy.yml'].jobs['test-build'].steps = w['test-deploy.yml'].jobs['test-build'].steps.filter(s => !s.run?.startsWith('npm audit')); }],
   ['audit failure bypass', w => { w['deploy.yml'].jobs.build.steps.find(s => s.run?.startsWith('npm audit'))['continue-on-error'] = true; }],
   ['omitted dev dependencies', w => { w['deploy.yml'].jobs.build.steps.find(s => s.run?.startsWith('npm audit')).run = 'npm audit --omit=dev --audit-level=high'; }],
-  ['old Node runtime', w => { w['audit-capture.yml'].jobs.capture.steps[1].with['node-version'] = '20'; }],
+  ['old Node runtime', w => { w['audit-capture.yml'].jobs.capture.steps.find(s => s.uses?.startsWith('actions/setup-node@')).with['node-version'] = '20'; }],
+  ['runner context before job allocation', w => { w['audit-capture.yml'].jobs.capture.env.AUDIT_OUT = '${{ runner.temp }}/audit-out'; }],
   ['dependency execution beside writer', w => { w['audit-capture.yml'].jobs.record.steps.push({ run: 'npm ci' }); }],
   ['broad App permissions', w => { w['audit-capture.yml'].jobs.record.steps.find(s => s.uses?.startsWith('actions/create-github-app-token@')).with['permission-workflows'] = 'write'; }],
   ['untrusted branch interpolation', w => { w['audit-capture.yml'].jobs.record.steps.find(s => s.id === 'branch').run = 'echo "${{ inputs.branch_name }}"'; }],

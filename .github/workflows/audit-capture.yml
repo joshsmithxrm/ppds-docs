@@ -34,13 +34,14 @@ jobs:
     outputs:
       artifact_id: ${{ steps.upload.outputs.artifact-id }}
     env:
-      AUDIT_OUT: ${{ runner.temp }}/audit-out
       AUDIT_SOURCE_REPO: ${{ github.repository }}
       AUDIT_SOURCE_REF: ${{ github.ref }}
       AUDIT_SOURCE_COMMIT: ${{ github.sha }}
       DOCS_MODE: ${{ inputs.mode }}
       DOCS_URL: ${{ inputs.docs_url }}
     steps:
+      - name: Set capture output directory
+        run: echo "AUDIT_OUT=$RUNNER_TEMP/audit-out" >> "$GITHUB_ENV"
       - name: Checkout ppds-docs
         uses: actions/checkout@v6
         with:
@@ -89,11 +90,12 @@ jobs:
     permissions:
       contents: read
     env:
-      AUDIT_OUT: ${{ runner.temp }}/audit-out
       AUDIT_SOURCE_REPO: ${{ github.repository }}
       AUDIT_SOURCE_REF: ${{ github.ref }}
       AUDIT_SOURCE_COMMIT: ${{ github.sha }}
     steps:
+      - name: Set capture output directory
+        run: echo "AUDIT_OUT=$RUNNER_TEMP/audit-out" >> "$GITHUB_ENV"
       - name: Checkout validation code only
         uses: actions/checkout@v6
         with:
