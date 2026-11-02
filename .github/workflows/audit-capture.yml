@@ -1,7 +1,6 @@
 name: Audit Capture
 
-# Manual-only for v1. No `schedule:` trigger until enabled intentionally.
-
+# Manual-only. Capture executes without writer credentials; recording only handles data.
 on:
   workflow_dispatch:
     inputs:
@@ -10,15 +9,13 @@ on:
         required: true
         default: 'dev'
         type: choice
-        options:
-          - dev
-          - production
+        options: [dev, production]
       docs_url:
         description: 'Override DOCS_URL (otherwise defaults for mode)'
         required: false
         type: string
       branch_name:
-        description: 'Override capture branch name in ppds-v1-audit (default: capture/<timestamp>)'
+        description: 'Existing or new capture/* branch in ppds-v1-audit; never default/protected branches'
         required: false
         type: string
 
@@ -26,49 +23,108 @@ concurrency:
   group: audit-capture-${{ github.ref }}
   cancel-in-progress: false
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   capture:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
+    permissions:
+      contents: read
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact-id }}
     env:
       AUDIT_SOURCE_REPO: ${{ github.repository }}
       AUDIT_SOURCE_REF: ${{ github.ref }}
       AUDIT_SOURCE_COMMIT: ${{ github.sha }}
-      DOCS_MODE: ${{ github.event.inputs.mode }}
-      DOCS_URL: ${{ github.event.inputs.docs_url }}
-
+      DOCS_MODE: ${{ inputs.mode }}
+      DOCS_URL: ${{ inputs.docs_url }}
     steps:
-      - name: Set AUDIT_OUT
+      - name: Set capture output directory
         run: echo "AUDIT_OUT=$RUNNER_TEMP/audit-out" >> "$GITHUB_ENV"
-
       - name: Checkout ppds-docs
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
-
+          persist-credentials: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+          check-latest: true
           cache: 'npm'
-
-      - name: Install deps
-        run: npm install
-
+      - name: Install dependencies
+        run: npm ci
+      - name: Audit all dependencies
+        run: npm audit --include=dev --audit-level=high
+      - name: Verify dependency compatibility contracts
+        run: npm run test:dependency-contracts
+      - name: Check CI security invariants
+        run: |
+          node --test tools/ci/test-ci-security.mjs
+          python -m unittest discover -s tools/ci -p 'test_*.py'
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
-
       - name: Capture
+        id: capture
         continue-on-error: true
-        run: |
-          mkdir -p "$AUDIT_OUT"
-          node tools/audit-capture.mjs run docs
+        run: node tools/audit-capture.mjs run docs
+      - name: Preserve capture artifact, including partial failures
+        id: upload
+        if: always() && steps.capture.outcome != 'skipped'
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-audit-capture
+          path: ${{ env.AUDIT_OUT }}
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve capture failure status
+        if: steps.capture.outcome != 'success'
+        run: exit 1
 
-      - name: Mint audit-repo token
+  record:
+    needs: capture
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    env:
+      AUDIT_SOURCE_REPO: ${{ github.repository }}
+      AUDIT_SOURCE_REF: ${{ github.ref }}
+      AUDIT_SOURCE_COMMIT: ${{ github.sha }}
+    steps:
+      - name: Set capture output directory
+        run: echo "AUDIT_OUT=$RUNNER_TEMP/audit-out" >> "$GITHUB_ENV"
+      - name: Checkout validation code only
+        uses: actions/checkout@v6
+        with:
+          path: trusted-source
+          persist-credentials: false
+      - name: Require capture artifact
+        env:
+          ARTIFACT_ID: ${{ needs.capture.outputs.artifact_id }}
+        run: test -n "$ARTIFACT_ID"
+      - name: Download this run's capture artifact
+        uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ needs.capture.outputs.artifact_id }}
+          path: ${{ env.AUDIT_OUT }}
+          merge-multiple: true
+      - name: Validate inert capture files and trusted source identity
+        id: summary
+        run: python trusted-source/tools/ci/audit_artifact.py "$AUDIT_OUT" --output "$GITHUB_OUTPUT"
+      - name: Compute capture branch name
+        id: branch
+        env:
+          REQUESTED_BRANCH: ${{ inputs.branch_name }}
+        run: |
+          BRANCH="${REQUESTED_BRANCH:-capture/$(date -u +%Y%m%d-%H%M%S)-docs}"
+          case "$BRANCH" in capture/*) ;; *) echo 'Only capture/* branches are permitted'; exit 1;; esac
+          [[ "$BRANCH" =~ ^capture/[A-Za-z0-9][A-Za-z0-9._/-]*$ ]]
+          git check-ref-format --branch "$BRANCH"
+          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
+      - name: Mint narrowly scoped audit-repo token
         id: audit-token
         uses: actions/create-github-app-token@v2
         with:
@@ -76,102 +132,83 @@ jobs:
           private-key: ${{ secrets.AUDIT_APP_PRIVATE_KEY }}
           owner: joshsmithxrm
           repositories: ppds-v1-audit
-
-      - name: Checkout audit repo
+          permission-contents: write
+      - name: Checkout audit repo without retaining credentials
         uses: actions/checkout@v6
         with:
           repository: joshsmithxrm/ppds-v1-audit
           path: audit-repo
           token: ${{ steps.audit-token.outputs.token }}
           fetch-depth: 1
-
-      - name: Compute capture branch name
-        id: branch
-        run: |
-          INPUT="${{ github.event.inputs.branch_name }}"
-          if [ -n "$INPUT" ]; then
-            BRANCH="$INPUT"
-          else
-            BRANCH="capture/$(date -u +%Y%m%d-%H%M%S)-docs"
-          fi
-          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
-
-      - name: Copy captures and commit
+          persist-credentials: false
+      - name: Record validated capture data
         id: push
         env:
           BRANCH: ${{ steps.branch.outputs.name }}
+          GH_TOKEN: ${{ steps.audit-token.outputs.token }}
+          APP_SLUG: ${{ steps.audit-token.outputs.app-slug }}
+          DOCS_MODE: ${{ inputs.mode }}
         run: |
-          set -e
-          cp -r "$AUDIT_OUT"/* audit-repo/ 2>/dev/null || true
-          cd audit-repo
-          git config user.email "${{ steps.audit-token.outputs.app-slug }}[bot]@users.noreply.github.com"
-          git config user.name "${{ steps.audit-token.outputs.app-slug }}[bot]"
-          # If another job already created this branch (coordinated run with PPDS),
-          # check it out and add to it. Otherwise create it fresh.
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
-            git fetch origin "$BRANCH":"$BRANCH"
-            git checkout "$BRANCH"
+          set -euo pipefail
+          DEFAULT_BRANCH=$(gh api repos/joshsmithxrm/ppds-v1-audit --jq .default_branch)
+          test "$BRANCH" != "$DEFAULT_BRANCH"
+          # Authentication applies only to these Git commands, never saved to disk.
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$AUTH"
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0=http.https://github.com/.extraheader
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $AUTH"
+          git -C audit-repo config core.hooksPath /dev/null
+          git -C audit-repo config user.email "$APP_SLUG[bot]@users.noreply.github.com"
+          git -C audit-repo config user.name "$APP_SLUG[bot]"
+          REMOTE_REF=$(git -C audit-repo ls-remote --heads origin "refs/heads/$BRANCH")
+          if [ -n "$REMOTE_REF" ]; then
+            ENCODED_BRANCH=$(python -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$BRANCH")
+            PROTECTED=$(gh api "repos/joshsmithxrm/ppds-v1-audit/branches/$ENCODED_BRANCH" --jq .protected)
+            test "$PROTECTED" = false
+            git -C audit-repo fetch origin "refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
+            git -C audit-repo checkout -b "$BRANCH" "refs/remotes/origin/$BRANCH"
           else
-            git checkout -b "$BRANCH"
+            git -C audit-repo checkout -b "$BRANCH"
           fi
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            echo "commit_url=" >> "$GITHUB_OUTPUT"
-            echo "skipped=true" >> "$GITHUB_OUTPUT"
+          python trusted-source/tools/ci/audit_artifact.py "$AUDIT_OUT" --destination audit-repo
+          git -C audit-repo add -- manifest.json docs
+          if git -C audit-repo diff --cached --quiet; then
+            echo 'No changes to commit'
+            echo 'commit_url=' >> "$GITHUB_OUTPUT"
           else
-            git commit -m "capture(docs): ${{ github.sha }} (mode=${{ github.event.inputs.mode }})"
-            git push origin "$BRANCH"
-            SHA=$(git rev-parse HEAD)
+            git -C audit-repo commit -m "capture(docs): $AUDIT_SOURCE_COMMIT (mode=$DOCS_MODE)"
+            git -C audit-repo push origin "HEAD:refs/heads/$BRANCH"
+            SHA=$(git -C audit-repo rev-parse HEAD)
             echo "commit_url=https://github.com/joshsmithxrm/ppds-v1-audit/commit/$SHA" >> "$GITHUB_OUTPUT"
-            echo "skipped=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Summarize manifest
-        id: summary
-        if: always()
-        run: |
-          if [ -f "$AUDIT_OUT/manifest.json" ]; then
-            TOTAL=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.total)")
-            OK=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.ok)")
-            ERR=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.error)")
-            SKIPPED=$(node -e "console.log(JSON.parse(require('node:fs').readFileSync(process.env.AUDIT_OUT + '/manifest.json', 'utf8')).summary.skipped)")
-            echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
-            echo "ok=$OK" >> "$GITHUB_OUTPUT"
-            echo "error=$ERR" >> "$GITHUB_OUTPUT"
-            echo "skipped=$SKIPPED" >> "$GITHUB_OUTPUT"
-          else
-            echo "total=0" >> "$GITHUB_OUTPUT"
-            echo "ok=0" >> "$GITHUB_OUTPUT"
-            echo "error=1" >> "$GITHUB_OUTPUT"
-            echo "skipped=0" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Notify webhook
         if: always()
         env:
           AUDIT_WEBHOOK_URL: ${{ secrets.AUDIT_WEBHOOK_URL }}
+          CAPTURE_RESULT: ${{ needs.capture.result }}
+          RECORD_RESULT: ${{ job.status }}
+          COMMIT_URL: ${{ steps.push.outputs.commit_url }}
+          OK_COUNT: ${{ steps.summary.outputs.ok }}
+          ERROR_COUNT: ${{ steps.summary.outputs.error }}
+          SKIPPED_COUNT: ${{ steps.summary.outputs.skipped }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          if [ -z "$AUDIT_WEBHOOK_URL" ]; then
-            echo "AUDIT_WEBHOOK_URL not configured — skipping notification"
-            exit 0
-          fi
-          STATUS="ready"
-          if [ "${{ steps.summary.outputs.error }}" != "0" ]; then STATUS="with errors"; fi
-          if [ "${{ job.status }}" != "success" ]; then STATUS="failed"; fi
-          COMMIT="${{ steps.push.outputs.commit_url }}"
-          if [ -z "$COMMIT" ]; then COMMIT="(no commit — see workflow run)"; fi
-          CONTENT="Docs audit capture $STATUS: $COMMIT — ${{ steps.summary.outputs.ok }} ok / ${{ steps.summary.outputs.error }} error / ${{ steps.summary.outputs.skipped }} skipped (mode=${{ github.event.inputs.mode }}, commit ${{ github.sha }}). Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          node -e "
-            const url = process.env.AUDIT_WEBHOOK_URL;
-            const content = process.argv[1];
-            const payload = JSON.stringify({ content, text: content });
-            fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload })
-              .then(r => { if (!r.ok) { console.error('webhook status:', r.status); process.exit(1); } });
-          " "$CONTENT"
-
-      - name: Fail job if capture had errors
-        if: steps.summary.outputs.error != '0'
-        run: |
-          echo "::error::Capture reported ${{ steps.summary.outputs.error }} errored entry/entries. See manifest.json."
-          exit 1
+          python - <<'PY'
+          import json, os, urllib.request
+          url = os.environ.get('AUDIT_WEBHOOK_URL')
+          if not url:
+              print('AUDIT_WEBHOOK_URL not configured; skipping notification')
+          else:
+              content = ('Docs audit capture: ' + os.environ['CAPTURE_RESULT'] +
+                         '; recording: ' + os.environ['RECORD_RESULT'] +
+                         '; ' + (os.environ['COMMIT_URL'] or '(no commit)') +
+                         '; ok/error/skipped: ' + '/'.join(os.environ[k] or '?' for k in ('OK_COUNT','ERROR_COUNT','SKIPPED_COUNT')) +
+                         '; source ' + os.environ['AUDIT_SOURCE_COMMIT'] + '; ' + os.environ['RUN_URL'])
+              request = urllib.request.Request(url, data=json.dumps({'content':content,'text':content}).encode(), headers={'Content-Type':'application/json'})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  if response.status >= 400: raise RuntimeError('Webhook failed')
+          PY
+      - name: Fail recording when capture failed
+        if: needs.capture.result != 'success' || steps.summary.outputs.error != '0'
+        run: exit 1

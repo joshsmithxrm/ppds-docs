@@ -16,6 +16,7 @@ ppds forms add-section [options]
 | --- | --- | --- | --- | --- |
 | `--available-on-phone` |  | `bool?` |  | Whether the section is available on phone |
 | `--columns` |  | `int?` |  | Number of columns (1 or 2) |
+| `--confirm-env` |  | `string` |  | Acknowledge writing to this exact resolved environment URL |
 | `--correlation-id` |  | `string` |  | Correlation ID for distributed tracing |
 | `--debug` |  | `bool` |  | Show trace-level diagnostic output |
 | `--entity` |  | `string` |  | Entity logical name |
@@ -24,7 +25,7 @@ ppds forms add-section [options]
 | `--label` |  | `string` |  | Section label |
 | `--output-format` | `-f` | `OutputFormat` |  | Output format |
 | `--profile` | `-p` | `string` |  | Authentication profile name |
-| `--publish` |  | `bool` |  | Publish customizations after adding the section |
+| `--publish` |  | `bool` |  | Publish all pending customizations for this table after writing |
 | `--quiet` | `-q` | `bool` |  | Show only warnings and errors |
 | `--show-label` |  | `bool?` |  | Show the section label |
 | `--solution` |  | `string` |  | Solution unique name to associate the change with |

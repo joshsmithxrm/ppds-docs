@@ -16,6 +16,7 @@ ppds forms update-tab [options]
 | --- | --- | --- | --- | --- |
 | `--available-on-phone` |  | `bool?` |  | Whether the tab is available on phone |
 | `--columns` |  | `int?` |  | Number of columns in the tab |
+| `--confirm-env` |  | `string` |  | Acknowledge writing to this exact resolved environment URL |
 | `--correlation-id` |  | `string` |  | Correlation ID for distributed tracing |
 | `--debug` |  | `bool` |  | Show trace-level diagnostic output |
 | `--entity` |  | `string` |  | Entity logical name |
@@ -25,7 +26,7 @@ ppds forms update-tab [options]
 | `--label` |  | `string` |  | New label for the tab (renames the tab) |
 | `--output-format` | `-f` | `OutputFormat` |  | Output format |
 | `--profile` | `-p` | `string` |  | Authentication profile name |
-| `--publish` |  | `bool` |  | Publish customizations after writing |
+| `--publish` |  | `bool` |  | Publish all pending customizations for this table after writing |
 | `--quiet` | `-q` | `bool` |  | Show only warnings and errors |
 | `--show-label` |  | `bool?` |  | Whether to show the tab label |
 | `--solution` |  | `string` |  | Solution unique name to associate the change with |

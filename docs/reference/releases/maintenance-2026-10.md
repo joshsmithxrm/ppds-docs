@@ -169,10 +169,12 @@ limits remain: 23 development-tooling advisories are deferred; GitHub tracks
 12 alerts covering 11 GHSAs and three test-only CodeQL notices. Unavailable
 companion GitHub scanning remains unknown rather than being treated as clean.
 
-A separate audit of this documentation site's unchanged dependency lockfile
-reports 65 affected-package entries: eight low, 15 moderate, 24 high, and
-18 critical. These documentation dependency findings are outside the core
-product audit counts and remain unresolved in this publication.
+The earlier documentation-site audit recorded 65 affected-package entries
+in its unchanged dependency lockfile:
+eight low, 15 moderate, 24 high, and 18 critical. Those counts were outside
+the core product audit. The subsequent, still-unpublished [safe-workflows release
+candidate](safe-multi-environment-workflows.md#security-preparation) records
+the November 2 remediation and the remaining lower-severity findings.
 
 The earlier live `net48` smoke used runtime `49f09af8`; all six resources
 were cleaned up. It is separate from the new public-artifact offline checks.

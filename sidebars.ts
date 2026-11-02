@@ -16,6 +16,10 @@ const sidebars: SidebarsConfig = {
         'guides/consumption-patterns',
         'guides/metadata-editing',
         'guides/plugin-packages',
+        'guides/environment-safety',
+        'guides/mcp-form-authoring',
+        'guides/notebook-environments',
+        'guides/flow-activation',
       ],
     },
     {
