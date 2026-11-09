@@ -19,7 +19,7 @@ Thank you for your interest in contributing to Power Platform Developer Suite!
 
 ### Prerequisites
 
-- .NET 8.0 SDK
+- The core repository SDK selected by its `global.json` (currently .NET 10.0.1xx); preserve the package target-framework matrix.
 - Node.js 20+ (for docs)
 - A Power Platform environment for testing
 

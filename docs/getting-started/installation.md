@@ -10,8 +10,10 @@ Install the published Power Platform Developer Suite (PPDS) CLI and libraries. T
 
 ## Prerequisites
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
+- A supported [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) is recommended for new CLI/MCP global-tool installations. Existing package targets remain .NET 8, 9 and 10.
 - A Microsoft Power Platform environment
+
+The approved candidate's self-contained native CLI and four VSIX payloads use .NET 10, with a patched 10.0 servicing floor. They need no separate runtime install. Native Linux requires glibc 2.27; VS Code requires 2.28. Runtime feasibility and Microsoft's supported OS list are separate checks against the final artifacts. Package target frameworks remain 8/9/10, with Plugins on net462. The install commands below fetch public packages; they do not by themselves install an unpublished source candidate.
 
 ## CLI Installation
 

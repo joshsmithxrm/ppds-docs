@@ -36,3 +36,7 @@ Read and review the saved draft, then call `ppds_forms_publish` with `entityLogi
 Inspect `entityPublication` and `publishedVerification`. If publication may have completed but verification failed, read the published form before retrying. There is no automatic rollback.
 
 The [forms specification](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/specs/feat-forms-commands.md) and [fixture provenance guide](https://github.com/joshsmithxrm/power-platform-developer-suite/blob/main/tests/PPDS.LiveTests/Fixtures/Forms/README.md) describe the supported layouts and validation limits. Generated MCP reference pages provide the exact tool schemas.
+
+## CLI layout operations
+
+For same-section retry handling, strict reorder and explicit field movement, use the matching [CLI form layout guide](form-layout.md). These are CLI operations; the bounded MCP catalog still exposes the draft-add/publication workflow described above. Existing custom labels are retained, and table publication remains a separate acknowledgement.

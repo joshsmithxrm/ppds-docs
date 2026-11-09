@@ -11,7 +11,7 @@ Before changing a form or flow, inspect the selected profile and environment. Ke
 
 ## Acknowledge a protected target
 
-Form writers and flow enable/disable commands accept `--confirm-env` with the exact environment URL. Supply it after reviewing the intended target and change. For MCP form mutations, the corresponding argument is `confirmEnvironment`.
+Form writers, all nine Views writers and flow enable/disable commands accept `--confirm-env` with the exact environment URL. Supply it after reviewing the intended target and change. For MCP form mutations, the corresponding argument is `confirmEnvironment`.
 
 The shared guard checks the actual target, profile identity, session and current environment policy. An acknowledgement for another target or profile cannot authorize this operation. Effective Production or Test protection requires acknowledgement. Unknown targets default to Production protection; an explicit environment protection override takes precedence. Read-only sessions reject actual writes. A write-free preview remains available where the operation supports it.
 
@@ -30,3 +30,5 @@ MCP acknowledgement is scoped to the current session and target. An environment 
 These guards apply to the form and flow paths described here. Other PPDS mutation domains retain their own safety contracts; this release does not promise a universal replacement for every existing guard.
 
 For the operation itself, follow [MCP form authoring](mcp-form-authoring.md), [flow activation](flow-activation.md), or [notebook environment selection](notebook-environments.md). Notebook execution confirmation acknowledges a query target and does not authorize DML.
+
+Use long `--environment` and `--entity` options when writing scripts; legacy `-e` meanings differ by command during the approved transition. See [CLI transitions](cli-transition.md). A strict form reorder or move that finds the desired state already present still runs target/customization protection. An XML no-op can retain explicitly requested solution association/publication; do not treat it as zero overall writes.
