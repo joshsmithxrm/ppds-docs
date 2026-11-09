@@ -1,13 +1,13 @@
 ---
 title: Confirm the environment before a write
-description: Keep form and flow changes tied to the intended environment
+description: Keep form, view and flow changes tied to the intended environment
 ---
 
 # Confirm the environment before a write
 
 This guide covers the implemented **Safe multi-environment workflows release candidate** for Power Platform Developer Suite (PPDS). It is not a claim that the candidate has been published.
 
-Before changing a form or flow, inspect the selected profile and environment. Keep the exact environment URL with your preview and result. A nickname is useful for display, but it does not identify the acknowledged write target.
+Before changing a form, view or flow, inspect the selected profile and environment. Keep the exact environment URL with your preview and result. A nickname is useful for display, but it does not identify the acknowledged write target.
 
 ## Acknowledge a protected target
 
@@ -27,7 +27,7 @@ MCP acknowledgement is scoped to the current session and target. An environment 
 | `Environment.ReadOnly` | Continue inspection or preview. Use an explicitly authorized write session for a mutation. |
 | `Environment.TargetUnresolved` or `Environment.ConfirmationPolicyUnavailable` | Resolve the target or configuration problem before retrying. |
 
-These guards apply to the form and flow paths described here. Other PPDS mutation domains retain their own safety contracts; this release does not promise a universal replacement for every existing guard.
+These guards apply to the form, nine Views writer and flow paths described here. Other PPDS mutation domains retain their own safety contracts; this release does not promise a universal replacement for every existing guard.
 
 For the operation itself, follow [MCP form authoring](mcp-form-authoring.md), [flow activation](flow-activation.md), or [notebook environment selection](notebook-environments.md). Notebook execution confirmation acknowledges a query target and does not authorize DML.
 

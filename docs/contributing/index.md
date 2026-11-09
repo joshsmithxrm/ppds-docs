@@ -20,7 +20,7 @@ Thank you for your interest in contributing to Power Platform Developer Suite!
 ### Prerequisites
 
 - The core repository SDK selected by its `global.json` (currently .NET 10.0.1xx); preserve the package target-framework matrix.
-- Node.js 20+ (for docs)
+- Node.js 24 (for docs, matching the repository engine and CI)
 - A Power Platform environment for testing
 
 ### Clone the Repository
