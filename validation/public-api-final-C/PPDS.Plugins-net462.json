@@ -1,0 +1,3964 @@
+{
+  "schema": 1,
+  "reader": "PEReader/MetadataReader; no target assembly load, resolver, constructor, module initializer or method invocation",
+  "sha256": "a34fbf59da4b07aa4f5ef93ad8cd494223bc3926c401640385e72889db9b70f4",
+  "assembly_name": "PPDS.Plugins",
+  "assembly_version": "3.0.0.0",
+  "assembly_flags": 1,
+  "public_key_hex": "00240000048000009400000006020000002400005253413100040000010001006123415301dd5c875570236f7d85e0306179aa3b21dbfcb8cba94bb0e78a6ba2402024998306d2db04777af1c163c8d46d6733e44951b032b9263fb25ba9a6e59053ead08f03181b36581f6d4696a2c4a0eb2dc58af6b842d7ca953e2d4435db4cebf49fce4b7fc02ef5cdb68b1684e8393dda6099ac458c636ddb4e3cf826c6",
+  "assembly_attributes": [
+    {
+      "type": "System.Runtime.CompilerServices.CompilationRelaxationsAttribute",
+      "raw_blob_hex": "0100080000000000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Runtime.CompilerServices.RuntimeCompatibilityAttribute",
+      "raw_blob_hex": "01000100540216577261704e6f6e457863657074696f6e5468726f777301",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Diagnostics.DebuggableAttribute",
+      "raw_blob_hex": "0100020000000000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Runtime.Versioning.TargetFrameworkAttribute",
+      "raw_blob_hex": "01001c2e4e45544672616d65776f726b2c56657273696f6e3d76342e362e320100540e144672616d65776f726b446973706c61794e616d65142e4e4554204672616d65776f726b20342e362e32",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyCompanyAttribute",
+      "raw_blob_hex": "01001e506f77657220506c6174666f726d20446576656c6f7065722053756974650000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyConfigurationAttribute",
+      "raw_blob_hex": "01000752656c656173650000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyCopyrightAttribute",
+      "raw_blob_hex": "01001d436f70797269676874202863292032303235204a6f736820536d6974680000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyDescriptionAttribute",
+      "raw_blob_hex": "010080c0506c7567696e20646576656c6f706d656e74206174747269627574657320666f72204461746176657273652e2050726f766964657320506c7567696e5374657020616e6420506c7567696e496d616765206174747269627574657320666f72206465636c6172617469766520706c7567696e20726567697374726174696f6e20636f6e66696775726174696f6e20746861742063616e2062652065787472616374656420616e64206465706c6f796564207573696e67205050445320434c492e0000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyFileVersionAttribute",
+      "raw_blob_hex": "010007332e312e312e300000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+      "raw_blob_hex": "010039332e312e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyProductAttribute",
+      "raw_blob_hex": "01000c505044532e506c7567696e730000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyTitleAttribute",
+      "raw_blob_hex": "01000c505044532e506c7567696e730000",
+      "single_string_argument": null
+    },
+    {
+      "type": "System.Reflection.AssemblyMetadataAttribute",
+      "raw_blob_hex": "01000d5265706f7369746f727955726c4268747470733a2f2f6769746875622e636f6d2f6a6f7368736d69746878726d2f706f7765722d706c6174666f726d2d646576656c6f7065722d73756974652e6769740000",
+      "single_string_argument": null
+    }
+  ],
+  "module_attributes": [
+    {
+      "type": "System.Runtime.CompilerServices.RefSafetyRulesAttribute",
+      "raw_blob_hex": "01000b0000000000",
+      "single_string_argument": null
+    }
+  ],
+  "references": [
+    {
+      "name": "mscorlib",
+      "version": "4.0.0.0",
+      "flags": 0,
+      "public_key_or_token_hex": "b77a5c561934e089"
+    }
+  ],
+  "exported_types": [],
+  "type_references": [
+    {
+      "name": "System.Attribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.AttributeTargets",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.AttributeUsageAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Byte",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Diagnostics.DebuggableAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Diagnostics.DebuggableAttribute\u002BDebuggingModes",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Enum",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyCompanyAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyConfigurationAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyCopyrightAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyDescriptionAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyFileVersionAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyInformationalVersionAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyMetadataAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyProductAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Reflection.AssemblyTitleAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Runtime.CompilerServices.CompilationRelaxationsAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Runtime.CompilerServices.RuntimeCompatibilityAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.Runtime.Versioning.TargetFrameworkAttribute",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    },
+    {
+      "name": "System.String",
+      "scope": "mscorlib, Version=4.0.0.0, Culture=, Key=b77a5c561934e089"
+    }
+  ],
+  "types": [
+    {
+      "name": "PPDS.Plugins.CustomApiAttribute",
+      "attributes": 1048833,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Attribute",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [
+        {
+          "name": "get_UniqueName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_UniqueName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_DisplayName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_DisplayName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_BindingType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.ApiBindingType",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_BindingType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.ApiBindingType"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_BoundEntity",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_BoundEntity",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_IsFunction",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_IsFunction",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_IsPrivate",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_IsPrivate",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_ExecutePrivilegeName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_ExecutePrivilegeName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_AllowedProcessingStepType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.ApiProcessingStepType",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_AllowedProcessingStepType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.ApiProcessingStepType"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": []
+        }
+      ],
+      "properties": [
+        {
+          "name": "UniqueName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "DisplayName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "Name",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Description",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "BindingType",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.ApiBindingType",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "BoundEntity",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "IsFunction",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "IsPrivate",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "ExecutePrivilegeName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "AllowedProcessingStepType",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.ApiProcessingStepType",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "custom_attributes": [
+        {
+          "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+          "raw_blob_hex": "0100020000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.Runtime.CompilerServices.NullableAttribute",
+          "raw_blob_hex": "0100000000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.AttributeUsageAttribute",
+          "raw_blob_hex": "010004000000020054020d416c6c6f774d756c7469706c6500540209496e6865726974656400",
+          "single_string_argument": null
+        }
+      ]
+    },
+    {
+      "name": "PPDS.Plugins.CustomApiParameterAttribute",
+      "attributes": 1048833,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Attribute",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [
+        {
+          "name": "get_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_UniqueName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_UniqueName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_DisplayName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_DisplayName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Type",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.ApiParameterType",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Type",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.ApiParameterType"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_LogicalEntityName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_LogicalEntityName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_IsOptional",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_IsOptional",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Direction",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.ParameterDirection",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Direction",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.ParameterDirection"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": []
+        }
+      ],
+      "properties": [
+        {
+          "name": "Name",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "UniqueName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "DisplayName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Description",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Type",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.ApiParameterType",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "LogicalEntityName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "IsOptional",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Direction",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.ParameterDirection",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "custom_attributes": [
+        {
+          "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+          "raw_blob_hex": "0100020000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.Runtime.CompilerServices.NullableAttribute",
+          "raw_blob_hex": "0100000000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.AttributeUsageAttribute",
+          "raw_blob_hex": "010004000000020054020d416c6c6f774d756c7469706c6501540209496e6865726974656400",
+          "single_string_argument": null
+        }
+      ]
+    },
+    {
+      "name": "PPDS.Plugins.PluginImageAttribute",
+      "attributes": 1048833,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Attribute",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [
+        {
+          "name": "get_ImageType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.PluginImageType",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_ImageType",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginImageType"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Attributes",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Attributes",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_EntityAlias",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_EntityAlias",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_StepId",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_StepId",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_MessagePropertyName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_MessagePropertyName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": []
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginImageType",
+            "System.String"
+          ],
+          "required_parameter_count": 2,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "imageType",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            },
+            {
+              "sequence": 2,
+              "name": "name",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginImageType",
+            "System.String",
+            "System.String"
+          ],
+          "required_parameter_count": 3,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "imageType",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            },
+            {
+              "sequence": 2,
+              "name": "name",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            },
+            {
+              "sequence": 3,
+              "name": "attributes",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "ImageType",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.PluginImageType",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Name",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "Attributes",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "EntityAlias",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "StepId",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Description",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "MessagePropertyName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "custom_attributes": [
+        {
+          "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+          "raw_blob_hex": "0100020000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.Runtime.CompilerServices.NullableAttribute",
+          "raw_blob_hex": "0100000000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.AttributeUsageAttribute",
+          "raw_blob_hex": "010004000000020054020d416c6c6f774d756c7469706c6501540209496e6865726974656400",
+          "single_string_argument": null
+        }
+      ]
+    },
+    {
+      "name": "PPDS.Plugins.PluginStepAttribute",
+      "attributes": 1048833,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Attribute",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [
+        {
+          "name": "get_Message",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Message",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_EntityLogicalName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_EntityLogicalName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            },
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_SecondaryEntityLogicalName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_SecondaryEntityLogicalName",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Stage",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.PluginStage",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Stage",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginStage"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Mode",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.PluginMode",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Mode",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginMode"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_FilteringAttributes",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_FilteringAttributes",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_ExecutionOrder",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Int32",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_ExecutionOrder",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Int32"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Name",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_UnsecureConfiguration",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_UnsecureConfiguration",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Description",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_AsyncAutoDelete",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_AsyncAutoDelete",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_Deployment",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.PluginDeployment",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_Deployment",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginDeployment"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_RunAsUser",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_RunAsUser",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_CanBeBypassed",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_CanBeBypassed",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_CanUseReadOnlyConnection",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_CanUseReadOnlyConnection",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.Boolean"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_InvocationSource",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "PPDS.Plugins.PluginInvocationSource",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_InvocationSource",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "PPDS.Plugins.PluginInvocationSource"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "get_StepId",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "set_StepId",
+          "visibility": "Public",
+          "attributes": 2182,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String"
+          ],
+          "required_parameter_count": 1,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "value",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [],
+          "required_parameter_count": 0,
+          "generic_parameters": [],
+          "parameters": [],
+          "custom_attributes": []
+        },
+        {
+          "name": ".ctor",
+          "visibility": "Public",
+          "attributes": 6278,
+          "implementation_attributes": 0,
+          "has_body": true,
+          "signature_header": 32,
+          "import_name": null,
+          "import_module": null,
+          "generic_parameter_count": 0,
+          "return_type": "System.Void",
+          "parameter_types": [
+            "System.String",
+            "System.String",
+            "PPDS.Plugins.PluginStage"
+          ],
+          "required_parameter_count": 3,
+          "generic_parameters": [],
+          "parameters": [
+            {
+              "sequence": 1,
+              "name": "message",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            },
+            {
+              "sequence": 2,
+              "name": "entityLogicalName",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            },
+            {
+              "sequence": 3,
+              "name": "stage",
+              "attributes": 0,
+              "default": null,
+              "custom_attributes": []
+            }
+          ],
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Message",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "EntityLogicalName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": [
+            {
+              "type": "System.Runtime.CompilerServices.NullableAttribute",
+              "raw_blob_hex": "0100010000",
+              "single_string_argument": null
+            }
+          ]
+        },
+        {
+          "name": "SecondaryEntityLogicalName",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Stage",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.PluginStage",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Mode",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.PluginMode",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "FilteringAttributes",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "ExecutionOrder",
+          "attributes": 0,
+          "return_type": "System.Int32",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Name",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "UnsecureConfiguration",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Description",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "AsyncAutoDelete",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Deployment",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.PluginDeployment",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "RunAsUser",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "CanBeBypassed",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "CanUseReadOnlyConnection",
+          "attributes": 0,
+          "return_type": "System.Boolean",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "InvocationSource",
+          "attributes": 0,
+          "return_type": "PPDS.Plugins.PluginInvocationSource",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "StepId",
+          "attributes": 0,
+          "return_type": "System.String",
+          "parameter_types": [],
+          "getter": "Public",
+          "setter": "Public",
+          "default": null,
+          "custom_attributes": []
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "custom_attributes": [
+        {
+          "type": "System.Runtime.CompilerServices.NullableContextAttribute",
+          "raw_blob_hex": "0100020000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.Runtime.CompilerServices.NullableAttribute",
+          "raw_blob_hex": "0100000000",
+          "single_string_argument": null
+        },
+        {
+          "type": "System.AttributeUsageAttribute",
+          "raw_blob_hex": "010004000000020054020d416c6c6f774d756c7469706c6501540209496e6865726974656400",
+          "single_string_argument": null
+        }
+      ]
+    },
+    {
+      "name": "PPDS.Plugins.ApiBindingType",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Global",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiBindingType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Entity",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiBindingType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "EntityCollection",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiBindingType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "02000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.ApiParameterType",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Boolean",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "DateTime",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Decimal",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "02000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Entity",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "03000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "EntityCollection",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "04000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "EntityReference",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "05000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Float",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "06000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Integer",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "07000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Money",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "08000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Picklist",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "09000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "String",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "0a000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "StringArray",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "0b000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Guid",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiParameterType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "0c000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.ApiProcessingStepType",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "None",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiProcessingStepType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "AsyncOnly",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiProcessingStepType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "SyncAndAsync",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ApiProcessingStepType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "02000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.ParameterDirection",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Input",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ParameterDirection",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Output",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.ParameterDirection",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.PluginDeployment",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "ServerOnly",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginDeployment",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Offline",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginDeployment",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Both",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginDeployment",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "02000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.PluginImageType",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "PreImage",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginImageType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "PostImage",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginImageType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Both",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginImageType",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "02000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.PluginInvocationSource",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Parent",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginInvocationSource",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Child",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginInvocationSource",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.PluginMode",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "Synchronous",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginMode",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "00000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "Asynchronous",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginMode",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "01000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    },
+    {
+      "name": "PPDS.Plugins.PluginStage",
+      "attributes": 257,
+      "packing_size": 0,
+      "layout_size": 0,
+      "base_type": "System.Enum",
+      "interfaces": [],
+      "generic_parameters": [],
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "name": "value__",
+          "attributes": 1542,
+          "field_type": "System.Int32",
+          "offset": -1,
+          "default": null,
+          "custom_attributes": []
+        },
+        {
+          "name": "PreValidation",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginStage",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "0a000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "PreOperation",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginStage",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "14000000"
+          },
+          "custom_attributes": []
+        },
+        {
+          "name": "PostOperation",
+          "attributes": 32854,
+          "field_type": "PPDS.Plugins.PluginStage",
+          "offset": -1,
+          "default": {
+            "type": "Int32",
+            "value_blob_hex": "28000000"
+          },
+          "custom_attributes": []
+        }
+      ],
+      "events": [],
+      "custom_attributes": []
+    }
+  ]
+}
