@@ -6,6 +6,8 @@ description: .NET libraries for Power Platform Developer Suite
 
 # Libraries Reference
 
+The generated API pages below describe final-C Release candidate `a0feb138f00575d35634565f3a733deb9e65ca98`, not the published stable packages in the table. [Capture provenance](../capture-provenance.md) records exact versions, all five libraries, and validation limits.
+
 The Power Platform Developer Suite (PPDS) ships a set of focused .NET libraries you can compose in your own applications. `PPDS.Auth` resolves credentials, `PPDS.Dataverse` manages connection pools and bulk operations on top of that, `PPDS.Migration` layers dependency-aware export and import on top of the pool, and `PPDS.Plugins` is a standalone `net462` package of attributes for declarative plugin registration. The CLI, MCP server, and VS Code extension are all built on these same libraries.
 
 ## Packages

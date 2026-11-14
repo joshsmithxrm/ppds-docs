@@ -1,0 +1,241 @@
+{
+  "source_commit": "a0feb138f00575d35634565f3a733deb9e65ca98",
+  "capture_file_sha256": "410e9b52027fdbe2e8fcaf23b11cd08e351c4d2ee00d6e2f03d9aa56ebb1aee0",
+  "count": 21,
+  "rows": [
+    {
+      "command": "ppds plugins extract",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                                    Overwrite existing file without merging"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>                Output format [default: Text]",
+      "raw_help_sha256": "de773e8427ebb2dccb84b51e4a1375b6599bd2328a801df30be7b4577bb973b9"
+    },
+    {
+      "command": "ppds plugins unregister",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Force cascade delete of all child entities"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "b75ae3473c9fb8c2c47fe87645723047e73546e866ae8d1581cdece2b85058a5"
+    },
+    {
+      "command": "ppds plugin-traces list",
+      "duplicate_aliases": [
+        "--correlation-id"
+      ],
+      "earlier_rows": [
+        "  --correlation-id <correlation-id>      Filter by correlation ID"
+      ],
+      "later_row": "  --correlation-id <correlation-id>      Correlation ID for distributed tracing",
+      "raw_help_sha256": "cb954c857748206fc59b1524e8c3627e0da0bb1b8be91e6e301eed1da4302fe0"
+    },
+    {
+      "command": "ppds plugin-traces related",
+      "duplicate_aliases": [
+        "--correlation-id"
+      ],
+      "earlier_rows": [
+        "  -c, --correlation-id <correlation-id>  The correlation ID to look up (alternative to trace-id)"
+      ],
+      "later_row": "  --correlation-id <correlation-id>      Correlation ID for distributed tracing",
+      "raw_help_sha256": "a237f576dbabd393003f3234fdad50a2dd132d0b9cf6f14c9925fd05a3d79cf1"
+    },
+    {
+      "command": "ppds plugin-traces timeline",
+      "duplicate_aliases": [
+        "--correlation-id"
+      ],
+      "earlier_rows": [
+        "  -c, --correlation-id <correlation-id>  Correlation ID to look up directly (use this if you already have the correlation ID)"
+      ],
+      "later_row": "  --correlation-id <correlation-id>      Correlation ID for distributed tracing",
+      "raw_help_sha256": "111513615fa063fb5d6e87d68dfa88fe16cfae2b4575fda34ec0b90ebee8c71c"
+    },
+    {
+      "command": "ppds service-endpoints unregister",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Force cascade delete of dependent step registrations"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "98a19a0b759e785a72761f030dc8f81dcf0a15cb09006329fa430f2a37eb8f28"
+    },
+    {
+      "command": "ppds custom-apis unregister",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Force cascade delete of dependent parameters and response properties"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "d75fc2117a6e3f7df0cc1424bc069dffc480c0387c9cddcee1abc945b75103b1"
+    },
+    {
+      "command": "ppds deployment-settings sync",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --file <file>                      [Required] Deployment settings file path"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>        Output format [default: Text]",
+      "raw_help_sha256": "542af7ad9b12e7160e9ba05eb2847ca69bd3cd5e506cbba18b58c889e3094a6a"
+    },
+    {
+      "command": "ppds views get",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "63651af965798f81521351e30e8ec8a491acb87f821ae90040822079e87d8742"
+    },
+    {
+      "command": "ppds views add-column",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "d718a07ebe17c2c88929720bb4a44d41f9b1b5a58763cd6391677274b842f278"
+    },
+    {
+      "command": "ppds views remove-column",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "29f84b7660a252f350eb7939f83756d65a02f2c3316a915aae0cf48462bc665e"
+    },
+    {
+      "command": "ppds views update-column",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "bf710aee2b1a603dbcf7d36d68e55453d58120622a9ee3ac9b658a9229624163"
+    },
+    {
+      "command": "ppds views reorder-columns",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "fc34d79fdd325518160ddf6eaa87fb3ebb2bdbd08caf0fe2300195010e3b1851"
+    },
+    {
+      "command": "ppds views set-sort",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "f0c4c55c349a0bd6b7451a66c387df51d88f59af6d65294cd2dce91f6790f3fa"
+    },
+    {
+      "command": "ppds views clear-sort",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "4e27b79d92c6ae20e7c9faf15bf746d967e999418c400fbc12fb1aac9233314b"
+    },
+    {
+      "command": "ppds views set-filter",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "3268f056ddeada1c9722fa1f49db7cc8f8983a14ff3e0437b0d3ee0c8474d78f"
+    },
+    {
+      "command": "ppds views clear-filter",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "30d249f5e94971dd36e7593ee7e17ff644081b8322de3046d17dc3be2f8b6d57"
+    },
+    {
+      "command": "ppds views set-fetchxml",
+      "duplicate_aliases": [
+        "-v"
+      ],
+      "earlier_rows": [
+        "  -v, --view <view>                      [Required] View name or ID"
+      ],
+      "later_row": "  -v, --verbose                          Show detailed output including debug messages",
+      "raw_help_sha256": "95b2f5a17b1a1787ddff96ce9251ee394b4846efa2fc2f04ba575ace34d627a1"
+    },
+    {
+      "command": "ppds plugins download assembly",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Overwrite existing file"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "9353ff9969a581b958b759f1e65fdc8df5b84cf79785705eff8e7dd0684ddf7d"
+    },
+    {
+      "command": "ppds plugins download package",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Overwrite existing file"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "50ee801553db1bd2230930ebd7d3f1e64b4a1343e92167b496ae23520babd543"
+    },
+    {
+      "command": "ppds query history clear",
+      "duplicate_aliases": [
+        "-f"
+      ],
+      "earlier_rows": [
+        "  -f, --force                        Skip confirmation prompt"
+      ],
+      "later_row": "  -f, --output-format <Text|Json>    Output format [default: Text]",
+      "raw_help_sha256": "e670f78594a5b10c92d32adc456fd243881816670cf5bd3ed64eee7cce024ce5"
+    }
+  ],
+  "all_rows_retained": true,
+  "binding_or_writer_safety_proven": false,
+  "historical_existing_classification_pending_independent_comparison": true
+}

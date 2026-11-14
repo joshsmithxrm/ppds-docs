@@ -1,0 +1,28 @@
+<!-- Generated from the exact captured CLI help; do not hand-edit. -->
+
+# ppds org who
+
+Source: `a0feb138f00575d35634565f3a733deb9e65ca98`, tree `904cce706d298d3f0ed62ea095bdcdd78d584101`. Actual CLI version: `1.4.3-alpha.0.35+a0feb138f00575d35634565f3a733deb9e65ca98`.
+
+## Options
+
+| Accepted spelling / aliases | Description |
+|---|---|
+| `-f, --output-format &lt;Text\|Json&gt;` | Output format [default: Text] |
+| `-env, --environment &lt;environment&gt;` | Environment to query (ID, URL, unique name, or partial name). Uses profile default if not specified. |
+| `-?, -h, --help` | Show help and usage information |
+
+## Captured help
+
+```text
+Description:
+  Verify connection and show current user info from Dataverse
+
+Usage:
+  ppds org who [options]
+
+Options:
+  -f, --output-format <Text|Json>    Output format [default: Text]
+  -env, --environment <environment>  Environment to query (ID, URL, unique name, or partial name). Uses profile default if not specified.
+  -?, -h, --help                     Show help and usage information
+```

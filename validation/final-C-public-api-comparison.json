@@ -1,0 +1,1625 @@
+{
+  "source_commit": "a0feb138f00575d35634565f3a733deb9e65ca98",
+  "source_tree": "904cce706d298d3f0ed62ea095bdcdd78d584101",
+  "configuration": "Release",
+  "public_stable_packages": [
+    {
+      "id": "PPDS.Auth",
+      "version": "1.1.2",
+      "nupkg": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\public-api-baseline-20261109\\downloads-1\\PPDS.Auth.1.1.2.nupkg",
+      "bytes": 371564,
+      "sha256": "d5213c936ebe6b1b98056d3916c02e33c202a60cca3265613480825776058642",
+      "official_catalog_SHA512_base64": "17O5EXkkH8FVr9M1IlDBY5NTSWPThL5YjMd/y/DCLsRRv3DR33MT/pdaWKjow1EeKubzFkV0EYicFlJ624jP3g==",
+      "actual_SHA512_base64": "17O5EXkkH8FVr9M1IlDBY5NTSWPThL5YjMd/y/DCLsRRv3DR33MT/pdaWKjow1EeKubzFkV0EYicFlJ624jP3g==",
+      "hash_matches": true,
+      "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.34.18/ppds.auth.1.1.2.json",
+      "catalog_record": {
+        "url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.34.18/ppds.auth.1.1.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.643316+00:00",
+        "raw_sha256": "6753bf77470d5cc75d96e08518f77b7ae69e8361abccf03dd0c1744b76ee7148",
+        "decoded_sha256": "6753bf77470d5cc75d96e08518f77b7ae69e8361abccf03dd0c1744b76ee7148",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:03 GMT",
+          "ETag": "0x8DF36E6B301847B",
+          "Last-Modified": "Sat, 31 Oct 2026 00:34:18 GMT",
+          "Content-Type": "application/json"
+        }
+      },
+      "registration_record": {
+        "url": "https://api.nuget.org/v3/registration5-gz-semver2/ppds.auth/1.1.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.478017+00:00",
+        "raw_sha256": "52873dcff60ee60a10d6fad4dac395baf5c8b08d6366e455f66a0f2ee3572b09",
+        "decoded_sha256": "dedee86238b1329573a374ad16020ae5b1a747dd9e087b7df10e49c08f61eb0d",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:02 GMT",
+          "ETag": "0x8DF36E6FA9CCA05",
+          "Last-Modified": "Sat, 31 Oct 2026 00:36:18 GMT",
+          "Content-Type": "application/json",
+          "Content-Encoding": "gzip"
+        }
+      },
+      "flatcontainer_sha512_marker_404_preserved": true,
+      "no_install_or_target_execution": true
+    },
+    {
+      "id": "PPDS.Dataverse",
+      "version": "1.3.2",
+      "nupkg": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\public-api-baseline-20261109\\downloads-1\\PPDS.Dataverse.1.3.2.nupkg",
+      "bytes": 1193437,
+      "sha256": "33ddf6bb57466ac9412178998a094c1b53b98e2e196290cc83dcb83dc557b195",
+      "official_catalog_SHA512_base64": "YBMwBCXK2BRCn4twA89S/Ghgn79foha0l4jq3FxT8zfZXciGUd11bJxEzY74sRJveJTTrHR7hmzdGSbFvijgbg==",
+      "actual_SHA512_base64": "YBMwBCXK2BRCn4twA89S/Ghgn79foha0l4jq3FxT8zfZXciGUd11bJxEzY74sRJveJTTrHR7hmzdGSbFvijgbg==",
+      "hash_matches": true,
+      "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.51.02/ppds.dataverse.1.3.2.json",
+      "catalog_record": {
+        "url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.51.02/ppds.dataverse.1.3.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.868518+00:00",
+        "raw_sha256": "a59a39b65dfcdd95030c36e13d2196e6be9847bc1878ada74fdb003278044d3c",
+        "decoded_sha256": "a59a39b65dfcdd95030c36e13d2196e6be9847bc1878ada74fdb003278044d3c",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:03 GMT",
+          "ETag": "0x8DF36E909BF3CAA",
+          "Last-Modified": "Sat, 31 Oct 2026 00:51:02 GMT",
+          "Content-Type": "application/json"
+        }
+      },
+      "registration_record": {
+        "url": "https://api.nuget.org/v3/registration5-gz-semver2/ppds.dataverse/1.3.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.477785+00:00",
+        "raw_sha256": "ab488afaa014699e2158397cce3313ed9413b5ce356dad010e1ccd3f4e17f974",
+        "decoded_sha256": "98af190002a153e5d09d7b7f479bd1da1c67e0f27b5776d5572c4caadb0d46ee",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:02 GMT",
+          "ETag": "0x8DF36E945592773",
+          "Last-Modified": "Sat, 31 Oct 2026 00:52:42 GMT",
+          "Content-Type": "application/json",
+          "Content-Encoding": "gzip"
+        }
+      },
+      "flatcontainer_sha512_marker_404_preserved": true,
+      "no_install_or_target_execution": true
+    },
+    {
+      "id": "PPDS.Plugins",
+      "version": "3.0.1",
+      "nupkg": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\public-api-baseline-20261109\\downloads-1\\PPDS.Plugins.3.0.1.nupkg",
+      "bytes": 28535,
+      "sha256": "d1a33ccc9bb7fa604bc99c6ed5debaf8177b1229f198177db23c1ef4eba2550d",
+      "official_catalog_SHA512_base64": "QsBqbcaHxJnBS6ehqBGkqX5b8kHCKQZSPZVGVvYppK/bEVhHqR+uKBRlvGW4Mc3dmjHpBsAskNrRu2LwHvOsxw==",
+      "actual_SHA512_base64": "QsBqbcaHxJnBS6ehqBGkqX5b8kHCKQZSPZVGVvYppK/bEVhHqR+uKBRlvGW4Mc3dmjHpBsAskNrRu2LwHvOsxw==",
+      "hash_matches": true,
+      "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.49.33/ppds.plugins.3.0.1.json",
+      "catalog_record": {
+        "url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.00.49.33/ppds.plugins.3.0.1.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.669747+00:00",
+        "raw_sha256": "e96fbf804ca5f74c88dcb8b242072e3f62016c903d17706f7c79e850b6056d24",
+        "decoded_sha256": "e96fbf804ca5f74c88dcb8b242072e3f62016c903d17706f7c79e850b6056d24",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:03 GMT",
+          "ETag": "0x8DF36E8D4A74E18",
+          "Last-Modified": "Sat, 31 Oct 2026 00:49:33 GMT",
+          "Content-Type": "application/json"
+        }
+      },
+      "registration_record": {
+        "url": "https://api.nuget.org/v3/registration5-gz-semver2/ppds.plugins/3.0.1.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.477939+00:00",
+        "raw_sha256": "a2015595ce9d9202f3c6b711e64272b58a3d1cc18a573d6ee22844d013692603",
+        "decoded_sha256": "9690b838124c9b0643f9260f204545a6210935342c1f1e367a235acfbb723f5a",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:02 GMT",
+          "ETag": "0x8DF36E91E8BC2E3",
+          "Last-Modified": "Sat, 31 Oct 2026 00:51:37 GMT",
+          "Content-Type": "application/json",
+          "Content-Encoding": "gzip"
+        }
+      },
+      "flatcontainer_sha512_marker_404_preserved": true,
+      "no_install_or_target_execution": true
+    },
+    {
+      "id": "PPDS.Query",
+      "version": "1.0.2",
+      "nupkg": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\public-api-baseline-20261109\\downloads-1\\PPDS.Query.1.0.2.nupkg",
+      "bytes": 537508,
+      "sha256": "f715329e0dcaa944de3c8f55c00a078bf22c4879c8e8eb34988c50b8e576beee",
+      "official_catalog_SHA512_base64": "IGr90H/h76e/TK+yDX511eOXRDmv9UAv6RnVE0GM8hIK8rM8speOXiBxDmo9LF2xCiApGyLXfe589Sx54LndPg==",
+      "actual_SHA512_base64": "IGr90H/h76e/TK+yDX511eOXRDmv9UAv6RnVE0GM8hIK8rM8speOXiBxDmo9LF2xCiApGyLXfe589Sx54LndPg==",
+      "hash_matches": true,
+      "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.01.04.45/ppds.query.1.0.2.json",
+      "catalog_record": {
+        "url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.01.04.45/ppds.query.1.0.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.676105+00:00",
+        "raw_sha256": "2465972f632cca253b3afa68145f9171b1b14e5802c6c1a622df8b7d5c245ed1",
+        "decoded_sha256": "2465972f632cca253b3afa68145f9171b1b14e5802c6c1a622df8b7d5c245ed1",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:03 GMT",
+          "ETag": "0x8DF36EAF4716E7E",
+          "Last-Modified": "Sat, 31 Oct 2026 01:04:46 GMT",
+          "Content-Type": "application/json"
+        }
+      },
+      "registration_record": {
+        "url": "https://api.nuget.org/v3/registration5-gz-semver2/ppds.query/1.0.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.477324+00:00",
+        "raw_sha256": "45e33ee2148e0eed8e48246887fb8eb7cda3f95c186df2de21025ac5eab6506d",
+        "decoded_sha256": "f6c04dad0563179106c9a0dc97382aa74bd1fcd9fc646769af47e5b92da66bc1",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:02 GMT",
+          "ETag": "0x8DF36EB4F940AA0",
+          "Last-Modified": "Sat, 31 Oct 2026 01:07:19 GMT",
+          "Content-Type": "application/json",
+          "Content-Encoding": "gzip"
+        }
+      },
+      "flatcontainer_sha512_marker_404_preserved": true,
+      "no_install_or_target_execution": true
+    },
+    {
+      "id": "PPDS.Migration",
+      "version": "1.2.2",
+      "nupkg": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\public-api-baseline-20261109\\downloads-1\\PPDS.Migration.1.2.2.nupkg",
+      "bytes": 531513,
+      "sha256": "37a18ec614af1d54f5f688e977083d584ef9af48103b678dd9fbe1fdde2807d1",
+      "official_catalog_SHA512_base64": "vTBfxdSF8tlO+CnKh7JFuJI6/7BOzz/PfSIjhYNviimKwLXX3vyGO9UIzWDjnRjbsWaLJwzSVBZErJ+TRXLV0w==",
+      "actual_SHA512_base64": "vTBfxdSF8tlO+CnKh7JFuJI6/7BOzz/PfSIjhYNviimKwLXX3vyGO9UIzWDjnRjbsWaLJwzSVBZErJ+TRXLV0w==",
+      "hash_matches": true,
+      "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.01.05.36/ppds.migration.1.2.2.json",
+      "catalog_record": {
+        "url": "https://api.nuget.org/v3/catalog0/data/2026.10.31.01.05.36/ppds.migration.1.2.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.607891+00:00",
+        "raw_sha256": "697f59c5bfb07d629c0c028494bf2311718167b202e70ca4a6b1d59f13c69e4f",
+        "decoded_sha256": "697f59c5bfb07d629c0c028494bf2311718167b202e70ca4a6b1d59f13c69e4f",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:03 GMT",
+          "ETag": "0x8DF36EB126EF68E",
+          "Last-Modified": "Sat, 31 Oct 2026 01:05:36 GMT",
+          "Content-Type": "application/json"
+        }
+      },
+      "registration_record": {
+        "url": "https://api.nuget.org/v3/registration5-gz-semver2/ppds.migration/1.2.2.json",
+        "status": 200,
+        "observed_utc": "2026-11-09T20:20:04.460207+00:00",
+        "raw_sha256": "71df373d7c66bc3c7b32dfec1a968931609dd368dfc152959d1679826a924e4f",
+        "decoded_sha256": "6e6ec8a6d233fde1fb6cd6a9789aabe92975a02b4b94b34232690caf1c14c249",
+        "headers": {
+          "Date": "Mon, 09 Nov 2026 20:20:02 GMT",
+          "ETag": "0x8DF36EB4F311F46",
+          "Last-Modified": "Sat, 31 Oct 2026 01:07:18 GMT",
+          "Content-Type": "application/json",
+          "Content-Encoding": "gzip"
+        }
+      },
+      "flatcontainer_sha512_marker_404_preserved": true,
+      "no_install_or_target_execution": true
+    }
+  ],
+  "matching_TFMs": 13,
+  "missing_TFMs": [],
+  "comparisons": [
+    {
+      "family": "PPDS.Auth",
+      "tfm": "net8.0",
+      "public_stable_version": "1.1.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Auth",
+        "tfm": "net8.0",
+        "input_sha256": "b6ad5189fd2a309c8eb24ab89a7cb2e960ac00a744ba99c524ab9a1653feaae8",
+        "output": "baseline-PPDS.Auth-net8.0.json",
+        "output_sha256": "bdb3f93c9b3c31863ac0aaa87c913e89842781ea65aea18fb4413f82bd19337f",
+        "type_references": 260,
+        "shutdown": {
+          "pid": 81188,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Auth\\bin\\Release\\net8.0\\PPDS.Auth.dll",
+        "sha256": "381c21529ad3c847cf159c59925b9c8fba27363874c75b41c13a68b83cc21fe3",
+        "bytes": 232960,
+        "family": "PPDS.Auth",
+        "project": "PPDS.Auth",
+        "tfm": "net8.0"
+      },
+      "baseline_types": 65,
+      "final_C_types": 65,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e312e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e312e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [
+          {
+            "path": "Microsoft.IdentityModel.Tokens",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          },
+          {
+            "path": "System.IdentityModel.Tokens.Jwt",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          }
+        ],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Auth",
+      "tfm": "net9.0",
+      "public_stable_version": "1.1.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Auth",
+        "tfm": "net9.0",
+        "input_sha256": "e842a332ee9dc433e9b0f4411d2416e3e7739a59aa91d62a3ce4f99e96a94c8c",
+        "output": "baseline-PPDS.Auth-net9.0.json",
+        "output_sha256": "f49b4f13f39741cde5a15cb1a9035874a8bcfc44e8323ec2e3e9891d563af789",
+        "type_references": 262,
+        "shutdown": {
+          "pid": 73584,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Auth\\bin\\Release\\net9.0\\PPDS.Auth.dll",
+        "sha256": "cbf1a10de0b91af518fefad6893fa59f1b4bb7d315b4f155b8d58f8179d35604",
+        "bytes": 232960,
+        "family": "PPDS.Auth",
+        "project": "PPDS.Auth",
+        "tfm": "net9.0"
+      },
+      "baseline_types": 65,
+      "final_C_types": 65,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e312e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e312e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [
+          {
+            "path": "Microsoft.IdentityModel.Tokens",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          },
+          {
+            "path": "System.IdentityModel.Tokens.Jwt",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          }
+        ],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Auth",
+      "tfm": "net10.0",
+      "public_stable_version": "1.1.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Auth",
+        "tfm": "net10.0",
+        "input_sha256": "5f3fde795e7ab644ba180cb2163551966f31bcb3f3976198ec83c68596340dcb",
+        "output": "baseline-PPDS.Auth-net10.0.json",
+        "output_sha256": "c9d97a2bd98befc2ce5037e4017910b4e90c813cde49f9735613c569cdf0a77e",
+        "type_references": 262,
+        "shutdown": {
+          "pid": 77924,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Auth\\bin\\Release\\net10.0\\PPDS.Auth.dll",
+        "sha256": "f43a118d0b3a9c0a010efb3aac79d68971cb9d3b18fce89efe5a787b807fcea6",
+        "bytes": 232960,
+        "family": "PPDS.Auth",
+        "project": "PPDS.Auth",
+        "tfm": "net10.0"
+      },
+      "baseline_types": 65,
+      "final_C_types": 65,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e312e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e312e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [
+          {
+            "path": "Microsoft.IdentityModel.Tokens",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "Microsoft.IdentityModel.Tokens",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          },
+          {
+            "path": "System.IdentityModel.Tokens.Jwt",
+            "reason": "referenced assembly identity changed",
+            "before": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.19.1.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            },
+            "after": {
+              "name": "System.IdentityModel.Tokens.Jwt",
+              "version": "8.23.0.0",
+              "flags": 0,
+              "public_key_or_token_hex": "31bf3856ad364e35"
+            }
+          }
+        ],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Dataverse",
+      "tfm": "net8.0",
+      "public_stable_version": "1.3.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Dataverse",
+        "tfm": "net8.0",
+        "input_sha256": "dbdf7f712bd7a35ddac4b75548e4736bf66a3a22e966f7d5d348963b308453f1",
+        "output": "baseline-PPDS.Dataverse-net8.0.json",
+        "output_sha256": "cd82dc65763c2f215953ca276700ec635a9e599db806f2ba563282a7bc6905d5",
+        "type_references": 394,
+        "shutdown": {
+          "pid": 36080,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Dataverse\\bin\\Release\\net8.0\\PPDS.Dataverse.dll",
+        "sha256": "653f0c35d743cdf954297f4eb1c8f1abb58cc172ae407df7475acee9569be1bb",
+        "bytes": 914432,
+        "family": "PPDS.Dataverse",
+        "project": "PPDS.Dataverse",
+        "tfm": "net8.0"
+      },
+      "baseline_types": 334,
+      "final_C_types": 334,
+      "delta": {
+        "breaking": [],
+        "additions": [
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_HasExplicitValue', 0, (), None)",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "get_HasExplicitValue",
+              "visibility": "Public",
+              "attributes": 2182,
+              "implementation_attributes": 0,
+              "has_body": true,
+              "signature_header": 32,
+              "import_name": null,
+              "import_module": null,
+              "generic_parameter_count": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "required_parameter_count": 0,
+              "generic_parameters": [],
+              "parameters": [],
+              "custom_attributes": []
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/properties/('HasExplicitValue', ())",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "HasExplicitValue",
+              "attributes": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "getter": "Public",
+              "setter": null,
+              "default": null,
+              "custom_attributes": [
+                {
+                  "type": "System.Text.Json.Serialization.JsonIgnoreAttribute",
+                  "raw_blob_hex": "01000000",
+                  "single_string_argument": null
+                }
+              ]
+            }
+          }
+        ],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e332e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e342e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e332e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e342e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition",
+            "reason": "serialization_contract",
+            "before": null,
+            "after": {
+              "type": "System.Text.Json.Serialization.JsonConverterAttribute",
+              "raw_blob_hex": "01003f505044532e4461746176657273652e4d657461646174612e417574686f72696e672e4f7074696f6e446566696e6974696f6e4a736f6e436f6e7665727465720000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_Value', 0, (), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('set_Value', 0, ('System.Int32',), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Dataverse",
+      "tfm": "net9.0",
+      "public_stable_version": "1.3.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Dataverse",
+        "tfm": "net9.0",
+        "input_sha256": "9b998b3ea9e578b7654dd87be249b6efeaf2c8280ba7e5a2c9356bf9f72911cc",
+        "output": "baseline-PPDS.Dataverse-net9.0.json",
+        "output_sha256": "f98f487772c2613c2d24fefcef2ae93b159332d78e30cb74f9438216592c73f1",
+        "type_references": 397,
+        "shutdown": {
+          "pid": 50180,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Dataverse\\bin\\Release\\net9.0\\PPDS.Dataverse.dll",
+        "sha256": "091e0c5e7303ec5ba16c83463dcfb2ba8063933d2cc91d155d8daec25a17fcd7",
+        "bytes": 915456,
+        "family": "PPDS.Dataverse",
+        "project": "PPDS.Dataverse",
+        "tfm": "net9.0"
+      },
+      "baseline_types": 334,
+      "final_C_types": 334,
+      "delta": {
+        "breaking": [],
+        "additions": [
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_HasExplicitValue', 0, (), None)",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "get_HasExplicitValue",
+              "visibility": "Public",
+              "attributes": 2182,
+              "implementation_attributes": 0,
+              "has_body": true,
+              "signature_header": 32,
+              "import_name": null,
+              "import_module": null,
+              "generic_parameter_count": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "required_parameter_count": 0,
+              "generic_parameters": [],
+              "parameters": [],
+              "custom_attributes": []
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/properties/('HasExplicitValue', ())",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "HasExplicitValue",
+              "attributes": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "getter": "Public",
+              "setter": null,
+              "default": null,
+              "custom_attributes": [
+                {
+                  "type": "System.Text.Json.Serialization.JsonIgnoreAttribute",
+                  "raw_blob_hex": "01000000",
+                  "single_string_argument": null
+                }
+              ]
+            }
+          }
+        ],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e332e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e342e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e332e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e342e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition",
+            "reason": "serialization_contract",
+            "before": null,
+            "after": {
+              "type": "System.Text.Json.Serialization.JsonConverterAttribute",
+              "raw_blob_hex": "01003f505044532e4461746176657273652e4d657461646174612e417574686f72696e672e4f7074696f6e446566696e6974696f6e4a736f6e436f6e7665727465720000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_Value', 0, (), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('set_Value', 0, ('System.Int32',), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Dataverse",
+      "tfm": "net10.0",
+      "public_stable_version": "1.3.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Dataverse",
+        "tfm": "net10.0",
+        "input_sha256": "0aefc905cdafb10e0c907f96a8f043449e7cfa04a2a2fafcbe1dcee1a07daa76",
+        "output": "baseline-PPDS.Dataverse-net10.0.json",
+        "output_sha256": "d0ae12872b2dc2faadc87eb701f064de6632d5c19729464a8ef7522a96637bf0",
+        "type_references": 397,
+        "shutdown": {
+          "pid": 37044,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Dataverse\\bin\\Release\\net10.0\\PPDS.Dataverse.dll",
+        "sha256": "0817fc77598a35cf8facbdbb5fc5b3a5528ad3c27c6d313e06c01cca7ef5f135",
+        "bytes": 915456,
+        "family": "PPDS.Dataverse",
+        "project": "PPDS.Dataverse",
+        "tfm": "net10.0"
+      },
+      "baseline_types": 334,
+      "final_C_types": 334,
+      "delta": {
+        "breaking": [],
+        "additions": [
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_HasExplicitValue', 0, (), None)",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "get_HasExplicitValue",
+              "visibility": "Public",
+              "attributes": 2182,
+              "implementation_attributes": 0,
+              "has_body": true,
+              "signature_header": 32,
+              "import_name": null,
+              "import_module": null,
+              "generic_parameter_count": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "required_parameter_count": 0,
+              "generic_parameters": [],
+              "parameters": [],
+              "custom_attributes": []
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/properties/('HasExplicitValue', ())",
+            "reason": "member added",
+            "before": null,
+            "after": {
+              "name": "HasExplicitValue",
+              "attributes": 0,
+              "return_type": "System.Boolean",
+              "parameter_types": [],
+              "getter": "Public",
+              "setter": null,
+              "default": null,
+              "custom_attributes": [
+                {
+                  "type": "System.Text.Json.Serialization.JsonIgnoreAttribute",
+                  "raw_blob_hex": "01000000",
+                  "single_string_argument": null
+                }
+              ]
+            }
+          }
+        ],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e332e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e342e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e332e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e342e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition",
+            "reason": "serialization_contract",
+            "before": null,
+            "after": {
+              "type": "System.Text.Json.Serialization.JsonConverterAttribute",
+              "raw_blob_hex": "01003f505044532e4461746176657273652e4d657461646174612e417574686f72696e672e4f7074696f6e446566696e6974696f6e4a736f6e436f6e7665727465720000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('get_Value', 0, (), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "PPDS.Dataverse.Metadata.Authoring.OptionDefinition/methods/('set_Value', 0, ('System.Int32',), None)",
+            "reason": "compiler_or_debug_metadata",
+            "before": {
+              "type": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+              "raw_blob_hex": "01000000",
+              "single_string_argument": null
+            },
+            "after": null
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Query",
+      "tfm": "net8.0",
+      "public_stable_version": "1.0.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Query",
+        "tfm": "net8.0",
+        "input_sha256": "72f20930f14bc876789a31d7a575886bcc13ce94b1d91e017320d2282f6feede",
+        "output": "baseline-PPDS.Query-net8.0.json",
+        "output_sha256": "fdc694a0f18fc0d8bdc058e00f75435a69fc441dde06bb2a4da0d3dc7853f397",
+        "type_references": 431,
+        "shutdown": {
+          "pid": 59736,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Query\\bin\\Release\\net8.0\\PPDS.Query.dll",
+        "sha256": "8c8846d41802e001f2f1be510774e77ae70b811f841d88e9c0afca88f0deebdc",
+        "bytes": 343552,
+        "family": "PPDS.Query",
+        "project": "PPDS.Query",
+        "tfm": "net8.0"
+      },
+      "baseline_types": 70,
+      "final_C_types": 70,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e302e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e302e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Query",
+      "tfm": "net9.0",
+      "public_stable_version": "1.0.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Query",
+        "tfm": "net9.0",
+        "input_sha256": "7b86b7e85953f53b16e0c565a00004962434af7ea1d04b681d6c1e2e448a1205",
+        "output": "baseline-PPDS.Query-net9.0.json",
+        "output_sha256": "b5d7742bf9b527df0e9a9456eddcbd178ece46ee938e859a4966abe795732cf3",
+        "type_references": 432,
+        "shutdown": {
+          "pid": 6516,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Query\\bin\\Release\\net9.0\\PPDS.Query.dll",
+        "sha256": "750b9a13e350e214eb8ce18a50ffcb1dff3d792dbdb9fdb8f534def0048dde93",
+        "bytes": 343552,
+        "family": "PPDS.Query",
+        "project": "PPDS.Query",
+        "tfm": "net9.0"
+      },
+      "baseline_types": 70,
+      "final_C_types": 70,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e302e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e302e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Query",
+      "tfm": "net10.0",
+      "public_stable_version": "1.0.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Query",
+        "tfm": "net10.0",
+        "input_sha256": "5914e61d7a66e0c84092050f30bb3befa3ab18452cbe2dbaac2295cadb3df4f3",
+        "output": "baseline-PPDS.Query-net10.0.json",
+        "output_sha256": "dd0ad4f19b60339c7670f8b9dcb1bbdf8e1c89c5738a96bc1ca33923abaa7be8",
+        "type_references": 432,
+        "shutdown": {
+          "pid": 38668,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Query\\bin\\Release\\net10.0\\PPDS.Query.dll",
+        "sha256": "bf724345638a55af983b5dc1deec5ea296da6ef143e2dd4365fc371a1fd323e6",
+        "bytes": 343552,
+        "family": "PPDS.Query",
+        "project": "PPDS.Query",
+        "tfm": "net10.0"
+      },
+      "baseline_types": 70,
+      "final_C_types": 70,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e302e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e302e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e302e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Migration",
+      "tfm": "net8.0",
+      "public_stable_version": "1.2.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Migration",
+        "tfm": "net8.0",
+        "input_sha256": "8b2982880f235ebe6aafcfa93803f3e403b6699d6801cef7df08ef88cf955428",
+        "output": "baseline-PPDS.Migration-net8.0.json",
+        "output_sha256": "b402ade33c8bb6ed08ffa9b55b2dd79e25f68703a34fc418919c1de2f079beac",
+        "type_references": 260,
+        "shutdown": {
+          "pid": 74596,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Migration\\bin\\Release\\net8.0\\PPDS.Migration.dll",
+        "sha256": "b5acc2381f61f4e1288fad795119774c3aa82306a0c366a5f733d3402cb4212d",
+        "bytes": 376320,
+        "family": "PPDS.Migration",
+        "project": "PPDS.Migration",
+        "tfm": "net8.0"
+      },
+      "baseline_types": 122,
+      "final_C_types": 122,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e322e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Migration",
+      "tfm": "net9.0",
+      "public_stable_version": "1.2.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Migration",
+        "tfm": "net9.0",
+        "input_sha256": "33c26b66353e8e907b10097aa126908687bbc9e846b38370850cd8e9cfbbf131",
+        "output": "baseline-PPDS.Migration-net9.0.json",
+        "output_sha256": "f0746670c70197196299e70b53cad0a4258de034d82d5a579832156b539c5f4b",
+        "type_references": 260,
+        "shutdown": {
+          "pid": 91744,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Migration\\bin\\Release\\net9.0\\PPDS.Migration.dll",
+        "sha256": "9f86a04597934fbd83ec672722a6f794203adc4f75d23b2847f3935a5ee6e667",
+        "bytes": 376320,
+        "family": "PPDS.Migration",
+        "project": "PPDS.Migration",
+        "tfm": "net9.0"
+      },
+      "baseline_types": 122,
+      "final_C_types": 122,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e322e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Migration",
+      "tfm": "net10.0",
+      "public_stable_version": "1.2.2",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Migration",
+        "tfm": "net10.0",
+        "input_sha256": "6c3456a7f7e357b30886ea2f599855e0c81ae2757e74d9515dcf3286d1bbc20c",
+        "output": "baseline-PPDS.Migration-net10.0.json",
+        "output_sha256": "774295c76e5557731168e91dc108007e3f6b8f876d1d630870367931416789d2",
+        "type_references": 260,
+        "shutdown": {
+          "pid": 73936,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Migration\\bin\\Release\\net10.0\\PPDS.Migration.dll",
+        "sha256": "96042a44799e2d4b7baae81bb8a5f78b1a0afa69cd16275da6c4fb0773fef0bd",
+        "bytes": 376320,
+        "family": "PPDS.Migration",
+        "project": "PPDS.Migration",
+        "tfm": "net10.0"
+      },
+      "baseline_types": 122,
+      "final_C_types": 122,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e322e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007312e322e332e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e312e322e322b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039312e322e332d616c7068612e302e33352b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    },
+    {
+      "family": "PPDS.Plugins",
+      "tfm": "net462",
+      "public_stable_version": "3.0.1",
+      "baseline": {
+        "side": "baseline",
+        "family": "PPDS.Plugins",
+        "tfm": "net462",
+        "input_sha256": "6d72eca1c658ac692863fe68bb149795eff27f937383f7fdf3b577bd076d6631",
+        "output": "baseline-PPDS.Plugins-net462.json",
+        "output_sha256": "a60120d85d01d9b4ad855ca00ddaf3cdb649fb0605e934bac3be277bea7a88a9",
+        "type_references": 21,
+        "shutdown": {
+          "pid": 42132,
+          "strategy": "already-exited",
+          "returncode": 0,
+          "descendant_shutdown_proven": false
+        }
+      },
+      "final_C_input": {
+        "path": "C:\\Users\\josh_\\.codex\\visualizations\\2026\\10\\31\\01a18f4f-c712-75e3-a0a6-8b4570f89fde\\release-merge-coordination-20261108\\final-c-preparation\\core\\src\\PPDS.Plugins\\bin\\Release\\net462\\PPDS.Plugins.dll",
+        "sha256": "a34fbf59da4b07aa4f5ef93ad8cd494223bc3926c401640385e72889db9b70f4",
+        "bytes": 14336,
+        "family": "PPDS.Plugins",
+        "project": "PPDS.Plugins",
+        "tfm": "net462"
+      },
+      "baseline_types": 13,
+      "final_C_types": 13,
+      "delta": {
+        "breaking": [],
+        "additions": [],
+        "default_changes": [],
+        "parameter_name_changes": [],
+        "annotations": [
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007332e302e312e300000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyFileVersionAttribute",
+              "raw_blob_hex": "010007332e312e312e300000",
+              "single_string_argument": null
+            }
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "01002e332e302e312b363064626436393664323863373934343766653634393039323461343632633931663962326433350000",
+              "single_string_argument": null
+            },
+            "after": null
+          },
+          {
+            "path": "assembly",
+            "reason": "assembly_build_provenance_or_Debug_Release",
+            "before": null,
+            "after": {
+              "type": "System.Reflection.AssemblyInformationalVersionAttribute",
+              "raw_blob_hex": "010039332e312e312d616c7068612e302e31382b613066656231333866303035373564333536333435363566336137333364656239653635636139380000",
+              "single_string_argument": null
+            }
+          }
+        ],
+        "implementation_metadata_changes": [],
+        "assembly_identity_changes": [],
+        "reference_changes": [],
+        "public_type_scope_changes": [],
+        "unknown": []
+      }
+    }
+  ],
+  "summary": {
+    "breaking": 0,
+    "additions": 6,
+    "default_changes": 0,
+    "parameter_name_changes": 0,
+    "annotations": 61,
+    "implementation_metadata_changes": 0,
+    "assembly_identity_changes": 0,
+    "reference_changes": 6,
+    "public_type_scope_changes": 0,
+    "unknown": 0
+  },
+  "actual_API_metadata_only_no_target_load": true,
+  "not_published_package_or_behavior_clearance": true
+}
