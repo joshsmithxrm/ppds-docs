@@ -20,19 +20,16 @@ An actual parsed entity/entity-list `-e` emits one fixed deprecation notice on
 stderr. Environment `-e`, argument values and unknown options do not emit that
 notice. The warning contains no option values and leaves stdout JSON intact.
 
-CLI 2.0 may standardize `-e` for environments only after at least 90 days from
-the first stable release containing the complete replacement aliases and
-deprecation guidance. Both requirements apply; no calendar date is set.
+Existing `-e` meanings are unchanged. Use `--environment` or `-env` for
+environments and the long options `--entity` / `--entities` for entities.
 
 ## Form operations
 
 Use `forms add-field` to add a placement, `forms reorder-fields-strict` to
 permute all existing selected-section fields, and `forms move-field` to move
-an existing unique control. Legacy `forms reorder-fields` retains its
-authoritative add/drop behavior during transition and warns on stderr only.
-Its removal requires CLI 2.0 and at least 90 days after the replacement
-commands' stable release. Read the form-layout guide for preservation,
-ambiguity and no-op rules.
+an existing unique control. Legacy `forms reorder-fields` is deprecated and warns on stderr only; its
+authoritative add/drop behavior and output are unchanged. Read the form-layout
+guide for preservation, ambiguity and no-op rules.
 
 ## Version-selected plugin cleanup
 
