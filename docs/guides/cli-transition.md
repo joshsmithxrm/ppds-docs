@@ -27,9 +27,10 @@ environments and the long options `--entity` / `--entities` for entities.
 
 Use `forms add-field` to add a placement, `forms reorder-fields-strict` to
 permute all existing selected-section fields, and `forms move-field` to move
-an existing unique control. Legacy `forms reorder-fields` is deprecated and warns on stderr only; its
-authoritative add/drop behavior and output are unchanged. Read the form-layout
-guide for preservation, ambiguity and no-op rules.
+an existing unique control. Legacy `forms reorder-fields` is deprecated and warns on stderr only; it keeps
+its authoritative add/drop behavior. Use `forms reorder-fields-strict`,
+`forms add-field` or `forms move-field` instead. Read the form-layout guide for
+preservation, ambiguity and no-op rules.
 
 ## Version-selected plugin cleanup
 
