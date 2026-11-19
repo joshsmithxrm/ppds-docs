@@ -1,5 +1,5 @@
 ---
-name: audit-capture
+name: docs-audit-capture
 description: Run manifest-driven PNG captures of the ppds-docs site (Docusaurus) for design audits. Emits a schema-conformant capture tree for consumption by a Claude design-audit session. Captures each page in both light and dark themes.
 allowed-tools: Bash(node tools/audit-capture*), Bash(node tools/audit-capture.mjs *), Bash(node tools/docs-verify.mjs *)
 ---

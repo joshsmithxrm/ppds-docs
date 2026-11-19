@@ -20,10 +20,13 @@ Governance for THIS file: **<https://github.com/joshsmithxrm/power-platform-deve
 | Command | Purpose |
 |---------|---------|
 | `npm start` | Dev server at localhost:3000 |
-| `npm run build` | Production build |
-| `npm run typecheck` | TypeScript validation |
+| `npm run build` | Production build; fails on broken links (CI runs this) |
+| `npm run typecheck` | TypeScript validation (CI runs this) |
+| `npm run serve` | Serve the built site locally |
 
 ## Authoring
 
-For Diátaxis classification, voice, and style: see the `write-docs` skill.
-For blog posts: see the `write-blog` skill.
+- Adding pages, templates, generated reference pages: `docs/contributing/index.md`.
+- Style: `docs/contributing/style-guide.md`.
+- Blog posts: the `write-blog` command.
+- Screenshot captures for design audits: the `docs-verify` and `docs-audit-capture` skills.
