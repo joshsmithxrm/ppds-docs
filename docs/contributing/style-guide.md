@@ -57,6 +57,10 @@ consumption-patterns.md
 - Active voice
 - Keep paragraphs short (3-4 sentences max)
 
+### Images
+
+Give informative images alt text that describes what the reader should see (the data shown, not "screenshot of dashboard"). Give decorative images an empty `alt=""`. This applies to blog posts too.
+
 ### Good/Bad Example Pattern
 
 Use clear labels for code examples:
@@ -142,6 +146,7 @@ Use these language hints for syntax highlighting:
 - Test all examples before publishing
 - Include necessary imports/setup
 - Show expected output when helpful
+- If the reader must substitute a value, say so directly above the block
 
 ```csharp
 // Include the using statement

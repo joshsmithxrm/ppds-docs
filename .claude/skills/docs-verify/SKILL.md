@@ -1,6 +1,6 @@
 ---
 name: docs-verify
-description: Playwright Chromium harness for capturing Docusaurus pages and components in light + dark themes. Use directly when iterating on a single page, or via audit-capture for a full manifest-driven run.
+description: Playwright Chromium harness for capturing Docusaurus pages and components in light + dark themes. Use directly when iterating on a single page, or via docs-audit-capture for a full manifest-driven run.
 allowed-tools: Bash(node tools/docs-verify*), Bash(node tools/docs-verify.mjs *)
 ---
 
@@ -13,7 +13,7 @@ Text-based verification isn't the goal here — this tool produces **PNGs** for 
 ## When to Use
 
 - Iterating on a single page's light/dark theming — rapid capture + eyeball
-- Debugging why an `audit-capture` entry produces an unexpected PNG
+- Debugging why a `docs-audit-capture` manifest entry produces an unexpected PNG
 - Verifying a new page shows up correctly before adding it to the manifest
 - **NOT** for visual regression — this is audit input, not a diff tool
 
@@ -120,5 +120,5 @@ If an interaction this tool doesn't support is needed (click, type, login, scrol
 
 ## Related
 
-- [@audit-capture](../audit-capture/SKILL.md) — the manifest-driven wrapper that drives this tool
+- [@docs-audit-capture](../docs-audit-capture/SKILL.md) — the manifest-driven wrapper that drives this tool
 - [specs/audit-capture.md](../../../specs/audit-capture.md) — the full contract

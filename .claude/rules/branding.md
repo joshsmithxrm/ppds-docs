@@ -1,6 +1,6 @@
 ---
 description: PPDS documentation branding guidelines
-globs: ["docs/**/*.md", "blog/**/*.md"]
+paths: ["docs/**/*.md", "blog/**/*.md"]
 ---
 
 # PPDS Branding
@@ -36,8 +36,10 @@ Use the full name on first reference in a document, then PPDS thereafter.
 |------|-------------|--------------|
 | Main | power-platform-developer-suite | PPDS (Libraries + CLI + TUI + Extension + MCP) |
 | Docs | ppds-docs | PPDS Docs |
+| Skills | ppds-skills | PPDS Skills |
+| ALM | ppds-alm | PPDS ALM |
+| Tools | ppds-tools | PPDS Tools |
 | Demo | ppds-demo | PPDS Demo |
-| Orchestration | ppds-orchestration | PPDS Orchestration |
 
 ## Terminology
 

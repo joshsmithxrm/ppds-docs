@@ -2,7 +2,7 @@
 
 **Status:** Draft
 **Last Updated:** 2026-04-18
-**Code:** [tools/audit-capture.mjs](../tools/audit-capture.mjs) | [tools/docs-verify.mjs](../tools/docs-verify.mjs) | [.claude/skills/audit-capture/](../.claude/skills/audit-capture/) | [tools/audit-manifests/](../tools/audit-manifests/)
+**Code:** [tools/audit-capture.mjs](../tools/audit-capture.mjs) | [tools/docs-verify.mjs](../tools/docs-verify.mjs) | [.claude/skills/docs-audit-capture/](../.claude/skills/docs-audit-capture/) | [tools/audit-manifests/](../tools/audit-manifests/)
 **Surfaces:** Docs
 
 ---
@@ -72,7 +72,7 @@ The runner is a thin orchestrator. Navigation + PNG rendering live in `docs-veri
 | `tools/audit-capture.mjs` | Reads `tools/audit-manifests/docs.yaml`, drives `docs-verify.mjs`, writes schema-conformant output. Subcommands: `run`, `validate`, `list`. |
 | `tools/docs-verify.mjs` | Playwright Chromium harness. Launches (optionally starts `npm run start`), captures a route or a component in both themes, closes cleanly. |
 | `tools/audit-manifests/docs.yaml` | Inventory of pages and components to capture. Version-controlled. |
-| `.claude/skills/audit-capture/SKILL.md` | Skill-authored usage + env vars + gotchas for the runner. |
+| `.claude/skills/docs-audit-capture/SKILL.md` | Skill-authored usage + env vars + gotchas for the runner. |
 | `.claude/skills/docs-verify/SKILL.md` | Skill-authored direct command surface for the verify tool. |
 
 ### Dependencies
@@ -236,7 +236,7 @@ To get a deterministic theme on first paint, `docs-verify` sets `localStorage.th
 | AC-10 | `audit-capture validate docs` dry-runs the manifest and exits non-zero on first broken entry | Manual: corrupt an entry; run validate | 🔲 |
 | AC-11 | `audit-capture list docs` prints id + title per entry | Manual: inspect stdout | 🔲 |
 | AC-12 | Adding a new page requires only editing `docs.yaml` — no runner changes | Manual: add a trivial entry, run; new entry appears in output | 🔲 |
-| AC-13 | `.claude/skills/audit-capture/SKILL.md` documents the single-command example and the env vars | Manual: read SKILL.md | 🔲 |
+| AC-13 | `.claude/skills/docs-audit-capture/SKILL.md` documents the single-command example and the env vars | Manual: read SKILL.md | 🔲 |
 | AC-14 | Runner rejects `AUDIT_OUT` pointing inside the repo working tree | Manual: `AUDIT_OUT=./out`; expect exit 1 + clear error | 🔲 |
 | AC-15 | Manifest entry `id` validation: kebab-case required, uniqueness enforced at parse time | Manual: add duplicate ids; expect parse error | 🔲 |
 | AC-16 | Runner detects source repo/ref/commit from git and records in `manifest.json`, overridable via env vars | Manual: run; inspect `source` block | 🔲 |
