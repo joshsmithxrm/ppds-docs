@@ -66,7 +66,8 @@ npm run build
 
 - **Guides** go in `docs/guides/`. Start from `docs/_templates/guide-template.md`, then add the page to the Guides list in `sidebars.ts`.
 - **Reference pages** go under `docs/reference/` (`cli/`, `extension/`, `libraries/`, `mcp/`, `releases/`). Start from `docs/_templates/reference-template.md`. The Reference sidebar is generated from the folder, so no `sidebars.ts` change is needed.
-- Use lowercase-kebab-case file names and set `title`, `description` and `sidebar_position` in the front matter.
+- Use lowercase-kebab-case file names and set `title` and `description` in the front matter.
+- Set `sidebar_position` only on pages under `docs/reference/`, where it orders the generated sidebar. Getting Started, Guides and Contributing are ordered by their lists in `sidebars.ts`, so the field has no effect there.
 
 ### Generated Reference Pages
 
@@ -76,7 +77,7 @@ Most pages under `docs/reference/` start with a comment such as `<!-- Auto-gener
 
 See the [Documentation Style Guide](./style-guide.md). In short:
 
-- Use second person ("you can...")
+- Second person ("you can...") for getting started pages and guides; third person for reference pages
 - Present tense ("the command exports...")
 - Active voice
 - Include working code examples

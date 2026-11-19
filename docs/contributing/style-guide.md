@@ -48,11 +48,22 @@ consumption-patterns.md
 | `CLAUDE.md` | AI context file |
 | `.github/pull_request_template.md` | GitHub convention (lowercase required) |
 
+## Page Types
+
+Each page has one job. If a page does two of these jobs, split it.
+
+| Section | Folder | Purpose | Voice |
+|---------|--------|---------|-------|
+| Getting Started | `docs/getting-started/` | Install PPDS and take the first steps | Second person or imperative ("you can...", "Run...") |
+| Guides | `docs/guides/` | Walk through one task from start to finish | Second person or imperative |
+| Reference | `docs/reference/` | Describe commands, options, APIs and releases completely and predictably | Third person ("the command exports..."); setup steps on an overview page may use second person |
+| Contributing | `docs/contributing/` | Explain how to work on PPDS and these docs | Second person |
+
 ## Writing Style
 
 ### Voice and Tense
 
-- Use second person ("you can...")
+- Use the voice for the page type (see [Page Types](#page-types))
 - Present tense ("the command exports...")
 - Active voice
 - Keep paragraphs short (3-4 sentences max)

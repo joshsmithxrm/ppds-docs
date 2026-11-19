@@ -116,6 +116,16 @@ tags: [category]
 
 `authors` must be a key in `blog/authors.yml`.
 
+## Post Outline
+
+A typical post runs:
+
+1. **Hook** - the problem or question that prompted the work, in 2-3 sentences
+2. **First attempt** - the wrong path, and why it seemed right at the time
+3. **Pivot** - the insight that changed the approach
+4. **Solution** - code, numbers, links to source
+5. **What's next** - what this enables, what is still open
+
 ## Categories (tags)
 
 - `announcements` - Releases, updates
